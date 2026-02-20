@@ -1,0 +1,918 @@
+/* Global Styles */
+body {
+    font-family: sans-serif;
+    color: #333;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+/* Header & Typography */
+h1 {
+    font-size: 40px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    /* Add spacing from the top nav */
+    text-align: center;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 10px;
+}
+
+h2,
+h3,
+h4,
+h5 {
+    color: #000;
+}
+
+h2.course-title {
+    font-size: 32px;
+    border-left: 8px solid #666;
+    /* Gray accent */
+    padding-left: 15px;
+    margin-top: 40px;
+    background-color: #eee;
+    padding: 10px 15px;
+}
+
+h3 {
+    font-size: 24px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 5px;
+    margin-top: 30px;
+}
+
+h4 {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h5 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+/* Navigation Buttons */
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.sub-nav button {
+    font-size: 14px;
+    padding: 8px 16px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+}
+
+nav button {
+    background-color: #fff;
+    border: 2px solid #666;
+    color: #333;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    border-radius: 4px;
+}
+
+nav button:hover,
+nav button.active {
+    background-color: #666;
+    color: #fff;
+}
+
+/* Layout Components */
+.course-section {
+    padding: 20px 0;
+}
+
+.content-block {
+    margin-bottom: 30px;
+}
+
+.feature-list {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.feature-list li {
+    margin-bottom: 8px;
+}
+
+.goal-text {
+    font-size: 1.2em;
+    font-weight: bold;
+    text-align: center;
+    padding: 15px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+}
+
+/* Two Column Layout */
+.two-column {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.column {
+    flex: 1;
+    min-width: 300px;
+}
+
+/* Image Placeholders */
+.main-hero-placeholder {
+    width: 100%;
+    height: 350px;
+    background-color: #bbb;
+    /* Slightly darker than other placeholders */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #555;
+    font-size: 24px;
+    font-weight: bold;
+    border: 1px dashed #777;
+    margin-bottom: 30px;
+}
+
+/* Replaced course-hero-placeholder with achievement content styles */
+.achievement-box {
+    margin-top: 0;
+    /* Remove top margin when in column */
+    padding: 15px;
+    background-color: #f5f5f5;
+    border: 1px solid #ddd;
+    text-align: left;
+    width: 100%;
+    /* Fill the column */
+    box-sizing: border-box;
+    /* Include padding in width */
+}
+
+.achievement-box h4 {
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+.achievement-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.achievement-list li {
+    padding: 3px 0;
+    border-bottom: 1px dashed #eee;
+}
+
+.image-placeholder {
+    width: 100%;
+    height: 200px;
+    background-color: #eee;
+    /* Light gray */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #888;
+    font-weight: bold;
+    border: 1px dashed #aaa;
+    margin-top: 15px;
+}
+
+.image-placeholder.small-placeholder {
+    height: 200px;
+    margin-top: 10px;
+    background-color: #f5f5f5;
+}
+
+.center-text {
+    text-align: center;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background-color: #ddd;
+    margin: 50px 0;
+}
+
+footer {
+    text-align: center;
+    margin-top: 50px;
+    padding: 20px;
+    background-color: #eee;
+    color: #666;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 600px) {
+    nav {
+        flex-direction: column;
+    }
+
+    .two-column {
+        flex-direction: column;
+    }
+
+    h1 {
+        font-size: 32px;
+        /* Slightly smaller on mobile but close to requested */
+    }
+}
+
+/* Learning Spaces Grid */
+.learning-spaces {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.space-item {
+    flex: 1;
+    min-width: 300px;
+    background-color: #f9f9f9;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.space-item h4 {
+    margin-top: 15px;
+    margin-bottom: 10px;
+    border-bottom: 1px dashed #ccc;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+/* Annual Events (Calendar) */
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 15px;
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+
+.month-box {
+    background-color: #f0f8ff;
+    /* Light blue tint */
+    border: 1px solid #cceeff;
+    padding: 15px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.month-name {
+    font-size: 24px;
+    color: #007bff;
+    /* Blue accent */
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.month-en {
+    font-size: 14px;
+    color: #666;
+    display: block;
+    margin-bottom: 15px;
+    border-bottom: 1px dashed #ccc;
+    padding-bottom: 5px;
+}
+
+.event-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 14px;
+    text-align: center;
+}
+
+.event-list li {
+    margin-bottom: 5px;
+}
+
+/* Uniform Section */
+.uniform-showcase {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-bottom: 50px;
+    justify-content: center;
+}
+
+.uniform-group {
+    flex: 1;
+    min-width: 300px;
+    text-align: center;
+}
+
+.uniform-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: #555;
+    margin-bottom: 20px;
+    display: inline-block;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 5px;
+}
+
+.uniform-items-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.item-box {
+    text-align: center;
+}
+
+.item-box .image-placeholder {
+    height: 100px;
+    /* Smaller for items */
+    margin-bottom: 10px;
+}
+
+.item-name {
+    font-size: 13px;
+    font-weight: bold;
+}
+
+/* Career Guidance Styles */
+.grade-guidance-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.grade-box {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-top: 5px solid #666;
+    /* Gray accent for grade header */
+}
+
+.grade-box h4 {
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.guidance-list {
+    list-style: none;
+    padding: 0;
+}
+
+.guidance-list li {
+    padding: 8px 0;
+    border-bottom: 1px dashed #eee;
+    font-size: 14px;
+}
+
+.guidance-list li::before {
+    content: "・";
+    margin-right: 5px;
+}
+
+.grade-guidance-container {
+    margin-top: 30px;
+}
+
+.grade-year-section {
+    margin-bottom: 40px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #eee;
+}
+
+.grade-year-section:last-child {
+    border-bottom: none;
+}
+
+.grade-year-section h4 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+
+/* Club Page Styles */
+.club-info-container {
+    margin-bottom: 50px;
+}
+
+.club-header-info {
+    font-size: 14px;
+    background-color: #f5f5f5;
+    padding: 15px;
+    border-left: 5px solid #333;
+    margin-bottom: 20px;
+}
+
+.club-results {
+    margin-top: 30px;
+    background-color: #f9f9f9;
+    /* Subtle highlight for results */
+    border: 1px solid #ddd;
+    padding: 20px;
+}
+
+.club-results h4 {
+    color: #333;
+    border-bottom-color: #ccc;
+    text-align: left;
+}
+
+.year-label {
+    font-weight: bold;
+    font-size: 1.1em;
+    margin: 15px 0 5px 0;
+    display: block;
+}
+
+/* Interview Page Styles */
+.interview-header {
+    margin-bottom: 50px;
+}
+
+.interview-qa-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.qa-block {
+    margin-bottom: 40px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #eee;
+}
+
+.qa-block:last-child {
+    border-bottom: none;
+}
+
+.question-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.q-icon {
+    background-color: #4A90E2;
+    color: white;
+    font-size: 28px;
+    font-weight: bold;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+    flex-shrink: 0;
+}
+
+.question-header h3 {
+    font-size: 20px;
+    margin: 0;
+    border: none;
+    padding: 0;
+}
+
+.answer-content {
+    display: flex;
+    align-items: flex-start;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.a-icon {
+    background-color: #E74C3C;
+    color: white;
+    font-size: 28px;
+    font-weight: bold;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+    flex-shrink: 0;
+}
+
+.answer-text {
+    flex: 1;
+}
+
+.answer-text p {
+    margin: 0;
+    line-height: 1.8;
+    font-size: 15px;
+}
+
+.interview-image-section {
+    margin: 40px 0;
+}
+
+.qa-block-with-image {
+    margin-bottom: 50px;
+}
+
+.qa-block-with-image .question-header {
+    margin-bottom: 15px;
+}
+
+.qa-block-with-image .answer-content {
+    background-color: transparent;
+    padding: 0;
+}
+
+/* Top Page Audience Sections */
+.audience-section {
+    margin: 40px 0;
+}
+
+.section-title {
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+.audience-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.audience-card {
+    background: #f9f9f9;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    padding: 30px;
+    transition: box-shadow 0.3s ease;
+}
+
+.audience-card:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.audience-title {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid #666;
+}
+
+.audience-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.category-block h4 {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.link-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.link-list li {
+    margin-bottom: 8px;
+}
+
+.link-list a {
+    color: #0066cc;
+    text-decoration: none;
+    font-size: 15px;
+    transition: color 0.2s ease;
+}
+
+.link-list a:hover {
+    color: #004499;
+    text-decoration: underline;
+}
+
+/* Responsive Design for Top Page */
+@media (max-width: 768px) {
+    .audience-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .audience-card {
+        padding: 20px;
+    }
+
+    .audience-title {
+        font-size: 20px;
+    }
+}
+
+/* Welcome Section */
+.welcome-section {
+    text-align: center;
+    padding: 50px 20px;
+    background: linear-gradient(135deg, #f5f5f5 0%, #e0e0e0 100%);
+    border-radius: 10px;
+    margin-bottom: 50px;
+}
+
+.welcome-title {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.welcome-text {
+    font-size: 18px;
+    color: #555;
+    line-height: 1.8;
+}
+
+/* Large Audience Cards */
+.audience-card-large {
+    background: #fff;
+    border: 2px solid #e0e0e0;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 40px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.audience-card-large:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.card-image-wrapper {
+    width: 100%;
+    overflow: hidden;
+}
+
+.card-content-wrapper {
+    padding: 40px;
+}
+
+.audience-title-large {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 15px;
+    font-weight: bold;
+    border-left: 5px solid #666;
+    padding-left: 15px;
+}
+
+.audience-description {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+/* Highlight Links */
+.highlight-links {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.highlight-link-card {
+    flex: 1;
+    background: linear-gradient(135deg, #333 0%, #555 100%);
+    color: #fff;
+    padding: 25px;
+    border-radius: 10px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.highlight-link-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.link-icon {
+    font-size: 40px;
+}
+
+.link-content h4 {
+    margin: 0 0 5px 0;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.link-content p {
+    margin: 0;
+    font-size: 13px;
+    opacity: 1;
+    color: #fff;
+}
+
+/* More Links Section */
+.more-links {
+    background: #f9f9f9;
+    padding: 25px;
+    border-radius: 8px;
+}
+
+.more-links h4 {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.link-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+
+.link-grid a {
+    background: #fff;
+    padding: 12px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+    text-align: center;
+    border: 1px solid #e0e0e0;
+    transition: all 0.2s ease;
+}
+
+.link-grid a:hover {
+    background: #333;
+    color: #fff;
+    border-color: #333;
+}
+
+/* Bottom Cards Row */
+.bottom-cards-row {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.audience-card-small {
+    flex: 1;
+    background: #fff;
+    border: 2px solid #e0e0e0;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.audience-card-small:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.card-image-wrapper-small {
+    width: 100%;
+    overflow: hidden;
+}
+
+.card-content-wrapper-small {
+    padding: 30px;
+}
+
+.audience-title-small {
+    font-size: 22px;
+    color: #333;
+    margin-bottom: 12px;
+    font-weight: bold;
+    border-left: 4px solid #666;
+    padding-left: 12px;
+}
+
+.audience-description-small {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+.small-links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.small-link {
+    background: #f5f5f5;
+    padding: 12px 15px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+    border-left: 3px solid #666;
+    transition: all 0.2s ease;
+}
+
+.small-link:hover {
+    background: #666;
+    color: #fff;
+    padding-left: 20px;
+}
+
+/* Responsive Adjustments for New Design */
+@media (max-width: 1024px) {
+    .link-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .welcome-title {
+        font-size: 28px;
+    }
+
+    .welcome-text {
+        font-size: 16px;
+    }
+
+    .highlight-links {
+        flex-direction: column;
+    }
+
+    .link-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .bottom-cards-row {
+        flex-direction: column;
+    }
+
+    .card-content-wrapper {
+        padding: 25px;
+    }
+}
+
+/* Club List Buttons */
+.club-list-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: flex-start;
+    margin-top: 20px;
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.club-button {
+    background-color: #3562a6;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 14px;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.club-button:hover {
+    background-color: #1a407a;
+    transform: translateY(-2px);
+}

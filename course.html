@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>コース紹介</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <nav class="main-nav">
+                <a href="index.html"><button>トップ</button></a>
+                <a href="news.html"><button>お知らせ</button></a>
+                <a href="course.html"><button class="active">コース紹介</button></a>
+                <a href="about.html"><button>学校紹介</button></a>
+                <a href="school_life.html"><button>学校生活</button></a>
+                <a href="career.html"><button>進路指導</button></a>
+                <a href="club.html"><button>部活動</button></a>
+                <a href="interview.html"><button>卒業生の声</button></a>
+                <a href="recruit.html"><button>教員採用</button></a>
+            </nav>
+            <h1>コース紹介</h1>
+            <div class="main-hero-placeholder">メインビジュアル (学校全体の雰囲気)</div>
+            <nav class="sub-nav">
+                <button onclick="scrollToSection('special-advanced')">特進選抜</button>
+                <button onclick="scrollToSection('advanced')">特進</button>
+                <button onclick="scrollToSection('comprehensive')">総合進学</button>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <!-- Special Advanced Selection Course -->
+        <section id="special-advanced" class="course-section">
+            <h2 class="course-title">特進選抜</h2>
+
+            <div class="content-block">
+                <h3>目標・実績</h3>
+                <div class="two-column">
+                    <div class="column">
+                        <h4>目標</h4>
+                        <p class="goal-text">国公立大学・難関私立大学</p>
+                    </div>
+                    <div class="column">
+                        <div class="achievement-box">
+                            <h4>主な合格実績 (昨年度)</h4>
+                            <ul class="achievement-list">
+                                <li>〇〇大学: 1名</li>
+                                <li>〇〇大学: 2名</li>
+                                <li>〇〇大学: 5名</li>
+                                <li>〇〇大学: 10名</li>
+                                <li>〇〇大学: 8名</li>
+                                <li>(他 国公立・難関私大多数)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-block">
+                <h3>特徴</h3>
+                <div class="two-column">
+                    <div class="column">
+                        <ul class="feature-list">
+                            <li>大学入学共通テスト対策+ 国公立2次試験対策の充実</li>
+                            <li>毎日7限授業 + 最低週3回の補習</li>
+                            <li>学習センターを活用し、専属の担当教員によるきめ細かな個別最適化指導</li>
+                            <li>定員30名以内の少人数クラス</li>
+                        </ul>
+                    </div>
+                    <div class="column">
+                        <div class="image-placeholder">少人数クラス授業風景</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-block">
+                <h3>「自考自動」</h3>
+                <p>「自考自動」とは、特進選抜コースの生徒へ向けて作ったオリジナルの四字熟語です。この言葉を胸に先輩たちは日々の学校生活を送っています。将来、他者をけん引する存在になれるように、様々なことを学び体験します。皆さんが霞ヶ浦高等学校に来ると会える「スクールサポーター」もその1つです。そして高校生活の中心である学習を通して、「一生学続けられる『学び方』を学ぶ」ことに取り組んでいます。初めは「課題」や「宿題」に取り組み、補習にも参加し学び方を学びます。最終的には自分の力を伸ばすために自分で考えて学習できる力を育みます。
+                </p>
+                <p>進路活動も充実しており、多くの先輩・友人・教員が様々なことを語り、皆さんをサポートしてくれます。霞ヶ浦高等学校の特進選抜コースで一緒に学び、今までの自分を一層魅力的にしてみませんか？</p>
+            </div>
+
+            <div class="sub-section">
+                <h3>「学習センターでの学び」</h3>
+                <h4>自宅でもない、塾でもない、あなたのための学習空間<br>あなたなら、“ここ”をどう使う？</h4>
+
+                <div class="two-column">
+                    <div class="column">
+                        <h5>・２０時まで開放</h5>
+                        <p>原則、最終下校は17：00。でも、学習センターは、20：00まで学習で活⽤できる！！「部活が終わった後、30分だけでも学校で勉強したい！」特進選抜コースで文武両道を目指すこの見方となる施設です。
+                        </p>
+                        <div class="image-placeholder">学習センターの様子 (写真)</div>
+                    </div>
+                    <div class="column">
+                        <h5>・教員が近くに常駐、質問は教員待機室へ</h5>
+                        <p>質問したい時、職員室まで⾏く必要がない！いつでも質問できる環境を整備。わからないをそのままにしない！聞きやすく、訪ねやすい教員待機室をぜひ体験してみてください。</p>
+                        <div class="image-placeholder">教員待機室 (写真)</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <hr>
+
+        <!-- Advanced Course -->
+        <section id="advanced" class="course-section">
+            <h2 class="course-title">特進</h2>
+
+            <div class="content-block">
+                <h3>目標・実績</h3>
+                <div class="two-column">
+                    <div class="column">
+                        <h4>目標</h4>
+                        <p class="goal-text">中堅私立大学</p>
+                    </div>
+                    <div class="column">
+                        <div class="achievement-box">
+                            <h4>主な合格実績 (昨年度)</h4>
+                            <ul class="achievement-list">
+                                <li>〇〇大学: 15名</li>
+                                <li>〇〇大学: 30名</li>
+                                <li>〇〇大学: 3名</li>
+                                <li>(他 有名私大多数)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-block">
+                <h3>特徴</h3>
+                <div class="two-column">
+                    <div class="column">
+                        <ul class="feature-list">
+                            <li>水・木・金の7 限目選択制<br>（部活動 or 国語・数学・英語の選択演習授業（１年）・ ゼミナール活動（２年））</li>
+                            <li>探究活動・ゼミナール活動の充実<br>（ゼミナール活動＝面接・小論・英検などの対策を２年次で実施）</li>
+                            <li>部活動と大学進学の両立</li>
+                            <li>総合型選抜・学校推薦型選抜での大学進学に特化</li>
+                        </ul>
+                    </div>
+                    <div class="column">
+                        <div class="image-placeholder">ゼミナール活動の様子</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-block">
+                <h3>「文武両道」</h3>
+                <p>この言葉を胸に先輩たちは学業にも部活動にも全力で取り組んでいます。「メリハリのある高校生活を送りたい！」「部活に本気で取り組みながら大学進学をしたい！」そんな本気の思いを応援します。総合型選抜や学校推薦型選抜に特化した活動を通して、得意な部活動も活かして大学進学を目指します。もちろん部活動に所属していない人も、自分の得意を見つけて・伸ばして・活かして大学進学を目指せます。「キャリア探究」の授業や２年次の「ゼミ」活動で「自分のこと」「社会のこと」を深く考え、そこに向けた行動をすることで、自分独自の武器を手に入れて受験へ臨めます。
+                </p>
+                <p>多様な入試方式（小論文・面接・集団討論・プレゼンテーション）に対応した活動を通して、自分の人生を明確に設計し、大学への強い志望理由を手に入れていきましょう。</p>
+            </div>
+
+            <div class="sub-section">
+                <h3>「探究学習」</h3>
+                <h4>～ 常識を疑え、未来を創れ～</h4>
+
+                <div class="two-column">
+                    <div class="column">
+                        <h5>・ゼロからイチを生み出す力</h5>
+                        <p>企業インターンや、阿見町と連携した地域探究を通して、ゼロからイチを生み出す力を養います。大人には考えつかない高校生ならではの発想で、「新しい」を作っていきましょう！</p>
+                        <div class="image-placeholder">探究学習の様子 (写真)</div>
+                    </div>
+                    <div class="column">
+                        <h5>・大学受験に向けたキャリア探究</h5>
+                        <p>受験対策の１つとして、志望理由書を作成します。この時間を「自分の生き方を見つける時間」と定義し、生徒と教員がともに本気で人生を探究しています。また、ウェルビーイングを扱い、例えば、「なぜあの人は評価されるのか-能力よりも大切なこと-」、「糖尿病になる理由とその未来」、「幸福とはなにか-様々なバイアスから考える-」など、テーマを絞って大学のゼミのような活動をしています。
+                        </p>
+                        <div class="image-placeholder">キャリア探究の様子 (写真)</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <hr>
+
+        <!-- Comprehensive Advancement Course -->
+        <section id="comprehensive" class="course-section">
+            <h2 class="course-title">総合進学</h2>
+
+            <div class="content-block">
+                <h3>目標・実績</h3>
+                <div class="two-column">
+                    <div class="column">
+                        <h4>目標</h4>
+                        <p class="goal-text">私立文系大学・短大・専門職大学・専門学校・就職</p>
+                    </div>
+                    <div class="column">
+                        <div class="achievement-box">
+                            <h4>主な進路実績 (昨年度)</h4>
+                            <ul class="achievement-list">
+                                <li>〇〇大学: 3人</li>
+                                <li>〇〇大学: 1人</li>
+                                <li>〇〇専門学校: 10人</li>
+                                <li>就職・公務員: 5人</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-block">
+                <h3>特徴</h3>
+                <div class="two-column">
+                    <div class="column">
+                        <ul class="feature-list">
+                            <li>基礎学力向上の徹底（学び直し・レベルアップ補習）</li>
+                            <li>公務員講座や看護医療系講座の実施</li>
+                            <li>各種検定試験の奨励・対策の実施</li>
+                            <li>定員40名以内・6 限授業</li>
+                        </ul>
+                    </div>
+                    <div class="column">
+                        <div class="image-placeholder">検定対策・補習の様子</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-block">
+                <h3>「力戦奮闘」</h3>
+                <p>この言葉を胸に先輩たちは日々自分自身にできることを精一杯努力しています。様々な進路目標をもつ友人や先輩と交流することで視野を広げ、1年次から行う進路活動によって、自分の希望進路を決めていきます。どの進路にも対応できるように「基礎学力の定着」「学習習慣の確立」を目指し、ときには学び直しをしながら力を向上させていきます。
+                </p>
+                <p>１年次から継続的に行う外部講師による公務員講座の実施や看護医療系対策、３年次には年内入試対策に特化した「キャリア探究」の授業を通して、幅広く進路実現に向けたサポート体制が整っています。<br>霞ヶ浦高等学校の総合進学コースで、希望進路を見つけて新たなステージへ進んでみませんか？
+                </p>
+            </div>
+
+            <div class="sub-section">
+                <h3>「進路にあった特別講座」</h3>
+
+                <div class="two-column">
+                    <div class="column">
+                        <h5>・公務員講座、企業インターン</h5>
+                        <p>高校卒業後、就職を目指せるのもこのコースの特徴です！特に人気の公務員は、1年次から特別講座を設けています。企業インターンも3年次に参加可能で、自分に合った就職先を見つけ出すことができます。
+                        </p>
+                        <div class="image-placeholder">公務員講座の様子 (写真)</div>
+                    </div>
+                    <div class="column">
+                        <h5>・看護体験実習、各種資格取得</h5>
+                        <p>看護体験実習も充実しており、3年次には看護クラスが創設されます。また、大学受験に必要な英検や漢検、就職に役立つ秘書検定やビジネス文書実務検定など、各種検定取得に力を入れています！</p>
+                        <div class="image-placeholder">看護体験実習の様子 (写真)</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Course Introduction Wireframe</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
