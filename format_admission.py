@@ -1,39 +1,14 @@
-<!DOCTYPE html>
-<html lang="ja">
+import re
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>受験生案内 - 霞ヶ浦高等学校</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+html_file = 'admission.html'
+with open(html_file, 'r', encoding='utf-8') as f:
+    content = f.read()
 
-<body>
-
-    <header>
-        <div class="container">
-            <nav class="main-nav">
-                <a href="index.html"><button>トップ</button></a>
-                <a href="news.html"><button>お知らせ</button></a>
-                <a href="admission.html"><button class="active">受験生案内</button></a>
-                <a href="course.html"><button>コース紹介</button></a>
-                <a href="about.html"><button >学校紹介</button></a>
-                <a href="school_life.html"><button>学校生活</button></a>
-                <a href="career.html"><button>進路指導</button></a>
-                <a href="club.html"><button>部活動</button></a>
-                <a href="interview.html"><button>卒業生の声</button></a>
-                <a href="recruit.html"><button>教員採用</button></a>
-            </nav>
-            <h1>受験生案内</h1>
-            <div class="main-hero-placeholder">受験生案内イメージ (学校案内パンフレット等)</div>
-        </div>
-    </header>
-
-        <main class="container">
+new_main = """    <main class="container">
 
         <!-- Section 1 -->
         <section class="course-section">
-            <h2 class="course-title" style="text-align: left; border-left: 5px solid #333; padding-left: 15px;" id="guide">学校案内・データブック</h2>
+            <h2 class="course-title" style="text-align: left; border-left: 5px solid #333; padding-left: 15px;">学校案内・データブック</h2>
             <div class="content-block center-text">
                 <div class="link-grid" style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;">
                     <a href="https://www.kasumi.ed.jp/wp-content/uploads/2025/06/e5ae4bbd3b319b45b67ffc8ce259311b.pdf" target="_blank" style="padding: 20px; font-weight: bold; border: 2px solid #ddd; background: #f9f9f9; color: #333; text-decoration: none; display: block; border-radius: 4px;">■ スクールガイド ２０２６</a>
@@ -47,7 +22,7 @@
 
         <!-- Section 2 -->
         <section class="course-section">
-            <h2 class="course-title" style="text-align: left; border-left: 5px solid #333; padding-left: 15px;" id="application">出願</h2>
+            <h2 class="course-title" style="text-align: left; border-left: 5px solid #333; padding-left: 15px;">出願</h2>
             <div class="content-block" style="text-align: left;">
                 <div style="margin-bottom: 20px;">
                     <a href="https://mirai-compass.net/usr/kasumih/common/login.jsf" target="_blank"><button style="padding: 15px 40px; font-size: 1.2em; font-weight: bold; cursor: pointer; background: #333; color: #fff; border: none; border-radius: 4px;">出 願 は こ ち ら</button></a>
@@ -60,7 +35,7 @@
 
         <!-- Section 3 -->
         <section class="course-section">
-            <h2 class="course-title" style="text-align: left; border-left: 5px solid #333; padding-left: 15px;" id="documents">入試関係書類</h2>
+            <h2 class="course-title" style="text-align: left; border-left: 5px solid #333; padding-left: 15px;">入試関係書類</h2>
             <div class="content-block center-text">
                 <div class="link-grid" style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;">
                     <a href="https://www.kasumi.ed.jp/wp-content/uploads/2025/10/4f8e1cd2405eed5d204ed3280cb20159.xlsx" target="_blank" style="padding: 20px; font-weight: bold; border: 2px solid #ddd; background: #f9f9f9; color: #333; text-decoration: none; display: block; border-radius: 4px;">■ 推薦書</a>
@@ -73,7 +48,7 @@
 
         <!-- Section 4 -->
         <section class="course-section">
-            <h2 class="course-title" style="text-align: left; border-left: 5px solid #333; padding-left: 15px;" id="consultation">2025年度　個別相談会日程</h2>
+            <h2 class="course-title" style="text-align: left; border-left: 5px solid #333; padding-left: 15px;">2025年度　個別相談会日程</h2>
             <div class="content-block">
                 <table style="width: 100%; border-collapse: collapse; margin-top: 15px; text-align: left; font-size: 1.1em;">
                     <thead>
@@ -119,7 +94,7 @@
 
         <!-- Section 5 -->
         <section class="course-section">
-            <h2 class="course-title" style="text-align: left; border-left: 5px solid #333; padding-left: 15px;" id="faq">よくあるご質問</h2>
+            <h2 class="course-title" style="text-align: left; border-left: 5px solid #333; padding-left: 15px;">よくあるご質問</h2>
             
             <div class="content-block">
                 <h4 style="border-bottom: 2px solid #ccc; padding-bottom: 10px; margin-bottom: 20px; font-size: 1.3em;">入試について知りたい</h4>
@@ -222,14 +197,11 @@
             </div>
         </section>
 
-    </main>
+    </main>"""
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2024 School Introduction Wireframe</p>
-        </div>
-    </footer>
+content = re.sub(r'<main class="container">.*?</main>', new_main, content, flags=re.DOTALL)
 
-</body>
+with open(html_file, 'w', encoding='utf-8') as f:
+    f.write(content)
 
-</html>
+print("HTML nicely formatted with inline styles to match wireframe exactly")
