@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>在校生・保護者の方へ - 霞ヶ浦高等学校</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .hub-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .hub-card {
+            display: block;
+            text-decoration: none;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.2s, box-shadow 0.2s;
+            color: #333;
+        }
+
+        .hub-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .hub-img {
+            height: 150px;
+            background-color: #e2e2e2;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2em;
+            color: #666;
+            border-bottom: 3px solid #333;
+        }
+
+        .hub-content {
+            padding: 20px;
+        }
+
+        .hub-title {
+            font-size: 1.2em;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .hub-desc {
+            font-size: 0.9em;
+            color: #666;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <nav class="main-nav">
+                <div class="nav-item"><a href="index.html"><button>トップ</button></a></div>
+                <div class="nav-item"><a href="news.html"><button>お知らせ</button></a></div>
+
+                <div class="nav-item has-dropdown">
+                    <a href="admission.html"><button>受験生案内 <span class="dropdown-arrow">▼</span></button></a>
+                    <div class="dropdown-menu">
+                        <a href="admission.html#guide">学校案内・データブック</a>
+                        <a href="admission.html#application">出願・入試関係書類</a>
+                        <a href="admission.html#consultation">個別相談会日程</a>
+                        <a href="admission.html#faq">よくあるご質問</a>
+                    </div>
+                </div>
+
+                <div class="nav-item has-dropdown">
+                    <a href="course.html"><button>コース紹介 <span class="dropdown-arrow">▼</span></button></a>
+                    <div class="dropdown-menu">
+                        <a href="course.html#tokushin_senbatsu">特進選抜コース</a>
+                        <a href="course.html#tokushin">特進コース</a>
+                        <a href="course.html#sogo">総合進学コース</a>
+                    </div>
+                </div>
+
+                <div class="nav-item has-dropdown">
+                    <a href="about.html"><button>学校紹介 <span class="dropdown-arrow">▼</span></button></a>
+                    <div class="dropdown-menu">
+                        <a href="about.html#history">校長挨拶・沿革</a>
+                        <a href="about.html#learning_center">学習センター</a>
+                        <a href="about.html#facilities">施設・設備</a>
+                    </div>
+                </div>
+
+                <div class="nav-item has-dropdown">
+                    <a href="school_life.html"><button>学校生活 <span class="dropdown-arrow">▼</span></button></a>
+                    <div class="dropdown-menu">
+                        <a href="school_life.html#annual_events">年間スケジュール</a>
+                        <a href="school_life.html#uniform">制服</a>
+                        <a href="school_life.html#anti_bullying">いじめ防止基本方針</a>
+                        <a href="school_life.html#anti_truancy">不登校未然防止方針</a>
+                    </div>
+                </div>
+
+                <div class="nav-item has-dropdown">
+                    <a href="career.html"><button>進路指導 <span class="dropdown-arrow">▼</span></button></a>
+                    <div class="dropdown-menu">
+                        <a href="career.html#career_path">進路指導体制</a>
+                        <a href="career.html#results">大学合格実績</a>
+                        <a href="career.html#interview">卒業生の声</a>
+                    </div>
+                </div>
+
+                <div class="nav-item has-dropdown">
+                    <a href="club.html"><button>部活動 <span class="dropdown-arrow">▼</span></button></a>
+                    <div class="dropdown-menu">
+                        <a href="club.html#sports">運動部</a>
+                        <a href="club.html#culture">文化部</a>
+                    </div>
+                </div>
+
+                <div class="nav-item"><a href="interview.html"><button>卒業生の声</button></a></div>
+                <div class="nav-item"><a href="recruit.html"><button>教員採用</button></a></div>
+                <div class="nav-item"><a href="contact.html"><button>お問い合わせ</button></a></div>
+            </nav>
+            <h1>在校生・保護者の方へ</h1>
+            <div class="main-hero-placeholder" style="height: 180px;">在校生・保護者向けメインビジュアル</div>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="course-section">
+            <h2 class="course-title" style="text-align: left; border-left: 5px solid #333; padding-left: 15px;">
+                在校生・保護者向けメニュー</h2>
+            <p style="margin-bottom: 20px; font-size: 1.1em;">在校生および保護者の皆様に必要な、学校生活や事務手続き等のご案内です。</p>
+
+            <div class="hub-grid">
+
+                <a href="school_life.html" class="hub-card">
+                    <div class="hub-img">学校生活</div>
+                    <div class="hub-content">
+                        <div class="hub-title">年間スケジュール・制服</div>
+                        <div class="hub-desc">今年度の行事予定や、制服の正しい着こなし方、各種基本方針などをご確認いただけます。</div>
+                    </div>
+                </a>
+
+                <a href="about.html" class="hub-card">
+                    <div class="hub-img">学校情報</div>
+                    <div class="hub-content">
+                        <div class="hub-title">学校紹介・アクセス</div>
+                        <div class="hub-desc">本校のコース詳細や、最新の施設・設備情報、およびアクセス情報をご案内します。</div>
+                    </div>
+                </a>
+
+                <a href="career.html" class="hub-card">
+                    <div class="hub-img">進路指導</div>
+                    <div class="hub-content">
+                        <div class="hub-title">進路状況・大学連携</div>
+                        <div class="hub-desc">最新の進学・就職状況の実績や、大学との連携協定プログラム等についてご案内します。</div>
+                    </div>
+                </a>
+
+                <a href="club.html" class="hub-card">
+                    <div class="hub-img">部活動</div>
+                    <div class="hub-content">
+                        <div class="hub-title">部活動</div>
+                        <div class="hub-desc">生徒が熱心に取り組む運動部・文化部の活動報告やスケジュールをご確認いただけます。</div>
+                    </div>
+                </a>
+
+                <!-- Missing Requirement C-5 -->
+                <a href="#" class="hub-card" style="border: 2px solid #5587aa;">
+                    <div class="hub-img" style="background-color: #5587aa; color: white;">治癒報告書 (PDF)</div>
+                    <div class="hub-content">
+                        <div class="hub-title">治癒報告書のダウンロード</div>
+                        <div class="hub-desc">インフルエンザ等の感染症から回復し、登校を再開する際に必要な書類はこちらからダウンロードしてください。</div>
+                    </div>
+                </a>
+
+                <a href="contact_parents.html" class="hub-card" style="border: 2px solid #333;">
+                    <div class="hub-img" style="background-color: #333; color: white;">お問い合わせ</div>
+                    <div class="hub-content">
+                        <div class="hub-title">在校生・保護者専用 連絡フォーム</div>
+                        <div class="hub-desc">欠席・遅刻のご連絡や、学校生活・学習に関するご相談などはこちらからお送りください。</div>
+                    </div>
+                </a>
+
+            </div>
+
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Kasumigaura High School</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

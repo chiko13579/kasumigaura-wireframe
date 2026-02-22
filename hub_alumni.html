@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>卒業生の方へ - 霞ヶ浦高等学校</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .hub-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .hub-card {
+            display: block;
+            text-decoration: none;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.2s, box-shadow 0.2s;
+            color: #333;
+        }
+
+        .hub-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .hub-img {
+            height: 150px;
+            background-color: #e2e2e2;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2em;
+            color: #666;
+            border-bottom: 3px solid #333;
+        }
+
+        .hub-content {
+            padding: 20px;
+        }
+
+        .hub-title {
+            font-size: 1.2em;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .hub-desc {
+            font-size: 0.9em;
+            color: #666;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <nav class="main-nav">
+                <div class="nav-item"><a href="index.html"><button>トップ</button></a></div>
+                <div class="nav-item"><a href="news.html"><button>お知らせ</button></a></div>
+
+                <div class="nav-item has-dropdown">
+                    <a href="admission.html"><button>受験生案内 <span class="dropdown-arrow">▼</span></button></a>
+                    <div class="dropdown-menu">
+                        <a href="admission.html#guide">学校案内・データブック</a>
+                        <a href="admission.html#application">出願・入試関係書類</a>
+                        <a href="admission.html#consultation">個別相談会日程</a>
+                        <a href="admission.html#faq">よくあるご質問</a>
+                    </div>
+                </div>
+
+                <div class="nav-item has-dropdown">
+                    <a href="course.html"><button>コース紹介 <span class="dropdown-arrow">▼</span></button></a>
+                    <div class="dropdown-menu">
+                        <a href="course.html#tokushin_senbatsu">特進選抜コース</a>
+                        <a href="course.html#tokushin">特進コース</a>
+                        <a href="course.html#sogo">総合進学コース</a>
+                    </div>
+                </div>
+
+                <div class="nav-item has-dropdown">
+                    <a href="about.html"><button>学校紹介 <span class="dropdown-arrow">▼</span></button></a>
+                    <div class="dropdown-menu">
+                        <a href="about.html#history">校長挨拶・沿革</a>
+                        <a href="about.html#learning_center">学習センター</a>
+                        <a href="about.html#facilities">施設・設備</a>
+                    </div>
+                </div>
+
+                <div class="nav-item has-dropdown">
+                    <a href="school_life.html"><button>学校生活 <span class="dropdown-arrow">▼</span></button></a>
+                    <div class="dropdown-menu">
+                        <a href="school_life.html#annual_events">年間スケジュール</a>
+                        <a href="school_life.html#uniform">制服</a>
+                        <a href="school_life.html#anti_bullying">いじめ防止基本方針</a>
+                        <a href="school_life.html#anti_truancy">不登校未然防止方針</a>
+                    </div>
+                </div>
+
+                <div class="nav-item has-dropdown">
+                    <a href="career.html"><button>進路指導 <span class="dropdown-arrow">▼</span></button></a>
+                    <div class="dropdown-menu">
+                        <a href="career.html#career_path">進路指導体制</a>
+                        <a href="career.html#results">大学合格実績</a>
+                        <a href="career.html#interview">卒業生の声</a>
+                    </div>
+                </div>
+
+                <div class="nav-item has-dropdown">
+                    <a href="club.html"><button>部活動 <span class="dropdown-arrow">▼</span></button></a>
+                    <div class="dropdown-menu">
+                        <a href="club.html#sports">運動部</a>
+                        <a href="club.html#culture">文化部</a>
+                    </div>
+                </div>
+
+                <div class="nav-item"><a href="interview.html"><button>卒業生の声</button></a></div>
+                <div class="nav-item"><a href="recruit.html"><button>教員採用</button></a></div>
+                <div class="nav-item"><a href="contact.html"><button>お問い合わせ</button></a></div>
+            </nav>
+            <h1>卒業生の方へ</h1>
+            <div class="main-hero-placeholder" style="height: 180px;">卒業生向けメインビジュアル</div>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="course-section">
+            <h2 class="course-title" style="text-align: left; border-left: 5px solid #333; padding-left: 15px;">
+                卒業生向けメニュー</h2>
+            <p style="margin-bottom: 20px; font-size: 1.1em;">本校を卒業された皆様へ、各種証明書の発行手続きなどをご案内します。</p>
+
+            <div class="hub-grid" style="grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));">
+
+                <a href="contact_alumni.html" class="hub-card" style="border: 2px solid #5587aa;">
+                    <div class="hub-img" style="background-color: #5587aa; color: white;">証明書申請</div>
+                    <div class="hub-content">
+                        <div class="hub-title">卒業証明書・成績証明書の申請</div>
+                        <div class="hub-desc">進学や就職等で必要な各種証明書および調査書の発行を、専用フォームからお申し込みいただけます。</div>
+                    </div>
+                </a>
+
+                <!-- Missing Requirement D: 料金・支払い案内 -->
+                <a href="#" class="hub-card">
+                    <div class="hub-img">料金・お支払い</div>
+                    <div class="hub-content">
+                        <div class="hub-title">証明書発行手数料・郵送代について</div>
+                        <div class="hub-desc">各種証明書の発行に必要な料金一覧と、お支払い方法（銀行振込等）に関する詳細なご案内です。</div>
+                    </div>
+                </a>
+
+                <a href="contact.html" class="hub-card" style="border: 2px solid #333;">
+                    <div class="hub-img" style="background-color: #333; color: white;">お問い合わせ</div>
+                    <div class="hub-content">
+                        <div class="hub-title">総合お問い合わせ窓口</div>
+                        <div class="hub-desc">同窓会に関するご連絡や、証明書申請以外に関する各種お問い合わせはこちらから承ります。</div>
+                    </div>
+                </a>
+
+            </div>
+
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Kasumigaura High School</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
