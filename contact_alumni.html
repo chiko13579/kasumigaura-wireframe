@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>卒業生専用フォーム（証明書申請） - 霞ヶ浦高等学校</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <nav class="main-nav">
+                <div class="nav-item"><a href="index.html"><button>トップ</button></a></div>
+                <div class="nav-item"><a href="news.html"><button>お知らせ</button></a></div>
+
+                <div class="nav-item has-dropdown">
+                    <a href="admission.html"><button>受験生案内 <span class="dropdown-arrow">▼</span></button></a>
+                    <div class="dropdown-menu">
+                        <a href="admission.html#guide">学校案内・データブック</a>
+                        <a href="admission.html#application">出願・入試関係書類</a>
+                        <a href="admission.html#consultation">個別相談会日程</a>
+                        <a href="admission.html#faq">よくあるご質問</a>
+                    </div>
+                </div>
+
+                <div class="nav-item has-dropdown">
+                    <a href="course.html"><button>コース紹介 <span class="dropdown-arrow">▼</span></button></a>
+                    <div class="dropdown-menu">
+                        <a href="course.html#tokushin_senbatsu">特進選抜コース</a>
+                        <a href="course.html#tokushin">特進コース</a>
+                        <a href="course.html#sogo">総合進学コース</a>
+                    </div>
+                </div>
+
+                <div class="nav-item has-dropdown">
+                    <a href="about.html"><button>学校紹介 <span class="dropdown-arrow">▼</span></button></a>
+                    <div class="dropdown-menu">
+                        <a href="about.html#history">校長挨拶・沿革</a>
+                        <a href="about.html#learning_center">学習センター</a>
+                        <a href="about.html#facilities">施設・設備</a>
+                    </div>
+                </div>
+
+                <div class="nav-item has-dropdown">
+                    <a href="school_life.html"><button>学校生活 <span class="dropdown-arrow">▼</span></button></a>
+                    <div class="dropdown-menu">
+                        <a href="school_life.html#annual_events">年間スケジュール</a>
+                        <a href="school_life.html#uniform">制服</a>
+                        <a href="school_life.html#anti_bullying">いじめ防止基本方針</a>
+                        <a href="school_life.html#anti_truancy">不登校未然防止方針</a>
+                    </div>
+                </div>
+
+                <div class="nav-item has-dropdown">
+                    <a href="career.html"><button>進路指導 <span class="dropdown-arrow">▼</span></button></a>
+                    <div class="dropdown-menu">
+                        <a href="career.html#career_path">進路指導体制</a>
+                        <a href="career.html#results">大学合格実績</a>
+                        <a href="career.html#interview">卒業生の声</a>
+                    </div>
+                </div>
+
+                <div class="nav-item has-dropdown">
+                    <a href="club.html"><button>部活動 <span class="dropdown-arrow">▼</span></button></a>
+                    <div class="dropdown-menu">
+                        <a href="club.html#sports">運動部</a>
+                        <a href="club.html#culture">文化部</a>
+                    </div>
+                </div>
+
+                <div class="nav-item"><a href="interview.html"><button>卒業生の声</button></a></div>
+                <div class="nav-item"><a href="recruit.html"><button>教員採用</button></a></div>
+                <div class="nav-item"><a href="contact.html"><button class="active">お問い合わせ</button></a></div>
+            </nav>
+            <h1>卒業生専用 各種証明書等 申請・お問い合わせフォーム</h1>
+            <div class="main-hero-placeholder" style="height: 150px;">お問い合わせ</div>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="course-section">
+            <h2 class="course-title">各種証明書等の申請・お問い合わせ</h2>
+            <div class="content-block"
+                style="max-width: 800px; margin: 0 auto; background-color: #f9f9f9; padding: 40px; border-radius: 8px; border-top: 5px solid #333;">
+
+                <p style="margin-bottom: 25px; line-height: 1.6;">卒業証明書、成績証明書、調査書等の発行申請や、同窓会窓口へのお問い合わせを受け付けています。<br>
+                    証明書の発行には数日～1週間程度かかる場合がございますので、余裕を持ってお申し込みください。</p>
+
+                <form class="contact-form">
+
+                    <div class="form-group">
+                        <label>申請種別 <span class="required">必須</span></label>
+                        <div style="display: flex; gap: 20px; flex-wrap: wrap;">
+                            <label style="font-weight: normal;"><input type="radio" name="application_type"
+                                    value="証明書発行" required> 証明書発行のお申し込み</label>
+                            <label style="font-weight: normal;"><input type="radio" name="application_type"
+                                    value="その他のお問い合わせ"> その他のお問い合わせ（同窓会等）</label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="grad_year">卒業年度 <span class="required">必須</span></label>
+                        <div style="display: flex; align-items: center; gap: 10px;">
+                            <select id="grad_era" name="grad_era" required style="width: auto;">
+                                <option value="令和">令和</option>
+                                <option value="平成" selected>平成</option>
+                                <option value="昭和">昭和</option>
+                            </select>
+                            <input type="number" id="grad_year" name="grad_year" placeholder="例：30" min="1" max="99"
+                                required style="width: 80px;"> 年度卒業
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="grad_course">卒業時のコース・科</label>
+                        <input type="text" id="grad_course" name="grad_course" placeholder="例：総合進学コース、普通科など">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="name">氏名（卒業時の氏名） <span class="required">必須</span></label>
+                        <input type="text" id="name" name="name" placeholder="例：霞ヶ浦 花子" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="name_kana">氏名（フリガナ） <span class="required">必須</span></label>
+                        <input type="text" id="name_kana" name="name_kana" placeholder="例：カスミガウラ ハナコ" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="birth_date">生年月日 <span class="required">必須</span></label>
+                        <input type="date" id="birth_date" name="birth_date" required style="width: auto;">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="address">現住所（郵送先） <span class="required">必須</span></label>
+                        <input type="text" id="zip_code" name="zip_code" placeholder="郵便番号 (例: 300-XXXX)" required
+                            style="width: 200px; margin-bottom: 10px;">
+                        <input type="text" id="address" name="address" placeholder="都道府県・市区町村・番地・マンション名" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">電話番号（日中連絡がつく番号） <span class="required">必須</span></label>
+                        <input type="tel" id="phone" name="phone" placeholder="例：090-1234-5678" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">メールアドレス <span class="required">必須</span></label>
+                        <input type="email" id="email" name="email" placeholder="例：info@example.com" required>
+                    </div>
+
+                    <div class="form-group"
+                        style="padding: 20px; background-color: #fff; border: 1px solid #ddd; border-radius: 4px;">
+                        <label
+                            style="border-bottom: 1px solid #eee; padding-bottom: 10px; margin-bottom: 15px;">必要な証明書と通数（※証明書申請の場合のみ入力）</label>
+
+                        <div
+                            style="display: flex; align-items: center; margin-bottom: 15px; border-bottom: 1px dashed #eee; padding-bottom: 15px;">
+                            <label style="width: 150px; font-weight: normal;">卒業証明書</label>
+                            <input type="number" name="cert_grad" min="0" max="10" placeholder="0" style="width: 80px;">
+                            通
+                        </div>
+                        <div
+                            style="display: flex; align-items: center; margin-bottom: 15px; border-bottom: 1px dashed #eee; padding-bottom: 15px;">
+                            <label style="width: 150px; font-weight: normal;">成績証明書</label>
+                            <input type="number" name="cert_grades" min="0" max="10" placeholder="0"
+                                style="width: 80px;"> 通
+                        </div>
+                        <div
+                            style="display: flex; align-items: center; margin-bottom: 15px; border-bottom: 1px dashed #eee; padding-bottom: 15px;">
+                            <label style="width: 150px; font-weight: normal;">調査書</label>
+                            <input type="number" name="cert_report" min="0" max="10" placeholder="0"
+                                style="width: 80px;"> 通
+                        </div>
+                        <div style="display: flex; align-items: center;">
+                            <label style="width: 150px; font-weight: normal;">その他証明書</label>
+                            <input type="text" name="cert_other_name" placeholder="証明書名"
+                                style="width: 200px; margin-right: 15px;">
+                            <input type="number" name="cert_other" min="0" max="10" placeholder="0"
+                                style="width: 80px;"> 通
+                        </div>
+                        <p style="font-size: 0.85em; color: #d35454; margin-top: 15px; margin-bottom: 0;">
+                            ※発行手数料および郵送料のお支払い方法については、申請受付け後、メールにてご案内いたします。</p>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">備考・その他お問い合わせ内容</label>
+                        <textarea id="message" name="message" rows="5"
+                            placeholder="証明書の提出先指定用紙がある場合や、証明書申請以外のお問い合わせはこちらへご入力ください。"></textarea>
+                    </div>
+
+                    <div class="form-group" style="text-align: center; margin-top: 30px;">
+                        <button type="submit" class="submit-btn"
+                            style="background-color: #333; color: white; padding: 15px 40px; border: none; font-size: 1.1em; border-radius: 4px; cursor: pointer; font-weight: bold;">入力内容を確認する</button>
+                    </div>
+                </form>
+
+            </div>
+
+            <div style="text-align: center; margin-top: 30px;">
+                <a href="contact.html" style="color: #666; text-decoration: underline;">&larr; お問い合わせ窓口一覧へ戻る</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Kasumigaura High School</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

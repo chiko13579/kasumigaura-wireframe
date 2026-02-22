@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>在校生・保護者専用フォーム - 霞ヶ浦高等学校</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <nav class="main-nav">
+                <div class="nav-item"><a href="index.html"><button>トップ</button></a></div>
+                <div class="nav-item"><a href="news.html"><button>お知らせ</button></a></div>
+
+                <div class="nav-item has-dropdown">
+                    <a href="admission.html"><button>受験生案内 <span class="dropdown-arrow">▼</span></button></a>
+                    <div class="dropdown-menu">
+                        <a href="admission.html#guide">学校案内・データブック</a>
+                        <a href="admission.html#application">出願・入試関係書類</a>
+                        <a href="admission.html#consultation">個別相談会日程</a>
+                        <a href="admission.html#faq">よくあるご質問</a>
+                    </div>
+                </div>
+
+                <div class="nav-item has-dropdown">
+                    <a href="course.html"><button>コース紹介 <span class="dropdown-arrow">▼</span></button></a>
+                    <div class="dropdown-menu">
+                        <a href="course.html#tokushin_senbatsu">特進選抜コース</a>
+                        <a href="course.html#tokushin">特進コース</a>
+                        <a href="course.html#sogo">総合進学コース</a>
+                    </div>
+                </div>
+
+                <div class="nav-item has-dropdown">
+                    <a href="about.html"><button>学校紹介 <span class="dropdown-arrow">▼</span></button></a>
+                    <div class="dropdown-menu">
+                        <a href="about.html#history">校長挨拶・沿革</a>
+                        <a href="about.html#learning_center">学習センター</a>
+                        <a href="about.html#facilities">施設・設備</a>
+                    </div>
+                </div>
+
+                <div class="nav-item has-dropdown">
+                    <a href="school_life.html"><button>学校生活 <span class="dropdown-arrow">▼</span></button></a>
+                    <div class="dropdown-menu">
+                        <a href="school_life.html#annual_events">年間スケジュール</a>
+                        <a href="school_life.html#uniform">制服</a>
+                        <a href="school_life.html#anti_bullying">いじめ防止基本方針</a>
+                        <a href="school_life.html#anti_truancy">不登校未然防止方針</a>
+                    </div>
+                </div>
+
+                <div class="nav-item has-dropdown">
+                    <a href="career.html"><button>進路指導 <span class="dropdown-arrow">▼</span></button></a>
+                    <div class="dropdown-menu">
+                        <a href="career.html#career_path">進路指導体制</a>
+                        <a href="career.html#results">大学合格実績</a>
+                        <a href="career.html#interview">卒業生の声</a>
+                    </div>
+                </div>
+
+                <div class="nav-item has-dropdown">
+                    <a href="club.html"><button>部活動 <span class="dropdown-arrow">▼</span></button></a>
+                    <div class="dropdown-menu">
+                        <a href="club.html#sports">運動部</a>
+                        <a href="club.html#culture">文化部</a>
+                    </div>
+                </div>
+
+                <div class="nav-item"><a href="interview.html"><button>卒業生の声</button></a></div>
+                <div class="nav-item"><a href="recruit.html"><button>教員採用</button></a></div>
+                <div class="nav-item"><a href="contact.html"><button class="active">お問い合わせ</button></a></div>
+            </nav>
+            <h1>在校生・保護者専用 お問い合わせフォーム</h1>
+            <div class="main-hero-placeholder" style="height: 150px;">お問い合わせ</div>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="course-section">
+            <h2 class="course-title">在校生・保護者のお問い合わせ</h2>
+            <div class="content-block"
+                style="max-width: 800px; margin: 0 auto; background-color: #f9f9f9; padding: 40px; border-radius: 8px; border-top: 5px solid #333;">
+
+                <form class="contact-form">
+
+                    <div class="form-group">
+                        <label for="grade_class">学年・クラス <span class="required">必須</span></label>
+                        <div style="display: flex; gap: 10px;">
+                            <select id="grade" name="grade" required style="width: auto;">
+                                <option value="">学年</option>
+                                <option value="1年">1年</option>
+                                <option value="2年">2年</option>
+                                <option value="3年">3年</option>
+                            </select>
+                            <span style="display: flex; align-items: center;">-</span>
+                            <input type="text" id="class_name" name="class_name" placeholder="例：A組" required
+                                style="width: auto;">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="student_name">生徒氏名 <span class="required">必須</span></label>
+                        <input type="text" id="student_name" name="student_name" placeholder="例：霞ヶ浦 太郎" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="parent_name">保護者氏名 <span class="required">必須</span></label>
+                        <input type="text" id="parent_name" name="parent_name" placeholder="例：霞ヶ浦 一郎" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="relation">生徒との続柄</label>
+                        <input type="text" id="relation" name="relation" placeholder="例：父、母">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">メールアドレス <span class="required">必須</span></label>
+                        <input type="email" id="email" name="email" placeholder="例：info@example.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">電話番号（緊急連絡先として） <span class="required">必須</span></label>
+                        <input type="tel" id="phone" name="phone" placeholder="例：090-1234-5678" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="inquiry_type">ご連絡種別 <span class="required">必須</span></label>
+                        <select id="inquiry_type" name="inquiry_type" required>
+                            <option value="">選択してください</option>
+                            <option value="欠席・遅刻・早退の連絡">欠席・遅刻・早退の連絡</option>
+                            <option value="学校生活についてのご相談">学校生活についてのご相談</option>
+                            <option value="進路・学習についてのご相談">進路・学習についてのご相談</option>
+                            <option value="提出書類・証明書について">提出書類（証明書など）について</option>
+                            <option value="その他">その他</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">ご連絡内容 <span class="required">必須</span></label>
+                        <textarea id="message" name="message" rows="8"
+                            placeholder="具体的な内容をご入力ください。（欠席等の場合は、理由も簡単にご記載ください）" required></textarea>
+                    </div>
+
+                    <div class="form-group" style="text-align: center; margin-top: 30px;">
+                        <button type="submit" class="submit-btn"
+                            style="background-color: #333; color: white; padding: 15px 40px; border: none; font-size: 1.1em; border-radius: 4px; cursor: pointer; font-weight: bold;">入力内容を確認する</button>
+                    </div>
+                </form>
+
+            </div>
+
+            <div style="text-align: center; margin-top: 30px;">
+                <a href="contact.html" style="color: #666; text-decoration: underline;">&larr; お問い合わせ窓口一覧へ戻る</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Kasumigaura High School</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

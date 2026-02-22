@@ -51,6 +51,10 @@ def update_global_nav():
                 'club.html': '部活動',
                 'interview.html': '卒業生の声',
                 'recruit.html': '教員採用',
+                'contact.html': 'お問い合わせ',
+                'contact_admission.html': 'お問い合わせ',
+                'contact_parents.html': 'お問い合わせ',
+                'contact_alumni.html': 'お問い合わせ',
                 # skip abstract ones like message.html if they don't have a button
             }
             
