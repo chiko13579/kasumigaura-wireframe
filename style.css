@@ -1716,3 +1716,82 @@ h5#danraku5 {
 .submit-btn:hover {
     background-color: #555;
 }
+/* Top Header (Target Audiences) */
+.top-header {
+    background-color: #f5f5f5; /* Light gray */
+    padding: 8px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.top-nav-container {
+    display: flex;
+    justify-content: flex-end; /* Align to right */
+    align-items: center;
+    padding: 0 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.top-nav-list {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    font-size: 13px;
+}
+
+.top-nav-list a {
+    text-decoration: none;
+    color: #555;
+    transition: color 0.3s;
+}
+
+.top-nav-list a:hover {
+    color: #000;
+}
+
+.top-nav-divider {
+    color: #ccc;
+}
+
+.top-nav-list .top-contact-btn {
+    background-color: #666;
+    color: #fff;
+    padding: 6px 16px;
+    border-radius: 20px; /* Pillow shape like reference */
+    font-weight: bold;
+    margin-left: 10px;
+    transition: background-color 0.3s;
+    text-decoration: none;
+}
+
+.top-nav-list .top-contact-btn:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+/* Header layout fixes for new structure */
+.main-header {
+    background-color: #fff;
+    border-bottom: 1px solid #eaeaea;
+}
+
+.main-header .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 0;
+}
+
+/* On mobile, stack them */
+@media (max-width: 768px) {
+    .top-nav-container {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .top-nav-list {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+    }
+}
