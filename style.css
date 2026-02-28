@@ -85,38 +85,25 @@ nav {
 
 nav button {
     background-color: #fff;
-    border: 2px solid #666;
-    color: #333;
-    padding: 10px 20px;
-    font-size: 16px;
+    border: 1px solid #666;
+    color: #4a4a52;
+    /* Darker grey/purpleish text */
+    padding: 8px 16px;
+    font-size: 15px;
+    font-weight: normal;
     cursor: pointer;
     transition: background-color 0.3s, color 0.3s;
-    border-radius: 4px;
+    border-radius: 3px;
+    text-decoration: underline;
 }
 
 nav button:hover,
 nav button.active {
-    background-color: #666;
+    background-color: #6a6a70;
+    /* Dark grey box */
     color: #fff;
-}
-
-/* Override for main header navigation to match reference */
-.main-nav button {
-    background-color: transparent;
-    border: none;
-    color: #1a3c5a;
-    /* Dark navy text */
-    padding: 10px 15px;
-    font-size: 16px;
-    font-weight: bold;
-    border-radius: 0;
-}
-
-.main-nav button:hover,
-.main-nav button.active {
-    background-color: transparent;
-    color: #0056b3;
-    /* Highlight blue text */
+    border: 1px solid #6a6a70;
+    text-decoration: underline;
 }
 
 /* Layout Components */
@@ -1965,30 +1952,4 @@ h5#danraku5 {
         justify-content: center;
         gap: 8px;
     }
-}
-
-/* Top Search Box */
-.top-search {
-    display: flex;
-    align-items: center;
-    background: #fff;
-    border-radius: 20px;
-    padding: 2px 12px;
-    margin-left: 10px;
-    border: 1px solid #ccc;
-}
-
-.top-search .search-icon {
-    font-size: 12px;
-    margin-right: 5px;
-    color: #666;
-}
-
-.top-search input {
-    border: none;
-    outline: none;
-    padding: 4px;
-    font-size: 13px;
-    width: 60px;
-    background: transparent;
 }
