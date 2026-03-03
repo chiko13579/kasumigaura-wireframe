@@ -7,45 +7,111 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v=2">
 </head>
 
 <body>
 
-    <header>
-        <div class="top-header">
-            <div class="top-nav-container">
-                <div class="top-nav-list">
-                    <a href="hub_admission.html">受験生の方へ</a>
-                    <span class="top-nav-divider">|</span>
-                    <a href="hub_parents.html">在校生・保護者の方へ</a>
-                    <span class="top-nav-divider">|</span>
-                    <a href="hub_alumni.html">卒業生の方へ</a>
-                    <span class="top-nav-divider">|</span>
-                    <a href="recruit.html">教員採用</a>
-                    <span class="top-nav-divider">|</span>
-                    <a href="alumni_assoc.html">同窓会</a>
-                    <a href="contact.html" class="top-contact-btn">お問合せ</a></div>
+        <header>
+        <div class="modern-header-container">
+            <div class="logo-container">
+                <a href="index.html" class="modern-logo">霞ヶ浦高等学校</a>
+            </div>
+            <div class="hamburger-btn" id="hamburgerBtn">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="menu-text">MENU</span>
             </div>
         </div>
-        <div class="main-header">
-            <div class="container">
-                                <nav class="main-nav">
-                    <div class="nav-item"><a href="index.html"><button>トップ</button></a></div>
-                    <div class="nav-item"><a href="hub_admission.html"><button>受験生の方へ</button></a></div>
-                    <div class="nav-item"><a href="hub_parents.html"><button>在校生・保護者の方へ</button></a></div>
-                    <div class="nav-item"><a href="hub_alumni.html"><button>卒業生の方へ</button></a></div>
-                    <div class="nav-item"><a href="recruit.html"><button>教員採用</button></a></div>
-                    <div class="nav-item"><a href="alumni_assoc.html"><button>同窓会</button></a></div>
-                </nav>
 
+        <div class="fullscreen-overlay-nav" id="fullscreenNav">
+            <div class="close-btn" id="closeNavBtn">✕ 閉じる</div>
+            <div class="overlay-nav-container">
+                <div class="overlay-nav-left">
+                    <div class="school-name">霞ヶ浦高等学校</div>
+                    <div class="nav-pill-buttons">
+                        <a href="contact.html" class="pill-btn">お問合せ</a>
+                    </div>
+                </div>
+                <div class="overlay-nav-right">
+                    <ul class="overlay-nav-links">
+                        <li class="has-submenu">
+                            <a href="#" class="submenu-toggle">受験生・受験生指導者の方へ <span class="nav-arrow toggle-arrow">›</span></a>
+                            <ul class="overlay-submenu">
+                                <li><a href="application.html">出願はこちら <span class="nav-arrow">›</span></a></li>
+                                <li><a href="index.html">スクールガイド案内 <span class="nav-arrow">›</span></a></li>
+                                <li><a href="admission.html#application">募集要項案内 <span class="nav-arrow">›</span></a></li>
+                                <li><a href="admission.html#consultation">各種イベント案内 <span class="nav-arrow">›</span></a></li>
+                                <li><a href="admission.html#faq">よくある質問 <span class="nav-arrow">›</span></a></li>
+                                <li><a href="about.html#history">校長紹介・学校沿革 <span class="nav-arrow">›</span></a></li>
+                                <li><a href="course.html">コース紹介（3コース） <span class="nav-arrow">›</span></a></li>
+                                <li><a href="school_life.html">制服・年間スケジュール <span class="nav-arrow">›</span></a></li>
+                                <li><a href="about.html">施設・アクセス <span class="nav-arrow">›</span></a></li>
+                                <li><a href="club.html#sports">運動部 <span class="nav-arrow">›</span></a></li>
+                                <li><a href="club.html#culture">文化部 <span class="nav-arrow">›</span></a></li>
+                                <li><a href="career.html#results">進学状況・就職／進学指導 <span class="nav-arrow">›</span></a></li>
+                                <li><a href="career.html#kokugakuin">大学連携 <span class="nav-arrow">›</span></a></li>
+                                <li><a href="interview.html">卒業生の声 <span class="nav-arrow">›</span></a></li>
+                            </ul>
+                        </li>
+                        <li class="has-submenu">
+                            <a href="#" class="submenu-toggle">在校生・保護者の方へ <span class="nav-arrow toggle-arrow">›</span></a>
+                            <ul class="overlay-submenu">
+                                <li><a href="index.html">校長紹介・学校沿革 <span class="nav-arrow">›</span></a></li>
+                                <li><a href="course.html">コース紹介（3コース） <span class="nav-arrow">›</span></a></li>
+                                <li><a href="school_life.html">制服・年間スケジュール <span class="nav-arrow">›</span></a></li>
+                                <li><a href="about.html">施設・アクセス <span class="nav-arrow">›</span></a></li>
+                                <li><a href="club.html#sports">運動部 <span class="nav-arrow">›</span></a></li>
+                                <li><a href="club.html#culture">文化部 <span class="nav-arrow">›</span></a></li>
+                                <li><a href="career.html#results">進学状況・就職／進学指導 <span class="nav-arrow">›</span></a></li>
+                                <li><a href="career.html#kokugakuin">大学連携 <span class="nav-arrow">›</span></a></li>
+                                <li><a href="interview.html">卒業生の声 <span class="nav-arrow">›</span></a></li>
+                                <li><a href="#">治癒報告書の案内 <span class="nav-arrow">›</span></a></li>
+                            </ul>
+                        </li>
+                        <li class="has-submenu">
+                            <a href="#" class="submenu-toggle">卒業生の方へ <span class="nav-arrow toggle-arrow">›</span></a>
+                            <ul class="overlay-submenu">
+                                <li><a href="index.html">卒業証明書申請 <span class="nav-arrow">›</span></a></li>
+                                <li><a href="contact.html">成績証明書申請 <span class="nav-arrow">›</span></a></li>
+                                <li><a href="contact.html">料金・支払い案内 <span class="nav-arrow">›</span></a></li>
+                                <li><a href="alumni_assoc.html">同窓会ホームページへ <span class="nav-arrow">›</span></a></li>
+                            </ul>
+                        </li>
+                        <li><a href="recruit.html">教員採用 <span class="nav-arrow">›</span></a></li>
+                        <li><a href="access.html">アクセス <span class="nav-arrow">›</span></a></li>
+                    </ul>
+                </div>
             </div>
         </div>
-        <div class="container" style="padding-top: 0;">
-            <h1>学校紹介</h1>
-            <img src="img/facility.jpg" alt="学校紹介"
-                style="width: 100%; height: auto; border-radius: 4px; margin-bottom: 20px;">
-        </div>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                var hamburger = document.getElementById('hamburgerBtn');
+                var nav = document.getElementById('fullscreenNav');
+                var closebtn = document.getElementById('closeNavBtn');
+
+                if(hamburger && nav && closebtn) {
+                    hamburger.addEventListener('click', function() {
+                        nav.classList.add('active');
+                    });
+                    closebtn.addEventListener('click', function() {
+                        nav.classList.remove('active');
+                    });
+                }
+
+                // Accordion functionality
+                var toggles = document.querySelectorAll('.submenu-toggle');
+                toggles.forEach(function(toggle) {
+                    toggle.addEventListener('click', function(e) {
+                        e.preventDefault();
+                        var parentLi = this.parentElement;
+                        parentLi.classList.toggle('open');
+                    });
+                });
+            });
+        </script>
     </header>
 
     <main class="container">

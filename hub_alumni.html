@@ -7,7 +7,7 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v=2">
     <style>
         .hero-section {
             width: 100%;
@@ -154,38 +154,108 @@
 
 <body>
 
-    <header>
-        <div class="top-header">
-            <div class="top-nav-container">
-                <div class="top-nav-list">
-                    <a href="hub_admission.html">受験生の方へ</a>
-                    <span class="top-nav-divider">|</span>
-                    <a href="hub_parents.html">在校生・保護者の方へ</a>
-                    <span class="top-nav-divider">|</span>
-                    <a href="hub_alumni.html">卒業生の方へ</a>
-                    <span class="top-nav-divider">|</span>
-                    <a href="recruit.html">教員採用</a>
-                    <span class="top-nav-divider">|</span>
-                    <a href="alumni_assoc.html">同窓会</a>
-                    <a href="contact.html" class="top-contact-btn">お問合せ</a>
+        <header>
+        <div class="modern-header-container">
+            <div class="logo-container">
+                <a href="index.html" class="modern-logo">霞ヶ浦高等学校</a>
+            </div>
+            <div class="hamburger-btn" id="hamburgerBtn">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="menu-text">MENU</span>
+            </div>
+        </div>
+
+        <div class="fullscreen-overlay-nav" id="fullscreenNav">
+            <div class="close-btn" id="closeNavBtn">✕ 閉じる</div>
+            <div class="overlay-nav-container">
+                <div class="overlay-nav-left">
+                    <div class="school-name">霞ヶ浦高等学校</div>
+                    <div class="nav-pill-buttons">
+                        <a href="contact.html" class="pill-btn">お問合せ</a>
+                    </div>
+                </div>
+                <div class="overlay-nav-right">
+                    <ul class="overlay-nav-links">
+                        <li class="has-submenu">
+                            <a href="#" class="submenu-toggle">受験生・受験生指導者の方へ <span class="nav-arrow toggle-arrow">›</span></a>
+                            <ul class="overlay-submenu">
+                                <li><a href="application.html">出願はこちら <span class="nav-arrow">›</span></a></li>
+                                <li><a href="index.html">スクールガイド案内 <span class="nav-arrow">›</span></a></li>
+                                <li><a href="admission.html#application">募集要項案内 <span class="nav-arrow">›</span></a></li>
+                                <li><a href="admission.html#consultation">各種イベント案内 <span class="nav-arrow">›</span></a></li>
+                                <li><a href="admission.html#faq">よくある質問 <span class="nav-arrow">›</span></a></li>
+                                <li><a href="about.html#history">校長紹介・学校沿革 <span class="nav-arrow">›</span></a></li>
+                                <li><a href="course.html">コース紹介（3コース） <span class="nav-arrow">›</span></a></li>
+                                <li><a href="school_life.html">制服・年間スケジュール <span class="nav-arrow">›</span></a></li>
+                                <li><a href="about.html">施設・アクセス <span class="nav-arrow">›</span></a></li>
+                                <li><a href="club.html#sports">運動部 <span class="nav-arrow">›</span></a></li>
+                                <li><a href="club.html#culture">文化部 <span class="nav-arrow">›</span></a></li>
+                                <li><a href="career.html#results">進学状況・就職／進学指導 <span class="nav-arrow">›</span></a></li>
+                                <li><a href="career.html#kokugakuin">大学連携 <span class="nav-arrow">›</span></a></li>
+                                <li><a href="interview.html">卒業生の声 <span class="nav-arrow">›</span></a></li>
+                            </ul>
+                        </li>
+                        <li class="has-submenu">
+                            <a href="#" class="submenu-toggle">在校生・保護者の方へ <span class="nav-arrow toggle-arrow">›</span></a>
+                            <ul class="overlay-submenu">
+                                <li><a href="index.html">校長紹介・学校沿革 <span class="nav-arrow">›</span></a></li>
+                                <li><a href="course.html">コース紹介（3コース） <span class="nav-arrow">›</span></a></li>
+                                <li><a href="school_life.html">制服・年間スケジュール <span class="nav-arrow">›</span></a></li>
+                                <li><a href="about.html">施設・アクセス <span class="nav-arrow">›</span></a></li>
+                                <li><a href="club.html#sports">運動部 <span class="nav-arrow">›</span></a></li>
+                                <li><a href="club.html#culture">文化部 <span class="nav-arrow">›</span></a></li>
+                                <li><a href="career.html#results">進学状況・就職／進学指導 <span class="nav-arrow">›</span></a></li>
+                                <li><a href="career.html#kokugakuin">大学連携 <span class="nav-arrow">›</span></a></li>
+                                <li><a href="interview.html">卒業生の声 <span class="nav-arrow">›</span></a></li>
+                                <li><a href="#">治癒報告書の案内 <span class="nav-arrow">›</span></a></li>
+                            </ul>
+                        </li>
+                        <li class="has-submenu">
+                            <a href="#" class="submenu-toggle">卒業生の方へ <span class="nav-arrow toggle-arrow">›</span></a>
+                            <ul class="overlay-submenu">
+                                <li><a href="index.html">卒業証明書申請 <span class="nav-arrow">›</span></a></li>
+                                <li><a href="contact.html">成績証明書申請 <span class="nav-arrow">›</span></a></li>
+                                <li><a href="contact.html">料金・支払い案内 <span class="nav-arrow">›</span></a></li>
+                                <li><a href="alumni_assoc.html">同窓会ホームページへ <span class="nav-arrow">›</span></a></li>
+                            </ul>
+                        </li>
+                        <li><a href="recruit.html">教員採用 <span class="nav-arrow">›</span></a></li>
+                        <li><a href="access.html">アクセス <span class="nav-arrow">›</span></a></li>
+                    </ul>
                 </div>
             </div>
         </div>
-        <div class="main-header">
-            <div class="container">
-                <nav class="main-nav">
-                    <div class="nav-item"><a href="index.html"><button>トップ</button></a></div>
-                    <div class="nav-item"><a href="hub_admission.html"><button>受験生の方へ</button></a></div>
-                    <div class="nav-item"><a href="hub_parents.html"><button>在校生・保護者の方へ</button></a></div>
-                    <div class="nav-item"><a href="hub_alumni.html"><button>卒業生の方へ</button></a></div>
-                    <div class="nav-item"><a href="recruit.html"><button>教員採用</button></a></div>
-                    <div class="nav-item"><a href="alumni_assoc.html"><button>同窓会</button></a></div>
-                </nav>
 
-            </div>
-        </div>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                var hamburger = document.getElementById('hamburgerBtn');
+                var nav = document.getElementById('fullscreenNav');
+                var closebtn = document.getElementById('closeNavBtn');
+
+                if(hamburger && nav && closebtn) {
+                    hamburger.addEventListener('click', function() {
+                        nav.classList.add('active');
+                    });
+                    closebtn.addEventListener('click', function() {
+                        nav.classList.remove('active');
+                    });
+                }
+
+                // Accordion functionality
+                var toggles = document.querySelectorAll('.submenu-toggle');
+                toggles.forEach(function(toggle) {
+                    toggle.addEventListener('click', function(e) {
+                        e.preventDefault();
+                        var parentLi = this.parentElement;
+                        parentLi.classList.toggle('open');
+                    });
+                });
+            });
+        </script>
     </header>
-    
+
     <div class="hero-section">
         <div class="hero-overlay"></div>
         <div class="hero-content">
@@ -194,44 +264,84 @@
     </div>
 
     <main class="container">
-        <section class="modern-list-section" style="display: flex; flex-direction: row; flex-wrap: wrap; gap: 50px; margin-top: 80px; padding-top: 20px;">
+        <section class="modern-list-section"
+            style="display: flex; flex-direction: row; flex-wrap: wrap; gap: 50px; margin-top: 80px; padding-top: 20px;">
             <div style="flex: 1; min-width: 300px;">
-                <h2 style="font-size: 2.2em; margin-bottom: 25px; font-weight: bold; letter-spacing: 2px; border-bottom: 3px solid #333; padding-bottom: 15px;">各種申請・お問い合わせ</h2>
-                <img src="https://placehold.co/800x600/eeeeee/666666?text=Photo" alt="各種申請・お問い合わせ" style="width: 100%; height: auto; object-fit: cover; border-radius: 4px; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
+                <h2
+                    style="font-size: 2.2em; margin-bottom: 25px; font-weight: bold; letter-spacing: 2px; border-bottom: 3px solid #333; padding-bottom: 15px;">
+                    各種申請・お問い合わせ</h2>
+                <img src="https://placehold.co/800x600/eeeeee/666666?text=Photo" alt="各種申請・お問い合わせ"
+                    style="width: 100%; height: auto; object-fit: cover; border-radius: 4px; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
             </div>
             <div style="flex: 1; min-width: 300px; display: flex; flex-direction: column; justify-content: flex-end;">
                 <ul style="list-style: none; padding: 0; margin: 0; border-top: 1px solid #ddd;">
                     <li style="border-bottom: 1px solid #ddd;">
-                        <a href="contact.html" class="modern-list-link" style="display: flex; justify-content: space-between; align-items: center; padding: 30px 10px; color: #333; text-decoration: none; font-size: 1.25em; font-weight: bold; transition: all 0.3s ease;">
+                        <a href="contact.html" class="modern-list-link"
+                            style="display: flex; justify-content: space-between; align-items: center; padding: 30px 10px; color: #333; text-decoration: none; font-size: 1.25em; font-weight: bold; transition: all 0.3s ease;">
                             <div style="display: flex; flex-direction: column; gap: 8px;">
                                 <span>卒業証明書申請</span>
-                                <span style="font-size: 0.75em; font-weight: normal; color: #666; letter-spacing: 0.5px;">卒業証明書の発行手続きについてはこちらからお申し込みください。</span>
+                                <span
+                                    style="font-size: 0.75em; font-weight: normal; color: #666; letter-spacing: 0.5px;">卒業証明書の発行手続きについてはこちらからお申し込みください。</span>
                             </div>
-                            <span class="modern-arrow" style="font-size: 1.5em; color: #999; transition: transform 0.3s ease;">→</span>
+                            <span class="modern-arrow"
+                                style="font-size: 1.5em; color: #999; transition: transform 0.3s ease;">→</span>
                         </a>
                     </li>
                     <li style="border-bottom: 1px solid #ddd;">
-                        <a href="contact.html" class="modern-list-link" style="display: flex; justify-content: space-between; align-items: center; padding: 30px 10px; color: #333; text-decoration: none; font-size: 1.25em; font-weight: bold; transition: all 0.3s ease;">
+                        <a href="contact.html" class="modern-list-link"
+                            style="display: flex; justify-content: space-between; align-items: center; padding: 30px 10px; color: #333; text-decoration: none; font-size: 1.25em; font-weight: bold; transition: all 0.3s ease;">
                             <div style="display: flex; flex-direction: column; gap: 8px;">
                                 <span>成績証明書申請</span>
-                                <span style="font-size: 0.75em; font-weight: normal; color: #666; letter-spacing: 0.5px;">成績証明書・調査書などの発行手続きについてはこちら。</span>
+                                <span
+                                    style="font-size: 0.75em; font-weight: normal; color: #666; letter-spacing: 0.5px;">成績証明書・調査書などの発行手続きについてはこちら。</span>
                             </div>
-                            <span class="modern-arrow" style="font-size: 1.5em; color: #999; transition: transform 0.3s ease;">→</span>
+                            <span class="modern-arrow"
+                                style="font-size: 1.5em; color: #999; transition: transform 0.3s ease;">→</span>
                         </a>
                     </li>
                     <li style="border-bottom: 1px solid #ddd;">
-                        <a href="contact.html" class="modern-list-link" style="display: flex; justify-content: space-between; align-items: center; padding: 30px 10px; color: #333; text-decoration: none; font-size: 1.25em; font-weight: bold; transition: all 0.3s ease;">
+                        <a href="contact.html" class="modern-list-link"
+                            style="display: flex; justify-content: space-between; align-items: center; padding: 30px 10px; color: #333; text-decoration: none; font-size: 1.25em; font-weight: bold; transition: all 0.3s ease;">
                             <div style="display: flex; flex-direction: column; gap: 8px;">
                                 <span>料金・支払い案内</span>
-                                <span style="font-size: 0.75em; font-weight: normal; color: #666; letter-spacing: 0.5px;">各種証明書の発行にかかる手数料とお支払い方法のご案内です。</span>
+                                <span
+                                    style="font-size: 0.75em; font-weight: normal; color: #666; letter-spacing: 0.5px;">各種証明書の発行にかかる手数料とお支払い方法のご案内です。</span>
                             </div>
-                            <span class="modern-arrow" style="font-size: 1.5em; color: #999; transition: transform 0.3s ease;">→</span>
+                            <span class="modern-arrow"
+                                style="font-size: 1.5em; color: #999; transition: transform 0.3s ease;">→</span>
                         </a>
                     </li>
                 </ul>
             </div>
         </section>
 
+        <!-- 同窓会セクション -->
+        <section class="modern-list-section"
+            style="display: flex; flex-direction: row; flex-wrap: wrap; gap: 50px; margin-top: 80px; padding-top: 20px; margin-bottom: 80px;">
+            <div style="flex: 1; min-width: 300px;">
+                <h2
+                    style="font-size: 2.2em; margin-bottom: 25px; font-weight: bold; letter-spacing: 2px; border-bottom: 3px solid #333; padding-bottom: 15px;">
+                    同窓会</h2>
+                <img src="https://placehold.co/800x600/eeeeee/666666?text=Alumni+Assoc" alt="同窓会"
+                    style="width: 100%; height: auto; object-fit: cover; border-radius: 4px; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
+            </div>
+            <div style="flex: 1; min-width: 300px; display: flex; flex-direction: column; justify-content: flex-end;">
+                <ul style="list-style: none; padding: 0; margin: 0; border-top: 1px solid #ddd;">
+                    <li style="border-bottom: 1px solid #ddd;">
+                        <a href="alumni_assoc.html" class="modern-list-link"
+                            style="display: flex; justify-content: space-between; align-items: center; padding: 30px 10px; color: #333; text-decoration: none; font-size: 1.25em; font-weight: bold; transition: all 0.3s ease;">
+                            <div style="display: flex; flex-direction: column; gap: 8px;">
+                                <span>同窓会ホームページへ</span>
+                                <span
+                                    style="font-size: 0.75em; font-weight: normal; color: #666; letter-spacing: 0.5px;">霞ヶ浦高等学校の同窓会に関する情報はこちらからご覧いただけます。</span>
+                            </div>
+                            <span class="modern-arrow"
+                                style="font-size: 1.5em; color: #999; transition: transform 0.3s ease;">→</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
 
     </main>
 
