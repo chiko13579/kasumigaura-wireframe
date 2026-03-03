@@ -2092,6 +2092,7 @@ nav button.contact-highlight-btn:hover {
     margin: 0 auto;
     justify-content: space-between;
     align-items: flex-start;
+    padding-bottom: 150px;
 }
 
 .overlay-nav-left {
