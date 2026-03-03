@@ -9,54 +9,135 @@
     <title></title>
     <link rel="stylesheet" href="style.css">
     <style>
+        .hero-section {
+            width: 100%;
+            height: 350px;
+            background-color: #e0e0e0;
+            background-image: url('https://placehold.co/1920x400/dddddd/666666?text=Admission+Hero+Image');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            margin-bottom: 50px;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(255, 255, 255, 0.4);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            color: #333;
+            background: rgba(255, 255, 255, 0.85);
+            padding: 30px 60px;
+            border-radius: 4px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .hero-title {
+            font-size: 2.8em;
+            font-weight: bold;
+            letter-spacing: 4px;
+            margin: 0;
+        }
+
+        .hero-subtitle {
+            font-size: 1.1em;
+            letter-spacing: 2px;
+            margin-top: 10px;
+        }
+
         .hub-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
             margin-top: 30px;
         }
 
         .hub-card {
-            display: block;
+            display: flex;
+            flex-direction: column;
             text-decoration: none;
             background-color: #fff;
-            border: 1px solid #ddd;
-            border-radius: 8px;
+            border-radius: 12px;
             overflow: hidden;
-            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
             color: #333;
+            border: 1px solid #f0f0f0;
         }
 
         .hub-card:hover {
-            transform: translateY(-5px);
-
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
         }
 
-        .hub-img {
-            height: 150px;
-            background-color: #e2e2e2;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.2em;
-            color: #666;
-            border-bottom: 3px solid #333;
+        .hub-img-wrapper {
+            width: 100%;
+            height: 200px;
+            overflow: hidden;
+            background-color: #f5f5f5;
+        }
+
+        .hub-img-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+
+        .hub-card:hover .hub-img-wrapper img {
+            transform: scale(1.08);
         }
 
         .hub-content {
-            padding: 20px;
+            padding: 30px 25px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
         }
 
         .hub-title {
-            font-size: 1.2em;
+            font-size: 1.4em;
             font-weight: bold;
-            margin-bottom: 10px;
+            margin-bottom: 12px;
+            color: #222;
         }
 
         .hub-desc {
-            font-size: 0.9em;
+            font-size: 0.95em;
             color: #666;
-            line-height: 1.5;
+            line-height: 1.7;
+            flex-grow: 1;
+        }
+
+        .hub-action {
+            margin-top: 20px;
+            font-size: 0.9em;
+            font-weight: bold;
+            color: #333;
+            letter-spacing: 1px;
+            display: flex;
+            align-items: center;
+        }
+
+        .hub-action::after {
+            content: '→';
+            margin-left: 8px;
+            transition: transform 0.3s;
+        }
+
+        .hub-card:hover .hub-action::after {
+            transform: translateX(6px);
         }
     </style>
 </head>
@@ -93,11 +174,15 @@
 
             </div>
         </div>
-        <div class="container" style="padding-top: 0;">
-            <h1>受験生の方へ</h1>
-
-        </div>
     </header>
+    
+    <div class="hero-section">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="hero-title">受験生の方へ</h1>
+            <div class="hero-subtitle">ADMISSION</div>
+        </div>
+    </div>
 
     <main class="container">
         <!-- 0. 出願ボタン -->
@@ -117,31 +202,43 @@
             </h2>
             <div class="hub-grid">
                 <a href="admission.html#guide" class="hub-card">
-                    <div class="hub-img" style="background-color: #eee; color: #333;">スクールガイド</div>
+                    <div class="hub-img-wrapper">
+                        <img src="https://placehold.co/600x400/eeeeee/666666?text=Photo" alt="スクールガイド案内">
+                    </div>
                     <div class="hub-content">
                         <div class="hub-title">スクールガイド案内</div>
                         <div class="hub-desc">本校のデジタルパンフレット。</div>
+                        <div class="hub-action">詳細を見る</div>
                     </div>
                 </a>
                 <a href="admission.html#application" class="hub-card">
-                    <div class="hub-img" style="background-color: #eee; color: #333;">募集要項</div>
+                    <div class="hub-img-wrapper">
+                        <img src="https://placehold.co/600x400/eeeeee/666666?text=Photo" alt="募集要項案内">
+                    </div>
                     <div class="hub-content">
                         <div class="hub-title">募集要項案内</div>
                         <div class="hub-desc">詳細な募集要項や入試情報の確認。</div>
+                        <div class="hub-action">詳細を見る</div>
                     </div>
                 </a>
                 <a href="admission.html#consultation" class="hub-card">
-                    <div class="hub-img" style="background-color: #eee; color: #333;">イベント</div>
+                    <div class="hub-img-wrapper">
+                        <img src="https://placehold.co/600x400/eeeeee/666666?text=Photo" alt="各種イベント案内">
+                    </div>
                     <div class="hub-content">
                         <div class="hub-title">各種イベント案内</div>
                         <div class="hub-desc">オープンスクールや個別相談会の日程・予約。</div>
+                        <div class="hub-action">詳細を見る</div>
                     </div>
                 </a>
                 <a href="admission.html#faq" class="hub-card">
-                    <div class="hub-img" style="background-color: #eee; color: #333;">FAQ</div>
+                    <div class="hub-img-wrapper">
+                        <img src="https://placehold.co/600x400/eeeeee/666666?text=Photo" alt="よくある質問">
+                    </div>
                     <div class="hub-content">
                         <div class="hub-title">よくある質問</div>
                         <div class="hub-desc">受験生から寄せられるよくある質問と回答。</div>
+                        <div class="hub-action">詳細を見る</div>
                     </div>
                 </a>
             </div>
@@ -154,31 +251,43 @@
             </h2>
             <div class="hub-grid">
                 <a href="about.html#history" class="hub-card">
-                    <div class="hub-img" style="background-color: #eee; color: #333;">校長紹介</div>
+                    <div class="hub-img-wrapper">
+                        <img src="https://placehold.co/600x400/eeeeee/666666?text=Photo" alt="校長紹介・学校沿革">
+                    </div>
                     <div class="hub-content">
                         <div class="hub-title">校長紹介・学校沿革</div>
                         <div class="hub-desc">学校の歴史と教育方針。</div>
+                        <div class="hub-action">詳細を見る</div>
                     </div>
                 </a>
                 <a href="course.html" class="hub-card">
-                    <div class="hub-img" style="background-color: #eee; color: #333;">コース紹介</div>
+                    <div class="hub-img-wrapper">
+                        <img src="https://placehold.co/600x400/eeeeee/666666?text=Photo" alt="コース紹介（3コース）">
+                    </div>
                     <div class="hub-content">
                         <div class="hub-title">コース紹介（3コース）</div>
                         <div class="hub-desc">特進選抜、特進、総合進学の3コース。</div>
+                        <div class="hub-action">詳細を見る</div>
                     </div>
                 </a>
                 <a href="school_life.html" class="hub-card">
-                    <div class="hub-img" style="background-color: #eee; color: #333;">制服・スケジュール</div>
+                    <div class="hub-img-wrapper">
+                        <img src="https://placehold.co/600x400/eeeeee/666666?text=Photo" alt="制服・年間スケジュール">
+                    </div>
                     <div class="hub-content">
                         <div class="hub-title">制服・年間スケジュール</div>
                         <div class="hub-desc">学校行事と霞ヶ浦高校の制服紹介。</div>
+                        <div class="hub-action">詳細を見る</div>
                     </div>
                 </a>
                 <a href="about.html" class="hub-card">
-                    <div class="hub-img" style="background-color: #eee; color: #333;">施設・アクセス</div>
+                    <div class="hub-img-wrapper">
+                        <img src="https://placehold.co/600x400/eeeeee/666666?text=Photo" alt="施設・アクセス">
+                    </div>
                     <div class="hub-content">
                         <div class="hub-title">施設・アクセス</div>
                         <div class="hub-desc">充実した学習環境と交通アクセス。</div>
+                        <div class="hub-action">詳細を見る</div>
                     </div>
                 </a>
             </div>
@@ -190,17 +299,23 @@
                 style="text-align: left; border-left: 5px solid #333; padding-left: 15px; margin-bottom: 30px;">部活動</h2>
             <div class="hub-grid">
                 <a href="club.html#sports" class="hub-card">
-                    <div class="hub-img" style="background-color: #eee; color: #333;">運動部</div>
+                    <div class="hub-img-wrapper">
+                        <img src="https://placehold.co/600x400/eeeeee/666666?text=Photo" alt="運動部">
+                    </div>
                     <div class="hub-content">
                         <div class="hub-title">運動部</div>
                         <div class="hub-desc">全国レベルで活躍する運動部の紹介。</div>
+                        <div class="hub-action">詳細を見る</div>
                     </div>
                 </a>
                 <a href="club.html#culture" class="hub-card">
-                    <div class="hub-img" style="background-color: #eee; color: #333;">文化部</div>
+                    <div class="hub-img-wrapper">
+                        <img src="https://placehold.co/600x400/eeeeee/666666?text=Photo" alt="文化部">
+                    </div>
                     <div class="hub-content">
                         <div class="hub-title">文化部</div>
                         <div class="hub-desc">多彩な文化部の紹介。</div>
+                        <div class="hub-action">詳細を見る</div>
                     </div>
                 </a>
             </div>
@@ -212,24 +327,33 @@
                 style="text-align: left; border-left: 5px solid #333; padding-left: 15px; margin-bottom: 30px;">進路</h2>
             <div class="hub-grid">
                 <a href="career.html#results" class="hub-card">
-                    <div class="hub-img" style="background-color: #eee; color: #333;">進学状況</div>
+                    <div class="hub-img-wrapper">
+                        <img src="https://placehold.co/600x400/eeeeee/666666?text=Photo" alt="進学状況・就職／進学指導">
+                    </div>
                     <div class="hub-content">
                         <div class="hub-title">進学状況・就職／進学指導</div>
                         <div class="hub-desc">大学合格実績と丁寧な進路指導。</div>
+                        <div class="hub-action">詳細を見る</div>
                     </div>
                 </a>
                 <a href="career.html#kokugakuin" class="hub-card">
-                    <div class="hub-img" style="background-color: #eee; color: #333;">大学連携</div>
+                    <div class="hub-img-wrapper">
+                        <img src="https://placehold.co/600x400/eeeeee/666666?text=Photo" alt="大学連携">
+                    </div>
                     <div class="hub-content">
                         <div class="hub-title">大学連携</div>
                         <div class="hub-desc">國學院大學をはじめとする各種大学連携。</div>
+                        <div class="hub-action">詳細を見る</div>
                     </div>
                 </a>
                 <a href="interview.html" class="hub-card">
-                    <div class="hub-img" style="background-color: #eee; color: #333;">卒業生の声</div>
+                    <div class="hub-img-wrapper">
+                        <img src="https://placehold.co/600x400/eeeeee/666666?text=Photo" alt="卒業生の声">
+                    </div>
                     <div class="hub-content">
                         <div class="hub-title">卒業生の声</div>
                         <div class="hub-desc">各方面で活躍する卒業生へのインタビュー。</div>
+                        <div class="hub-action">詳細を見る</div>
                     </div>
                 </a>
             </div>
