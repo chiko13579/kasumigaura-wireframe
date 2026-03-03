@@ -14,7 +14,7 @@
             padding: 0;
             height: 100%;
             font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
-            background-color: #215187;
+            background-color: #333;
             /* Prevents white flash at bottom */
         }
 
@@ -25,7 +25,7 @@
             height: 75vh;
             min-height: 600px;
             /* Placeholder background color if image is missing */
-            background-color: #87CEEB;
+            background-color: #e0e0e0;
             /* URL for the actual photo. Replace 'img/hero_bg.jpg' with the real image file later */
             background-image: url('img/hero_bg.jpg');
             background-size: cover;
@@ -49,8 +49,8 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            background-color: rgba(99, 155, 226, 0.85);
-            /* Semi-transparent blue */
+            background-color: rgba(100, 100, 100, 0.85);
+            /* Semi-transparent gray */
             color: #fff;
             text-decoration: none;
             font-size: 1.8em;
@@ -62,7 +62,7 @@
         }
 
         .btn-large:hover {
-            background-color: rgba(99, 155, 226, 0.95);
+            background-color: rgba(50, 50, 50, 0.95);
         }
 
         .row-buttons {
@@ -75,7 +75,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            background-color: rgba(144, 184, 237, 0.85);
+            background-color: rgba(150, 150, 150, 0.85);
             color: #fff;
             text-decoration: none;
             font-size: 1.05em;
@@ -88,7 +88,7 @@
         }
 
         .btn-small:hover {
-            background-color: rgba(144, 184, 237, 0.95);
+            background-color: rgba(80, 80, 80, 0.95);
         }
 
         /* --- Logo Box at Bottom Left --- */
@@ -112,45 +112,22 @@
 
         .logo-sub {
             font-size: 0.85em;
-            color: #003366;
+            color: #333;
             margin-bottom: 2px;
             font-weight: bold;
         }
 
         .logo-main {
             font-size: 2em;
-            color: #003366;
+            color: #333;
             font-weight: bold;
             letter-spacing: 2px;
             margin: 0;
         }
 
-        .anniversary-mark {
-            width: 70px;
-            height: 70px;
-            background-color: #007bff;
-            color: #fff;
-            border-radius: 50%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            border: 3px solid #f1c40f;
-            line-height: 1;
-        }
-
-        .anniversary-mark .num {
-            font-size: 2em;
-            font-weight: bold;
-        }
-
-        .anniversary-mark .th {
-            font-size: 0.8em;
-        }
-
         /* --- Footer --- */
         .splash-footer {
-            background-color: #215187;
+            background-color: #333;
             color: white;
             padding: 40px 20px;
             text-align: center;
@@ -217,19 +194,9 @@
         </div>
 
         <div class="splash-logo-box">
-            <!-- Simulated Logo Graphic (K mark) -->
-            <div
-                style="font-size: 3em; color: #003366; font-style: italic; font-weight: 900; margin-right: 10px; line-height: 1;">
-                K</div>
-
             <div class="logo-text-block">
                 <span class="logo-sub">学校法人 霞ヶ浦高等学校</span>
                 <h1 class="logo-main">霞ヶ浦高等学校</h1>
-            </div>
-
-            <div class="anniversary-mark">
-                <span class="num">75</span>
-                <span class="th">th</span>
             </div>
         </div>
     </header>
