@@ -9,54 +9,145 @@
     <title></title>
     <link rel="stylesheet" href="style.css">
     <style>
+        .hero-section {
+            width: 100%;
+            height: 350px;
+            background-color: #e0e0e0;
+            background-image: url('https://placehold.co/1920x400/dddddd/666666?text=Admission+Hero+Image');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            margin-bottom: 50px;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(255, 255, 255, 0.4);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            color: #333;
+            background: rgba(255, 255, 255, 0.85);
+            padding: 30px 60px;
+            border-radius: 4px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .hero-title {
+            font-size: 2.8em;
+            font-weight: bold;
+            letter-spacing: 4px;
+            margin: 0;
+        }
+
+        .hero-subtitle {
+            font-size: 1.1em;
+            letter-spacing: 2px;
+            margin-top: 10px;
+        }
+
         .hub-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
             margin-top: 30px;
         }
 
         .hub-card {
-            display: block;
+            display: flex;
+            flex-direction: column;
             text-decoration: none;
             background-color: #fff;
-            border: 1px solid #ddd;
-            border-radius: 8px;
+            border-radius: 12px;
             overflow: hidden;
-            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
             color: #333;
+            border: 1px solid #f0f0f0;
         }
 
         .hub-card:hover {
-            transform: translateY(-5px);
-
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
         }
 
-        .hub-img {
-            height: 150px;
-            background-color: #e2e2e2;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.2em;
-            color: #666;
-            border-bottom: 3px solid #333;
+        .hub-img-wrapper {
+            width: 100%;
+            height: 200px;
+            overflow: hidden;
+            background-color: #f5f5f5;
+        }
+
+        .hub-img-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+
+        .hub-card:hover .hub-img-wrapper img {
+            transform: scale(1.08);
         }
 
         .hub-content {
-            padding: 20px;
+            padding: 30px 25px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
         }
 
         .hub-title {
-            font-size: 1.2em;
+            font-size: 1.4em;
             font-weight: bold;
-            margin-bottom: 10px;
+            margin-bottom: 12px;
+            color: #222;
         }
 
         .hub-desc {
-            font-size: 0.9em;
+            font-size: 0.95em;
             color: #666;
-            line-height: 1.5;
+            line-height: 1.7;
+            flex-grow: 1;
+        }
+
+        .hub-action {
+            margin-top: 20px;
+            font-size: 0.9em;
+            font-weight: bold;
+            color: #333;
+            letter-spacing: 1px;
+            display: flex;
+            align-items: center;
+        }
+
+        .hub-action::after {
+            content: '→';
+            margin-left: 8px;
+            transition: transform 0.3s;
+        }
+
+        .hub-card:hover .hub-action::after {
+            transform: translateX(6px);
+        }
+
+        .modern-list-link:hover {
+            background-color: #fafafa;
+            padding-left: 20px !important;
+        }
+
+        .modern-list-link:hover .modern-arrow {
+            transform: translateX(10px);
+            color: #333;
         }
     </style>
 </head>
@@ -93,46 +184,55 @@
 
             </div>
         </div>
-        <div class="container" style="padding-top: 0;">
-            <h1>卒業生の方へ</h1>
-
-        </div>
     </header>
+    
+    <div class="hero-section">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="hero-title">卒業生の方へ</h1>
+        </div>
+    </div>
 
     <main class="container">
-        <!-- 1. お問い合わせ / 各種申請 -->
-        <section class="course-section" style="margin-top: 50px;">
-            <h2 class="course-title"
-                style="text-align: left; border-left: 5px solid #333; padding-left: 15px; margin-bottom: 30px;">
-                各種申請・お問い合わせ</h2>
-            <div class="hub-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
-
-                <a href="contact.html" class="hub-card">
-                    <div class="hub-img" style="background-color: #eee; color: #333;">各種証明書発行</div>
-                    <div class="hub-content">
-                        <div class="hub-title">卒業証明書申請</div>
-                        <div class="hub-desc">卒業証明書の発行手続きについてはこちらからお申し込みください。</div>
-                    </div>
-                </a>
-
-                <a href="contact.html" class="hub-card">
-                    <div class="hub-img" style="background-color: #eee; color: #333;">各種証明書発行</div>
-                    <div class="hub-content">
-                        <div class="hub-title">成績証明書申請</div>
-                        <div class="hub-desc">成績証明書・調査書などの発行手続きについてはこちら。</div>
-                    </div>
-                </a>
-
-                <a href="contact.html" class="hub-card">
-                    <div class="hub-img" style="background-color: #eee; color: #333;">ご案内</div>
-                    <div class="hub-content">
-                        <div class="hub-title">料金・支払い案内</div>
-                        <div class="hub-desc">各種証明書の発行にかかる手数料とお支払い方法のご案内です。</div>
-                    </div>
-                </a>
-
+        <section class="modern-list-section" style="display: flex; flex-direction: row; flex-wrap: wrap; gap: 50px; margin-top: 80px; padding-top: 20px;">
+            <div style="flex: 1; min-width: 300px;">
+                <h2 style="font-size: 2.2em; margin-bottom: 25px; font-weight: bold; letter-spacing: 2px; border-bottom: 3px solid #333; padding-bottom: 15px;">各種申請・お問い合わせ</h2>
+                <img src="https://placehold.co/800x600/eeeeee/666666?text=Photo" alt="各種申請・お問い合わせ" style="width: 100%; height: auto; object-fit: cover; border-radius: 4px; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
+            </div>
+            <div style="flex: 1; min-width: 300px; display: flex; flex-direction: column; justify-content: flex-end;">
+                <ul style="list-style: none; padding: 0; margin: 0; border-top: 1px solid #ddd;">
+                    <li style="border-bottom: 1px solid #ddd;">
+                        <a href="contact.html" class="modern-list-link" style="display: flex; justify-content: space-between; align-items: center; padding: 30px 10px; color: #333; text-decoration: none; font-size: 1.25em; font-weight: bold; transition: all 0.3s ease;">
+                            <div style="display: flex; flex-direction: column; gap: 8px;">
+                                <span>卒業証明書申請</span>
+                                <span style="font-size: 0.75em; font-weight: normal; color: #666; letter-spacing: 0.5px;">卒業証明書の発行手続きについてはこちらからお申し込みください。</span>
+                            </div>
+                            <span class="modern-arrow" style="font-size: 1.5em; color: #999; transition: transform 0.3s ease;">→</span>
+                        </a>
+                    </li>
+                    <li style="border-bottom: 1px solid #ddd;">
+                        <a href="contact.html" class="modern-list-link" style="display: flex; justify-content: space-between; align-items: center; padding: 30px 10px; color: #333; text-decoration: none; font-size: 1.25em; font-weight: bold; transition: all 0.3s ease;">
+                            <div style="display: flex; flex-direction: column; gap: 8px;">
+                                <span>成績証明書申請</span>
+                                <span style="font-size: 0.75em; font-weight: normal; color: #666; letter-spacing: 0.5px;">成績証明書・調査書などの発行手続きについてはこちら。</span>
+                            </div>
+                            <span class="modern-arrow" style="font-size: 1.5em; color: #999; transition: transform 0.3s ease;">→</span>
+                        </a>
+                    </li>
+                    <li style="border-bottom: 1px solid #ddd;">
+                        <a href="contact.html" class="modern-list-link" style="display: flex; justify-content: space-between; align-items: center; padding: 30px 10px; color: #333; text-decoration: none; font-size: 1.25em; font-weight: bold; transition: all 0.3s ease;">
+                            <div style="display: flex; flex-direction: column; gap: 8px;">
+                                <span>料金・支払い案内</span>
+                                <span style="font-size: 0.75em; font-weight: normal; color: #666; letter-spacing: 0.5px;">各種証明書の発行にかかる手数料とお支払い方法のご案内です。</span>
+                            </div>
+                            <span class="modern-arrow" style="font-size: 1.5em; color: #999; transition: transform 0.3s ease;">→</span>
+                        </a>
+                    </li>
+                </ul>
             </div>
         </section>
+
+
     </main>
 
     <footer>

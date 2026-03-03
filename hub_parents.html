@@ -9,54 +9,145 @@
     <title></title>
     <link rel="stylesheet" href="style.css">
     <style>
+        .hero-section {
+            width: 100%;
+            height: 350px;
+            background-color: #e0e0e0;
+            background-image: url('https://placehold.co/1920x400/dddddd/666666?text=Admission+Hero+Image');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            margin-bottom: 50px;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(255, 255, 255, 0.4);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            color: #333;
+            background: rgba(255, 255, 255, 0.85);
+            padding: 30px 60px;
+            border-radius: 4px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .hero-title {
+            font-size: 2.8em;
+            font-weight: bold;
+            letter-spacing: 4px;
+            margin: 0;
+        }
+
+        .hero-subtitle {
+            font-size: 1.1em;
+            letter-spacing: 2px;
+            margin-top: 10px;
+        }
+
         .hub-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
             margin-top: 30px;
         }
 
         .hub-card {
-            display: block;
+            display: flex;
+            flex-direction: column;
             text-decoration: none;
             background-color: #fff;
-            border: 1px solid #ddd;
-            border-radius: 8px;
+            border-radius: 12px;
             overflow: hidden;
-            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
             color: #333;
+            border: 1px solid #f0f0f0;
         }
 
         .hub-card:hover {
-            transform: translateY(-5px);
-
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
         }
 
-        .hub-img {
-            height: 150px;
-            background-color: #e2e2e2;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.2em;
-            color: #666;
-            border-bottom: 3px solid #333;
+        .hub-img-wrapper {
+            width: 100%;
+            height: 200px;
+            overflow: hidden;
+            background-color: #f5f5f5;
+        }
+
+        .hub-img-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+
+        .hub-card:hover .hub-img-wrapper img {
+            transform: scale(1.08);
         }
 
         .hub-content {
-            padding: 20px;
+            padding: 30px 25px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
         }
 
         .hub-title {
-            font-size: 1.2em;
+            font-size: 1.4em;
             font-weight: bold;
-            margin-bottom: 10px;
+            margin-bottom: 12px;
+            color: #222;
         }
 
         .hub-desc {
-            font-size: 0.9em;
+            font-size: 0.95em;
             color: #666;
-            line-height: 1.5;
+            line-height: 1.7;
+            flex-grow: 1;
+        }
+
+        .hub-action {
+            margin-top: 20px;
+            font-size: 0.9em;
+            font-weight: bold;
+            color: #333;
+            letter-spacing: 1px;
+            display: flex;
+            align-items: center;
+        }
+
+        .hub-action::after {
+            content: '→';
+            margin-left: 8px;
+            transition: transform 0.3s;
+        }
+
+        .hub-card:hover .hub-action::after {
+            transform: translateX(6px);
+        }
+
+        .modern-list-link:hover {
+            background-color: #fafafa;
+            padding-left: 20px !important;
+        }
+
+        .modern-list-link:hover .modern-arrow {
+            transform: translateX(10px);
+            color: #333;
         }
     </style>
 </head>
@@ -93,128 +184,157 @@
 
             </div>
         </div>
-        <div class="container" style="padding-top: 0;">
-            <h1>在校生・保護者の方へ</h1>
-        </div>
     </header>
+    
+    <div class="hero-section">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="hero-title">在校生・保護者の方へ</h1>
+        </div>
+    </div>
 
     <main class="container">
-        <section class="course-section">
-            <!-- 1. 学校紹介 -->
-            <section class="course-section" style="margin-top: 50px;">
-                <h2 class="course-title"
-                    style="text-align: left; border-left: 5px solid #333; padding-left: 15px; margin-bottom: 30px;">学校紹介
-                </h2>
-                <div class="hub-grid">
-                    <a href="about.html#history" class="hub-card">
-                        <div class="hub-img" style="background-color: #eee; color: #333;">校長紹介</div>
-                        <div class="hub-content">
-                            <div class="hub-title">校長紹介・学校沿革</div>
-                            <div class="hub-desc">学校の歴史と教育方針。</div>
-                        </div>
-                    </a>
-                    <a href="course.html" class="hub-card">
-                        <div class="hub-img" style="background-color: #eee; color: #333;">コース紹介</div>
-                        <div class="hub-content">
-                            <div class="hub-title">コース紹介（3コース）</div>
-                            <div class="hub-desc">特進選抜、特進、総合進学の3コース。</div>
-                        </div>
-                    </a>
-                    <a href="school_life.html" class="hub-card">
-                        <div class="hub-img" style="background-color: #eee; color: #333;">制服・スケジュール</div>
-                        <div class="hub-content">
-                            <div class="hub-title">制服・年間スケジュール</div>
-                            <div class="hub-desc">学校行事と霞ヶ浦高校の制服紹介。</div>
-                        </div>
-                    </a>
-                    <a href="about.html" class="hub-card">
-                        <div class="hub-img" style="background-color: #eee; color: #333;">施設・アクセス</div>
-                        <div class="hub-content">
-                            <div class="hub-title">施設・アクセス</div>
-                            <div class="hub-desc">充実した学習環境と交通アクセス。</div>
-                        </div>
-                    </a>
-                </div>
-            </section>
+        <section class="modern-list-section" style="display: flex; flex-direction: row; flex-wrap: wrap; gap: 50px; margin-top: 80px; padding-top: 20px;">
+            <div style="flex: 1; min-width: 300px;">
+                <h2 style="font-size: 2.2em; margin-bottom: 25px; font-weight: bold; letter-spacing: 2px; border-bottom: 3px solid #333; padding-bottom: 15px;">学校紹介</h2>
+                <img src="https://placehold.co/800x600/eeeeee/666666?text=Photo" alt="学校紹介" style="width: 100%; height: auto; object-fit: cover; border-radius: 4px; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
+            </div>
+            <div style="flex: 1; min-width: 300px; display: flex; flex-direction: column; justify-content: flex-end;">
+                <ul style="list-style: none; padding: 0; margin: 0; border-top: 1px solid #ddd;">
+                    <li style="border-bottom: 1px solid #ddd;">
+                        <a href="about.html#history" class="modern-list-link" style="display: flex; justify-content: space-between; align-items: center; padding: 30px 10px; color: #333; text-decoration: none; font-size: 1.25em; font-weight: bold; transition: all 0.3s ease;">
+                            <div style="display: flex; flex-direction: column; gap: 8px;">
+                                <span>校長紹介・学校沿革</span>
+                                <span style="font-size: 0.75em; font-weight: normal; color: #666; letter-spacing: 0.5px;">学校の歴史と教育方針。</span>
+                            </div>
+                            <span class="modern-arrow" style="font-size: 1.5em; color: #999; transition: transform 0.3s ease;">→</span>
+                        </a>
+                    </li>
+                    <li style="border-bottom: 1px solid #ddd;">
+                        <a href="course.html" class="modern-list-link" style="display: flex; justify-content: space-between; align-items: center; padding: 30px 10px; color: #333; text-decoration: none; font-size: 1.25em; font-weight: bold; transition: all 0.3s ease;">
+                            <div style="display: flex; flex-direction: column; gap: 8px;">
+                                <span>コース紹介（3コース）</span>
+                                <span style="font-size: 0.75em; font-weight: normal; color: #666; letter-spacing: 0.5px;">特進選抜、特進、総合進学の3コース。</span>
+                            </div>
+                            <span class="modern-arrow" style="font-size: 1.5em; color: #999; transition: transform 0.3s ease;">→</span>
+                        </a>
+                    </li>
+                    <li style="border-bottom: 1px solid #ddd;">
+                        <a href="school_life.html" class="modern-list-link" style="display: flex; justify-content: space-between; align-items: center; padding: 30px 10px; color: #333; text-decoration: none; font-size: 1.25em; font-weight: bold; transition: all 0.3s ease;">
+                            <div style="display: flex; flex-direction: column; gap: 8px;">
+                                <span>制服・年間スケジュール</span>
+                                <span style="font-size: 0.75em; font-weight: normal; color: #666; letter-spacing: 0.5px;">学校行事と霞ヶ浦高校の制服紹介。</span>
+                            </div>
+                            <span class="modern-arrow" style="font-size: 1.5em; color: #999; transition: transform 0.3s ease;">→</span>
+                        </a>
+                    </li>
+                    <li style="border-bottom: 1px solid #ddd;">
+                        <a href="about.html" class="modern-list-link" style="display: flex; justify-content: space-between; align-items: center; padding: 30px 10px; color: #333; text-decoration: none; font-size: 1.25em; font-weight: bold; transition: all 0.3s ease;">
+                            <div style="display: flex; flex-direction: column; gap: 8px;">
+                                <span>施設・アクセス</span>
+                                <span style="font-size: 0.75em; font-weight: normal; color: #666; letter-spacing: 0.5px;">充実した学習環境と交通アクセス。</span>
+                            </div>
+                            <span class="modern-arrow" style="font-size: 1.5em; color: #999; transition: transform 0.3s ease;">→</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
 
-            <!-- 2. 部活動 -->
-            <section class="course-section" style="margin-top: 50px;">
-                <h2 class="course-title"
-                    style="text-align: left; border-left: 5px solid #333; padding-left: 15px; margin-bottom: 30px;">部活動
-                </h2>
-                <div class="hub-grid">
-                    <a href="club.html#sports" class="hub-card">
-                        <div class="hub-img" style="background-color: #eee; color: #333;">運動部</div>
-                        <div class="hub-content">
-                            <div class="hub-title">運動部</div>
-                            <div class="hub-desc">全国レベルで活躍する運動部の紹介。</div>
-                        </div>
-                    </a>
-                    <a href="club.html#culture" class="hub-card">
-                        <div class="hub-img" style="background-color: #eee; color: #333;">文化部</div>
-                        <div class="hub-content">
-                            <div class="hub-title">文化部</div>
-                            <div class="hub-desc">多彩な文化部の紹介。</div>
-                        </div>
-                    </a>
-                </div>
-            </section>
+        <section class="modern-list-section" style="display: flex; flex-direction: row; flex-wrap: wrap; gap: 50px; margin-top: 80px; padding-top: 20px;">
+            <div style="flex: 1; min-width: 300px;">
+                <h2 style="font-size: 2.2em; margin-bottom: 25px; font-weight: bold; letter-spacing: 2px; border-bottom: 3px solid #333; padding-bottom: 15px;">部活動</h2>
+                <img src="https://placehold.co/800x600/eeeeee/666666?text=Photo" alt="部活動" style="width: 100%; height: auto; object-fit: cover; border-radius: 4px; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
+            </div>
+            <div style="flex: 1; min-width: 300px; display: flex; flex-direction: column; justify-content: flex-end;">
+                <ul style="list-style: none; padding: 0; margin: 0; border-top: 1px solid #ddd;">
+                    <li style="border-bottom: 1px solid #ddd;">
+                        <a href="club.html#sports" class="modern-list-link" style="display: flex; justify-content: space-between; align-items: center; padding: 30px 10px; color: #333; text-decoration: none; font-size: 1.25em; font-weight: bold; transition: all 0.3s ease;">
+                            <div style="display: flex; flex-direction: column; gap: 8px;">
+                                <span>運動部</span>
+                                <span style="font-size: 0.75em; font-weight: normal; color: #666; letter-spacing: 0.5px;">全国レベルで活躍する運動部の紹介。</span>
+                            </div>
+                            <span class="modern-arrow" style="font-size: 1.5em; color: #999; transition: transform 0.3s ease;">→</span>
+                        </a>
+                    </li>
+                    <li style="border-bottom: 1px solid #ddd;">
+                        <a href="club.html#culture" class="modern-list-link" style="display: flex; justify-content: space-between; align-items: center; padding: 30px 10px; color: #333; text-decoration: none; font-size: 1.25em; font-weight: bold; transition: all 0.3s ease;">
+                            <div style="display: flex; flex-direction: column; gap: 8px;">
+                                <span>文化部</span>
+                                <span style="font-size: 0.75em; font-weight: normal; color: #666; letter-spacing: 0.5px;">多彩な文化部の紹介。</span>
+                            </div>
+                            <span class="modern-arrow" style="font-size: 1.5em; color: #999; transition: transform 0.3s ease;">→</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
 
-            <!-- 3. 進路 -->
-            <section class="course-section" style="margin-top: 50px;">
-                <h2 class="course-title"
-                    style="text-align: left; border-left: 5px solid #333; padding-left: 15px; margin-bottom: 30px;">進路
-                </h2>
-                <div class="hub-grid">
-                    <a href="career.html#results" class="hub-card">
-                        <div class="hub-img" style="background-color: #eee; color: #333;">進学状況</div>
-                        <div class="hub-content">
-                            <div class="hub-title">進学状況・就職／進学指導</div>
-                            <div class="hub-desc">大学合格実績と丁寧な進路指導。</div>
-                        </div>
-                    </a>
-                    <a href="career.html#kokugakuin" class="hub-card">
-                        <div class="hub-img" style="background-color: #eee; color: #333;">大学連携</div>
-                        <div class="hub-content">
-                            <div class="hub-title">大学連携</div>
-                            <div class="hub-desc">國學院大學をはじめとする各種大学連携。</div>
-                        </div>
-                    </a>
-                    <a href="interview.html" class="hub-card">
-                        <div class="hub-img" style="background-color: #eee; color: #333;">卒業生の声</div>
-                        <div class="hub-content">
-                            <div class="hub-title">卒業生の声</div>
-                            <div class="hub-desc">各方面で活躍する卒業生へのインタビュー。</div>
-                        </div>
-                    </a>
-                </div>
-            </section>
+        <section class="modern-list-section" style="display: flex; flex-direction: row; flex-wrap: wrap; gap: 50px; margin-top: 80px; padding-top: 20px;">
+            <div style="flex: 1; min-width: 300px;">
+                <h2 style="font-size: 2.2em; margin-bottom: 25px; font-weight: bold; letter-spacing: 2px; border-bottom: 3px solid #333; padding-bottom: 15px;">進路</h2>
+                <img src="https://placehold.co/800x600/eeeeee/666666?text=Photo" alt="進路" style="width: 100%; height: auto; object-fit: cover; border-radius: 4px; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
+            </div>
+            <div style="flex: 1; min-width: 300px; display: flex; flex-direction: column; justify-content: flex-end;">
+                <ul style="list-style: none; padding: 0; margin: 0; border-top: 1px solid #ddd;">
+                    <li style="border-bottom: 1px solid #ddd;">
+                        <a href="career.html#results" class="modern-list-link" style="display: flex; justify-content: space-between; align-items: center; padding: 30px 10px; color: #333; text-decoration: none; font-size: 1.25em; font-weight: bold; transition: all 0.3s ease;">
+                            <div style="display: flex; flex-direction: column; gap: 8px;">
+                                <span>進学状況・就職／進学指導</span>
+                                <span style="font-size: 0.75em; font-weight: normal; color: #666; letter-spacing: 0.5px;">大学合格実績と丁寧な進路指導。</span>
+                            </div>
+                            <span class="modern-arrow" style="font-size: 1.5em; color: #999; transition: transform 0.3s ease;">→</span>
+                        </a>
+                    </li>
+                    <li style="border-bottom: 1px solid #ddd;">
+                        <a href="career.html#kokugakuin" class="modern-list-link" style="display: flex; justify-content: space-between; align-items: center; padding: 30px 10px; color: #333; text-decoration: none; font-size: 1.25em; font-weight: bold; transition: all 0.3s ease;">
+                            <div style="display: flex; flex-direction: column; gap: 8px;">
+                                <span>大学連携</span>
+                                <span style="font-size: 0.75em; font-weight: normal; color: #666; letter-spacing: 0.5px;">國學院大學をはじめとする各種大学連携。</span>
+                            </div>
+                            <span class="modern-arrow" style="font-size: 1.5em; color: #999; transition: transform 0.3s ease;">→</span>
+                        </a>
+                    </li>
+                    <li style="border-bottom: 1px solid #ddd;">
+                        <a href="interview.html" class="modern-list-link" style="display: flex; justify-content: space-between; align-items: center; padding: 30px 10px; color: #333; text-decoration: none; font-size: 1.25em; font-weight: bold; transition: all 0.3s ease;">
+                            <div style="display: flex; flex-direction: column; gap: 8px;">
+                                <span>卒業生の声</span>
+                                <span style="font-size: 0.75em; font-weight: normal; color: #666; letter-spacing: 0.5px;">各方面で活躍する卒業生へのインタビュー。</span>
+                            </div>
+                            <span class="modern-arrow" style="font-size: 1.5em; color: #999; transition: transform 0.3s ease;">→</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
 
-            <!-- 4. 各種書類 (PDF) -->
-            <section class="course-section" style="margin-top: 50px;">
-                <h2 class="course-title"
-                    style="text-align: left; border-left: 5px solid #333; padding-left: 15px; margin-bottom: 30px;">
-                    各種手続き・書類</h2>
-                <div class="hub-grid" style="grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));">
-                    <a href="#" class="hub-card">
-                        <div class="hub-img" style="background-color: #e6f2ff; color: #0056b3; font-weight: bold;">
-                            PDFダウンロード</div>
-                        <div class="hub-content">
-                            <div class="hub-title">治癒報告書の案内</div>
-                            <div class="hub-desc">インフルエンザ等による欠席後の登校時に必要な治癒報告書はこちらからダウンロードしてください。</div>
-                        </div>
-                    </a>
-                </div>
-            </section>
+        <section class="modern-list-section" style="display: flex; flex-direction: row; flex-wrap: wrap; gap: 50px; margin-top: 80px; padding-top: 20px;">
+            <div style="flex: 1; min-width: 300px;">
+                <h2 style="font-size: 2.2em; margin-bottom: 25px; font-weight: bold; letter-spacing: 2px; border-bottom: 3px solid #333; padding-bottom: 15px;">各種手続き・書類</h2>
+                <img src="https://placehold.co/800x600/eeeeee/666666?text=Photo" alt="各種手続き・書類" style="width: 100%; height: auto; object-fit: cover; border-radius: 4px; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
+            </div>
+            <div style="flex: 1; min-width: 300px; display: flex; flex-direction: column; justify-content: flex-end;">
+                <ul style="list-style: none; padding: 0; margin: 0; border-top: 1px solid #ddd;">
+                    <li style="border-bottom: 1px solid #ddd;">
+                        <a href="#" class="modern-list-link" style="display: flex; justify-content: space-between; align-items: center; padding: 30px 10px; color: #333; text-decoration: none; font-size: 1.25em; font-weight: bold; transition: all 0.3s ease;">
+                            <div style="display: flex; flex-direction: column; gap: 8px;">
+                                <span>治癒報告書の案内</span>
+                                <span style="font-size: 0.75em; font-weight: normal; color: #666; letter-spacing: 0.5px;">インフルエンザ等による欠席後の登校時に必要な治癒報告書はこちらからダウンロードしてください。</span>
+                            </div>
+                            <span class="modern-arrow" style="font-size: 1.5em; color: #999; transition: transform 0.3s ease;">→</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
 
-            <!-- 5. Inquiry Button -->
-            <section class="course-section" style="margin-top: 60px; text-align: center; padding-bottom: 40px;">
-                <a href="contact_parents.html"
-                    style="display: inline-block; width: 100%; max-width: 800px; padding: 30px 20px; background-color: #fff; color: #333; text-decoration: none; border: 2px solid #333; border-radius: 8px; font-weight: bold; font-size: 1.5em; transition: all 0.3s ease;">
-                    在校生・保護者専用 お問い合わせフォーム
-                </a>
-            </section>
 
+        <!-- Inquiry Button -->
+        <section class="course-section" style="margin-top: 60px; text-align: center; padding-bottom: 40px;">
+            <a href="contact_parents.html"
+                style="display: inline-block; width: 100%; max-width: 800px; padding: 30px 20px; background-color: #fff; color: #333; text-decoration: none; border: 2px solid #333; border-radius: 8px; font-weight: bold; font-size: 1.5em; transition: all 0.3s ease;">
+                在校生・保護者専用 お問い合わせフォーム
+            </a>
         </section>
     </main>
 
