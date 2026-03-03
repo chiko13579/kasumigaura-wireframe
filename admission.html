@@ -40,9 +40,10 @@
 <a class="submenu-toggle" href="#">受験情報 <span class="nav-arrow toggle-arrow">›</span></a>
 <ul class="overlay-submenu">
 <li><a href="admission.html#guide">スクールガイド案内 <span class="nav-arrow">›</span></a></li>
-<li><a href="admission.html#application">募集要項案内 <span class="nav-arrow">›</span></a></li>
+
 <li><a href="admission.html#consultation">各種イベント案内 <span class="nav-arrow">›</span></a></li>
-<li><a href="admission.html#faq">よくある質問 <span class="nav-arrow">›</span></a></li>
+<li><a href="admission.html#faq">よくある質問 <span class="nav-arrow">›</span></a>
+</li>
 </ul>
 </li>
 <li class="has-submenu">
@@ -65,7 +66,8 @@
 <a class="submenu-toggle" href="#">進路 <span class="nav-arrow toggle-arrow">›</span></a>
 <ul class="overlay-submenu">
 <li><a href="career.html#results">進学状況・就職／進学指導 <span class="nav-arrow">›</span></a></li>
-<li><a href="career.html#kokugakuin">大学連携 <span class="nav-arrow">›</span></a></li>
+<li><a href="career.html#kokugakuin">大学連携 <span class="nav-arrow">›</span></a>
+</li>
 <li><a href="career.html#interview-top">卒業生の声 <span class="nav-arrow">›</span></a></li>
 </ul>
 </li>
@@ -95,7 +97,8 @@
 <a class="submenu-toggle" href="#">進路 <span class="nav-arrow toggle-arrow">›</span></a>
 <ul class="overlay-submenu">
 <li><a href="career.html#results">進学状況・就職／進学指導 <span class="nav-arrow">›</span></a></li>
-<li><a href="career.html#kokugakuin">大学連携 <span class="nav-arrow">›</span></a></li>
+<li><a href="career.html#kokugakuin">大学連携 <span class="nav-arrow">›</span></a>
+</li>
 <li><a href="career.html#interview-top">卒業生の声 <span class="nav-arrow">›</span></a></li>
 </ul>
 </li>
@@ -123,24 +126,24 @@
 </div>
 </div>
 <script>
-            document.addEventListener('DOMContentLoaded', function() {
+            document.addEventListener('DOMContentLoaded', function () {
                 var hamburger = document.getElementById('hamburgerBtn');
                 var nav = document.getElementById('fullscreenNav');
                 var closebtn = document.getElementById('closeNavBtn');
 
-                if(hamburger && nav && closebtn) {
-                    hamburger.addEventListener('click', function() {
+                if (hamburger && nav && closebtn) {
+                    hamburger.addEventListener('click', function () {
                         nav.classList.add('active');
                     });
-                    closebtn.addEventListener('click', function() {
+                    closebtn.addEventListener('click', function () {
                         nav.classList.remove('active');
                     });
                 }
 
                 // Accordion functionality
                 var toggles = document.querySelectorAll('.submenu-toggle');
-                toggles.forEach(function(toggle) {
-                    toggle.addEventListener('click', function(e) {
+                toggles.forEach(function (toggle) {
+                    toggle.addEventListener('click', function (e) {
                         e.preventDefault();
                         e.stopPropagation(); // crucial for multi-level accordions
                         var parentLi = this.parentElement;
@@ -151,7 +154,8 @@
         </script>
 </header>
 <main class="container">
-<h1 class="page-main-title" style="text-align: center; font-size: 32px; font-weight: bold; margin-top: 40px; margin-bottom: 30px; letter-spacing: 2px;">受験情報</h1>
+<h1 class="page-main-title" style="text-align: center; font-size: 32px; font-weight: bold; margin-top: 40px; margin-bottom: 30px; letter-spacing: 2px;">
+            受験情報</h1>
 <!-- Section 1 -->
 <section class="course-section">
 <h2 class="course-title" id="guide" style="text-align: left; border-left: 5px solid #333; padding-left: 15px;">学校案内・データブック</h2>
@@ -164,18 +168,6 @@
 <a href="https://www.kasumi.ed.jp/wp-content/uploads/2025/10/a4d63b51a13ebd3de2cf783bf286f264.pdf" style="padding: 20px; font-weight: bold; border: 2px solid #ddd; background: #fff; color: #333; text-decoration: none; display: block; border-radius: 4px;" target="_blank">■
                         令和８年度　入学試験要項</a>
 </div>
-</div>
-</section>
-<hr/>
-<!-- Section 2 -->
-<section class="course-section">
-<h2 class="course-title" id="application" style="text-align: left; border-left: 5px solid #333; padding-left: 15px;">出願</h2>
-<div class="content-block" style="text-align: left;">
-<div style="margin-bottom: 20px;">
-<a href="https://mirai-compass.net/usr/kasumih/common/login.jsf" target="_blank"><button style="padding: 15px 40px; font-size: 1.2em; font-weight: bold; cursor: pointer; background: #333; color: #fff; border: none; border-radius: 4px;">出
-                            願 は こ ち ら</button></a>
-</div>
-<p>出願に関しては、<strong>入学試験要項</strong>を参照してください。</p>
 </div>
 </section>
 <hr/>
