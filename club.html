@@ -249,25 +249,49 @@
         </style>
 
         <section class="club-presentation">
-            <!-- 4-column photo grid -->
-            <div class="club-photo-grid">
-                <a href="#" class="club-photo-card">
-                    <img src="https://placehold.co/400x400/cccccc/cccccc" alt="弓道部">
-                    <div class="club-photo-overlay">弓道部</div>
-                </a>
-                <a href="#" class="club-photo-card">
-                    <img src="https://placehold.co/400x400/cccccc/cccccc" alt="体操部">
-                    <div class="club-photo-overlay">体操部</div>
-                </a>
-                <a href="#" class="club-photo-card">
-                    <img src="https://placehold.co/400x400/cccccc/cccccc" alt="空手道部">
-                    <div class="club-photo-overlay">空手道部</div>
-                </a>
-                <a href="#" class="club-photo-card">
-                    <img src="https://placehold.co/400x400/cccccc/cccccc" alt="卓球部">
-                    <div class="club-photo-overlay">卓球部</div>
-                </a>
+            <!-- Tab buttons -->
+            <style>
+                .club-tab-area {
+                    display: flex;
+                    justify-content: center;
+                    gap: 0;
+                    margin-bottom: 40px;
+                }
+
+                .club-tab-btn {
+                    padding: 14px 60px;
+                    font-size: 1.1em;
+                    font-weight: bold;
+                    border: 2px solid #333;
+                    background-color: #fff;
+                    color: #333;
+                    cursor: pointer;
+                    text-decoration: none;
+                    transition: background-color 0.2s ease, color 0.2s ease;
+                }
+
+                .club-tab-btn.active,
+                .club-tab-btn:hover {
+                    background-color: #333;
+                    color: #fff;
+                }
+
+                .club-section-title {
+                    text-align: center;
+                    font-size: 2em;
+                    font-weight: bold;
+                    letter-spacing: 4px;
+                    margin-bottom: 40px;
+                    border-bottom: 2px solid #333;
+                    padding-bottom: 15px;
+                }
+            </style>
+            <div class="club-tab-area">
+                <a href="#" class="club-tab-btn active">運動部</a>
+                <a href="#" class="club-tab-btn">文化部</a>
             </div>
+            <h2 class="club-section-title">運動部</h2>
+
 
             <!-- Second photo grid for remaining clubs -->
             <div class="club-photo-grid">
