@@ -692,7 +692,6 @@
                         <a href="#" class="news-link">
                             <div class="news-date">2026.03.01</div>
                             <div>
-                                <span class="news-tag" style="background-color: #0056b3;">入試情報</span>
                                 <div class="news-text">令和◯年度 入学試験の出願受付を開始しました。</div>
                             </div>
                         </a>
@@ -701,7 +700,6 @@
                         <a href="#" class="news-link">
                             <div class="news-date">2026.02.15</div>
                             <div>
-                                <span class="news-tag" style="background-color: #e67e22;">イベント</span>
                                 <div class="news-text">春のオープンスクール（第1回）の予約受付について</div>
                             </div>
                         </a>
@@ -710,7 +708,6 @@
                         <a href="#" class="news-link">
                             <div class="news-date">2026.02.01</div>
                             <div>
-                                <span class="news-tag" style="background-color: #333;">お知らせ</span>
                                 <div class="news-text">受験生向け特設サイトをリニューアルしました。</div>
                             </div>
                         </a>
@@ -721,6 +718,132 @@
                 <img src="https://placehold.co/600x400/cccccc/cccccc" alt="お知らせイメージ画像">
             </div>
         </section>
+
+        <!-- Kasumigaura Tsushin (Blog) Section -->
+        <style>
+            .tsushin-section {
+                padding: 60px 0 80px 0;
+            }
+
+            .tsushin-header {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                border-bottom: 2px solid #333;
+                padding-bottom: 15px;
+                margin-bottom: 30px;
+            }
+
+            .tsushin-title {
+                font-size: 2em;
+                font-weight: bold;
+                margin: 0;
+                letter-spacing: 2px;
+            }
+
+            .tsushin-grid {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 30px;
+            }
+
+            .tsushin-card {
+                display: flex;
+                flex-direction: column;
+                text-decoration: none;
+                color: #333;
+                background-color: #fff;
+                border-radius: 8px;
+                overflow: hidden;
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+            }
+
+            .tsushin-card:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            }
+
+            .tsushin-img-wrapper {
+                width: 100%;
+                aspect-ratio: 16 / 9;
+                background-color: #ccc;
+                overflow: hidden;
+            }
+
+            .tsushin-img-wrapper img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                transition: transform 0.3s ease;
+            }
+
+            .tsushin-card:hover .tsushin-img-wrapper img {
+                transform: scale(1.05);
+            }
+
+            .tsushin-card-content {
+                padding: 20px;
+            }
+
+            .tsushin-card-title {
+                margin: 0;
+                font-size: 1.1em;
+                font-weight: bold;
+                line-height: 1.5;
+            }
+
+            @media (max-width: 992px) {
+                .tsushin-grid {
+                    grid-template-columns: repeat(2, 1fr);
+                }
+            }
+
+            @media (max-width: 576px) {
+                .tsushin-grid {
+                    grid-template-columns: 1fr;
+                }
+            }
+        </style>
+        <section class="tsushin-section">
+            <div class="tsushin-header">
+                <h2 class="tsushin-title">霞ヶ浦通信</h2>
+                <a href="#" class="news-more-link">一覧を見る <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2">
+                        <polyline points="9 18 15 12 9 6"></polyline>
+                    </svg></a>
+            </div>
+            <div class="tsushin-grid">
+                <!-- Card 1 -->
+                <a href="#" class="tsushin-card">
+                    <div class="tsushin-img-wrapper">
+                        <img src="https://placehold.co/400x225/cccccc/cccccc" alt="霞ヶ浦通信画像">
+                    </div>
+                    <div class="tsushin-card-content">
+                        <h3 class="tsushin-card-title">生徒会役員選挙が行われ、新体制がスタートしました。</h3>
+                    </div>
+                </a>
+                <!-- Card 2 -->
+                <a href="#" class="tsushin-card">
+                    <div class="tsushin-img-wrapper">
+                        <img src="https://placehold.co/400x225/cccccc/cccccc" alt="霞ヶ浦通信画像">
+                    </div>
+                    <div class="tsushin-card-content">
+                        <h3 class="tsushin-card-title">吹奏楽部が東関東大会で金賞を受賞！全国大会への切符を掴みました。</h3>
+                    </div>
+                </a>
+                <!-- Card 3 -->
+                <a href="#" class="tsushin-card">
+                    <div class="tsushin-img-wrapper">
+                        <img src="https://placehold.co/400x225/cccccc/cccccc" alt="霞ヶ浦通信画像">
+                    </div>
+                    <div class="tsushin-card-content">
+                        <h3 class="tsushin-card-title">特進選抜コースの生徒が参加した海外研修レポート。</h3>
+                    </div>
+                </a>
+            </div>
+        </section>
+
 
     </main>
     <footer>
