@@ -483,6 +483,83 @@
                 お問合せ
             </a>
         </div>
+
+        <!-- Scrolling Banner Section -->
+        <style>
+            .banner-marquee-container {
+                width: 100vw;
+                margin-left: calc(50% - 50vw);
+                overflow: hidden;
+                background-color: #f9f9f9;
+                padding: 40px 0;
+                margin-top: 60px;
+                border-top: 1px solid #eaeaea;
+                border-bottom: 1px solid #eaeaea;
+            }
+
+            .banner-marquee-track {
+                display: flex;
+                width: max-content;
+                animation: marquee-scroll 20s linear infinite;
+            }
+
+            .banner-marquee-track:hover {
+                animation-play-state: paused;
+            }
+
+            .banner-item {
+                flex-shrink: 0;
+                width: 280px;
+                height: 100px;
+                background-color: #e0e0e0;
+                margin: 0 15px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 8px;
+                text-decoration: none;
+                color: #555;
+                font-weight: bold;
+                font-size: 1.2em;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+                transition: transform 0.3s ease;
+            }
+
+            .banner-item:hover {
+                transform: scale(1.05);
+            }
+
+            @keyframes marquee-scroll {
+                0% {
+                    transform: translateX(0);
+                }
+
+                100% {
+                    transform: translateX(calc(-310px * 4));
+                }
+
+                /* width (280) + margin (30) = 310px */
+            }
+        </style>
+        <div class="banner-marquee-container">
+            <div class="banner-marquee-track">
+                <!-- Set 1 -->
+                <a href="#" class="banner-item">バナーテキスト 1</a>
+                <a href="#" class="banner-item">バナーテキスト 2</a>
+                <a href="#" class="banner-item">バナーテキスト 3</a>
+                <a href="#" class="banner-item">バナーテキスト 4</a>
+                <!-- Set 2 (Duplicate for continuous scroll) -->
+                <a href="#" class="banner-item">バナーテキスト 1</a>
+                <a href="#" class="banner-item">バナーテキスト 2</a>
+                <a href="#" class="banner-item">バナーテキスト 3</a>
+                <a href="#" class="banner-item">バナーテキスト 4</a>
+                <!-- Set 3 (Extra duplication for wide screens) -->
+                <a href="#" class="banner-item">バナーテキスト 1</a>
+                <a href="#" class="banner-item">バナーテキスト 2</a>
+                <a href="#" class="banner-item">バナーテキスト 3</a>
+                <a href="#" class="banner-item">バナーテキスト 4</a>
+            </div>
+        </div>
     </main>
     <footer>
         <div class="container">
