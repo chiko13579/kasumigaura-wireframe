@@ -1,21 +1,24 @@
 <!DOCTYPE html>
 
 <html lang="ja">
+
 <head>
-<meta charset="utf-8"/>
-<meta content="noindex, nofollow" name="robots"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title></title>
-<link href="style.css?v=2" rel="stylesheet"/>
-<style>
+    <meta charset="utf-8" />
+    <meta content="noindex, nofollow" name="robots" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title></title>
+    <link href="style.css?v=2" rel="stylesheet" />
+    <style>
         .hero-section {
             width: 100%;
-            height: 350px;
-            background-color: #e0e0e0;
-            background-image: url('https://placehold.co/1920x400/dddddd/666666?text=Admission+Hero+Image');
+            height: 75vh;
+            min-height: 600px;
+            background-color: #333;
+            background-image: url('https://placehold.co/1920x1080/cccccc/666666?text=Admission+Top+Hero');
             background-size: cover;
             background-position: center;
             display: flex;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
             position: relative;
@@ -28,31 +31,57 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: rgba(255, 255, 255, 0.4);
+            background: rgba(0, 0, 0, 0.3);
+            /* Dark overlay */
         }
 
         .hero-content {
             position: relative;
             z-index: 1;
             text-align: center;
-            color: #333;
-            background: rgba(255, 255, 255, 0.85);
-            padding: 30px 60px;
-            border-radius: 4px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            color: #fff;
+            background: rgba(0, 0, 0, 0.4);
+            padding: 40px 80px;
+            border-radius: 8px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(5px);
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
         }
 
         .hero-title {
-            font-size: 2.8em;
+            font-size: 3.2em;
             font-weight: bold;
-            letter-spacing: 4px;
+            letter-spacing: 6px;
             margin: 0;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
         }
 
         .hero-subtitle {
-            font-size: 1.1em;
+            font-size: 1.2em;
             letter-spacing: 2px;
             margin-top: 10px;
+        }
+
+        .hero-cta-btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 20px 40px;
+            background-color: #0056b3;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 1.5em;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .hero-cta-btn:hover {
+            background-color: #003d82;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
         }
 
         .hub-grid {
@@ -150,134 +179,168 @@
         }
     </style>
 </head>
+
 <body>
-<header>
-<div class="modern-header-container">
-<div class="logo-container">
-<a class="modern-logo" href="index.html">霞ヶ浦高等学校</a>
-</div>
-<div class="hamburger-btn" id="hamburgerBtn">
-<span class="bar"></span>
-<span class="bar"></span>
-<span class="bar"></span>
-<span class="menu-text">MENU</span>
-</div>
-</div>
-<div class="fullscreen-overlay-nav" id="fullscreenNav">
-<div class="close-btn" id="closeNavBtn">✕ 閉じる</div>
-<div class="overlay-nav-container">
-<div class="overlay-nav-left">
-<div class="school-name">霞ヶ浦高等学校</div>
-</div>
-<div class="overlay-nav-right">
-<ul class="overlay-nav-links">
-<li class="has-submenu">
-<a class="submenu-toggle" href="#">受験生の方へ <span class="nav-arrow toggle-arrow">›</span></a>
-<ul class="overlay-submenu"><li><a href="hub_admission.html">受験生の方へ <span class="nav-arrow">›</span></a></li>
-<li><a href="application.html">出願 <span class="nav-arrow">›</span></a></li>
-<li class="has-submenu">
-<a class="submenu-toggle" href="#">受験情報 <span class="nav-arrow toggle-arrow">›</span></a>
-<ul class="overlay-submenu">
-<li><a href="admission.html#guide">スクールガイド案内 <span class="nav-arrow">›</span></a></li>
-<li><a href="admission.html#consultation">各種イベント案内 <span class="nav-arrow">›</span></a></li>
-<li><a href="admission.html#faq">よくある質問 <span class="nav-arrow">›</span></a></li>
-</ul>
-</li>
-<li class="has-submenu">
-<a class="submenu-toggle" href="#">学校紹介 <span class="nav-arrow toggle-arrow">›</span></a>
-<ul class="overlay-submenu">
-<li><a href="about.html#principal-history">校長紹介・学校沿革 <span class="nav-arrow">›</span></a></li>
-<li><a href="about.html#course-top">コース紹介（3コース） <span class="nav-arrow">›</span></a></li>
-<li><a href="about.html#school-life-top">制服・年間スケジュール <span class="nav-arrow">›</span></a></li>
-<li><a href="about.html#learning-center">施設・アクセス <span class="nav-arrow">›</span></a></li>
-</ul>
-</li>
-<li class="has-submenu">
-<a class="submenu-toggle" href="#">部活動 <span class="nav-arrow toggle-arrow">›</span></a>
-<ul class="overlay-submenu">
-<li><a href="club.html#sports">運動部 <span class="nav-arrow">›</span></a></li>
-<li><a href="club.html#culture">文化部 <span class="nav-arrow">›</span></a></li>
-</ul>
-</li>
-<li class="has-submenu">
-<a class="submenu-toggle" href="#">進路 <span class="nav-arrow toggle-arrow">›</span></a>
-<ul class="overlay-submenu">
-<li><a href="career.html#results">進学状況・就職／進学指導 <span class="nav-arrow">›</span></a></li>
-<li><a href="career.html#kokugakuin">大学連携 <span class="nav-arrow">›</span></a></li>
-<li><a href="career.html#interview-top">卒業生の声 <span class="nav-arrow">›</span></a></li>
-</ul>
-</li>
-<li><a href="contact_admission.html">お問い合わせ <span class="nav-arrow">›</span></a></li>
-</ul>
-</li>
-<li class="has-submenu">
-<a class="submenu-toggle" href="#">在校生・保護者の方へ <span class="nav-arrow toggle-arrow">›</span></a>
-<ul class="overlay-submenu"><li><a href="hub_parents.html">在校生・保護者の方へ <span class="nav-arrow">›</span></a></li>
-<li class="has-submenu">
-<a class="submenu-toggle" href="#">学校紹介 <span class="nav-arrow toggle-arrow">›</span></a>
-<ul class="overlay-submenu">
-<li><a href="about.html#principal-history">校長紹介・学校沿革 <span class="nav-arrow">›</span></a></li>
-<li><a href="about.html#course-top">コース紹介（3コース） <span class="nav-arrow">›</span></a></li>
-<li><a href="about.html#school-life-top">制服・年間スケジュール <span class="nav-arrow">›</span></a></li>
-<li><a href="about.html#learning-center">施設・アクセス <span class="nav-arrow">›</span></a></li>
-</ul>
-</li>
-<li class="has-submenu">
-<a class="submenu-toggle" href="#">部活動 <span class="nav-arrow toggle-arrow">›</span></a>
-<ul class="overlay-submenu">
-<li><a href="club.html#sports">運動部 <span class="nav-arrow">›</span></a></li>
-<li><a href="club.html#culture">文化部 <span class="nav-arrow">›</span></a></li>
-</ul>
-</li>
-<li class="has-submenu">
-<a class="submenu-toggle" href="#">進路 <span class="nav-arrow toggle-arrow">›</span></a>
-<ul class="overlay-submenu">
-<li><a href="career.html#results">進学状況・就職／進学指導 <span class="nav-arrow">›</span></a></li>
-<li><a href="career.html#kokugakuin">大学連携 <span class="nav-arrow">›</span></a></li>
-<li><a href="career.html#interview-top">卒業生の声 <span class="nav-arrow">›</span></a></li>
-</ul>
-</li>
-<li><a href="#">治癒報告書の案内（PDF） <span class="nav-arrow">›</span></a></li>
-<li><a href="contact_parents.html">お問い合わせ <span class="nav-arrow">›</span></a></li>
-</ul>
-</li>
-<li class="has-submenu">
-<a class="submenu-toggle" href="#">卒業生の方へ <span class="nav-arrow toggle-arrow">›</span></a>
-<ul class="overlay-submenu"><li><a href="hub_alumni.html">卒業生の方へ <span class="nav-arrow">›</span></a></li><li><a href="alumni_assoc.html">同窓会 <span class="nav-arrow">›</span></a></li>
-<li class="has-submenu">
-<a class="submenu-toggle" href="#">お問い合わせ <span class="nav-arrow toggle-arrow">›</span></a>
-<ul class="overlay-submenu">
-<li><a href="contact_alumni.html#certificate">卒業証明書申請 <span class="nav-arrow">›</span></a></li>
-<li><a href="contact_alumni.html#transcript">成績証明書申請 <span class="nav-arrow">›</span></a></li>
-<li><a href="contact_alumni.html#fee">料金・支払い案内 <span class="nav-arrow">›</span></a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a href="recruit.html">教員採用 <span class="nav-arrow">›</span></a></li>
-</ul>
-</div>
-</div>
-</div>
-<script>
-            document.addEventListener('DOMContentLoaded', function() {
+    <header>
+        <div class="modern-header-container">
+            <div class="logo-container">
+                <a class="modern-logo" href="index.html">霞ヶ浦高等学校</a>
+            </div>
+            <div class="hamburger-btn" id="hamburgerBtn">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="menu-text">MENU</span>
+            </div>
+        </div>
+        <div class="fullscreen-overlay-nav" id="fullscreenNav">
+            <div class="close-btn" id="closeNavBtn">✕ 閉じる</div>
+            <div class="overlay-nav-container">
+                <div class="overlay-nav-left">
+                    <div class="school-name">霞ヶ浦高等学校</div>
+                </div>
+                <div class="overlay-nav-right">
+                    <ul class="overlay-nav-links">
+                        <li class="has-submenu">
+                            <a class="submenu-toggle" href="#">受験生の方へ <span class="nav-arrow toggle-arrow">›</span></a>
+                            <ul class="overlay-submenu">
+                                <li><a href="hub_admission.html">受験生の方へ <span class="nav-arrow">›</span></a></li>
+                                <li><a href="application.html">出願 <span class="nav-arrow">›</span></a></li>
+                                <li class="has-submenu">
+                                    <a class="submenu-toggle" href="#">受験情報 <span
+                                            class="nav-arrow toggle-arrow">›</span></a>
+                                    <ul class="overlay-submenu">
+                                        <li><a href="admission.html#guide">スクールガイド案内 <span
+                                                    class="nav-arrow">›</span></a></li>
+                                        <li><a href="admission.html#consultation">各種イベント案内 <span
+                                                    class="nav-arrow">›</span></a></li>
+                                        <li><a href="admission.html#faq">よくある質問 <span class="nav-arrow">›</span></a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="has-submenu">
+                                    <a class="submenu-toggle" href="#">学校紹介 <span
+                                            class="nav-arrow toggle-arrow">›</span></a>
+                                    <ul class="overlay-submenu">
+                                        <li><a href="about.html#principal-history">校長紹介・学校沿革 <span
+                                                    class="nav-arrow">›</span></a></li>
+                                        <li><a href="about.html#course-top">コース紹介（3コース） <span
+                                                    class="nav-arrow">›</span></a></li>
+                                        <li><a href="about.html#school-life-top">制服・年間スケジュール <span
+                                                    class="nav-arrow">›</span></a></li>
+                                        <li><a href="about.html#learning-center">施設・アクセス <span
+                                                    class="nav-arrow">›</span></a></li>
+                                    </ul>
+                                </li>
+                                <li class="has-submenu">
+                                    <a class="submenu-toggle" href="#">部活動 <span
+                                            class="nav-arrow toggle-arrow">›</span></a>
+                                    <ul class="overlay-submenu">
+                                        <li><a href="club.html#sports">運動部 <span class="nav-arrow">›</span></a></li>
+                                        <li><a href="club.html#culture">文化部 <span class="nav-arrow">›</span></a></li>
+                                    </ul>
+                                </li>
+                                <li class="has-submenu">
+                                    <a class="submenu-toggle" href="#">進路 <span
+                                            class="nav-arrow toggle-arrow">›</span></a>
+                                    <ul class="overlay-submenu">
+                                        <li><a href="career.html#results">進学状況・就職／進学指導 <span
+                                                    class="nav-arrow">›</span></a></li>
+                                        <li><a href="career.html#kokugakuin">大学連携 <span class="nav-arrow">›</span></a>
+                                        </li>
+                                        <li><a href="career.html#interview-top">卒業生の声 <span
+                                                    class="nav-arrow">›</span></a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="contact_admission.html">お問い合わせ <span class="nav-arrow">›</span></a></li>
+                            </ul>
+                        </li>
+                        <li class="has-submenu">
+                            <a class="submenu-toggle" href="#">在校生・保護者の方へ <span
+                                    class="nav-arrow toggle-arrow">›</span></a>
+                            <ul class="overlay-submenu">
+                                <li><a href="hub_parents.html">在校生・保護者の方へ <span class="nav-arrow">›</span></a></li>
+                                <li class="has-submenu">
+                                    <a class="submenu-toggle" href="#">学校紹介 <span
+                                            class="nav-arrow toggle-arrow">›</span></a>
+                                    <ul class="overlay-submenu">
+                                        <li><a href="about.html#principal-history">校長紹介・学校沿革 <span
+                                                    class="nav-arrow">›</span></a></li>
+                                        <li><a href="about.html#course-top">コース紹介（3コース） <span
+                                                    class="nav-arrow">›</span></a></li>
+                                        <li><a href="about.html#school-life-top">制服・年間スケジュール <span
+                                                    class="nav-arrow">›</span></a></li>
+                                        <li><a href="about.html#learning-center">施設・アクセス <span
+                                                    class="nav-arrow">›</span></a></li>
+                                    </ul>
+                                </li>
+                                <li class="has-submenu">
+                                    <a class="submenu-toggle" href="#">部活動 <span
+                                            class="nav-arrow toggle-arrow">›</span></a>
+                                    <ul class="overlay-submenu">
+                                        <li><a href="club.html#sports">運動部 <span class="nav-arrow">›</span></a></li>
+                                        <li><a href="club.html#culture">文化部 <span class="nav-arrow">›</span></a></li>
+                                    </ul>
+                                </li>
+                                <li class="has-submenu">
+                                    <a class="submenu-toggle" href="#">進路 <span
+                                            class="nav-arrow toggle-arrow">›</span></a>
+                                    <ul class="overlay-submenu">
+                                        <li><a href="career.html#results">進学状況・就職／進学指導 <span
+                                                    class="nav-arrow">›</span></a></li>
+                                        <li><a href="career.html#kokugakuin">大学連携 <span class="nav-arrow">›</span></a>
+                                        </li>
+                                        <li><a href="career.html#interview-top">卒業生の声 <span
+                                                    class="nav-arrow">›</span></a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">治癒報告書の案内（PDF） <span class="nav-arrow">›</span></a></li>
+                                <li><a href="contact_parents.html">お問い合わせ <span class="nav-arrow">›</span></a></li>
+                            </ul>
+                        </li>
+                        <li class="has-submenu">
+                            <a class="submenu-toggle" href="#">卒業生の方へ <span class="nav-arrow toggle-arrow">›</span></a>
+                            <ul class="overlay-submenu">
+                                <li><a href="hub_alumni.html">卒業生の方へ <span class="nav-arrow">›</span></a></li>
+                                <li><a href="alumni_assoc.html">同窓会 <span class="nav-arrow">›</span></a></li>
+                                <li class="has-submenu">
+                                    <a class="submenu-toggle" href="#">お問い合わせ <span
+                                            class="nav-arrow toggle-arrow">›</span></a>
+                                    <ul class="overlay-submenu">
+                                        <li><a href="contact_alumni.html#certificate">卒業証明書申請 <span
+                                                    class="nav-arrow">›</span></a></li>
+                                        <li><a href="contact_alumni.html#transcript">成績証明書申請 <span
+                                                    class="nav-arrow">›</span></a></li>
+                                        <li><a href="contact_alumni.html#fee">料金・支払い案内 <span
+                                                    class="nav-arrow">›</span></a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><a href="recruit.html">教員採用 <span class="nav-arrow">›</span></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
                 var hamburger = document.getElementById('hamburgerBtn');
                 var nav = document.getElementById('fullscreenNav');
                 var closebtn = document.getElementById('closeNavBtn');
 
-                if(hamburger && nav && closebtn) {
-                    hamburger.addEventListener('click', function() {
+                if (hamburger && nav && closebtn) {
+                    hamburger.addEventListener('click', function () {
                         nav.classList.add('active');
                     });
-                    closebtn.addEventListener('click', function() {
+                    closebtn.addEventListener('click', function () {
                         nav.classList.remove('active');
                     });
                 }
 
                 // Accordion functionality
                 var toggles = document.querySelectorAll('.submenu-toggle');
-                toggles.forEach(function(toggle) {
-                    toggle.addEventListener('click', function(e) {
+                toggles.forEach(function (toggle) {
+                    toggle.addEventListener('click', function (e) {
                         e.preventDefault();
                         e.stopPropagation(); // crucial for multi-level accordions
                         var parentLi = this.parentElement;
@@ -286,186 +349,232 @@
                 });
             });
         </script>
-</header>
-<div class="hero-section">
-<div class="hero-overlay"></div>
-<div class="hero-content">
-<h1 class="hero-title">受験生の方へ</h1>
-</div>
-</div>
-<main class="container">
-<!-- 0. 出願ボタン -->
-<section class="course-section" style="margin-top: 20px; text-align: center;">
-<a href="application.html" style="display: inline-block; width: 100%; max-width: 800px; padding: 30px 20px; background-color: #0056b3; color: white; text-decoration: none; border-radius: 8px; font-weight: bold; font-size: 1.8em; transition: all 0.3s ease; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
-                出願はこちら
-            </a>
-</section>
-<!-- 受験情報 -->
-<section class="modern-list-section" style="display: flex; flex-direction: row; flex-wrap: wrap; gap: 50px; margin-top: 80px; padding-top: 20px;">
-<div style="flex: 1; min-width: 300px;">
-<h2 style="font-size: 2.2em; margin-bottom: 25px; font-weight: bold; letter-spacing: 2px; border-bottom: 3px solid #333; padding-bottom: 15px;">
+    </header>
+    <div class="hero-section">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="hero-title">受験生の方へ</h1>
+            <p class="hero-subtitle">各種情報のご案内・出願手続き</p>
+            <a href="application.html" class="hero-cta-btn">出願はこちら</a>
+        </div>
+    </div>
+    <main class="container">
+        <!-- 受験情報 -->
+        <section class="modern-list-section"
+            style="display: flex; flex-direction: row; flex-wrap: wrap; gap: 50px; margin-top: 80px; padding-top: 20px;">
+            <div style="flex: 1; min-width: 300px;">
+                <h2
+                    style="font-size: 2.2em; margin-bottom: 25px; font-weight: bold; letter-spacing: 2px; border-bottom: 3px solid #333; padding-bottom: 15px;">
                     受験情報</h2>
-<img alt="受験情報" src="https://placehold.co/800x600/eeeeee/666666?text=Photo" style="width: 100%; height: auto; object-fit: cover; border-radius: 4px; box-shadow: 0 4px 15px rgba(0,0,0,0.05);"/>
-</div>
-<div style="flex: 1; min-width: 300px; display: flex; flex-direction: column; justify-content: flex-end;">
-<ul style="list-style: none; padding: 0; margin: 0; border-top: 1px solid #ddd;">
-<li style="border-bottom: 1px solid #ddd;">
-<a class="modern-list-link" href="admission.html#guide" style="display: flex; justify-content: space-between; align-items: center; padding: 30px 10px; color: #333; text-decoration: none; font-size: 1.25em; font-weight: bold; transition: all 0.3s ease;">
-<div style="display: flex; flex-direction: column; gap: 8px;">
-<span>スクールガイド案内</span>
-<span style="font-size: 0.75em; font-weight: normal; color: #666; letter-spacing: 0.5px;">本校のデジタルパンフレット。</span>
-</div>
-<span class="modern-arrow" style="font-size: 1.5em; color: #999; transition: transform 0.3s ease;">→</span>
-</a>
-</li>
-<li style="border-bottom: 1px solid #ddd;">
-<a class="modern-list-link" href="admission.html#consultation" style="display: flex; justify-content: space-between; align-items: center; padding: 30px 10px; color: #333; text-decoration: none; font-size: 1.25em; font-weight: bold; transition: all 0.3s ease;">
-<div style="display: flex; flex-direction: column; gap: 8px;">
-<span>各種イベント案内</span>
-<span style="font-size: 0.75em; font-weight: normal; color: #666; letter-spacing: 0.5px;">オープンスクールや個別相談会の日程・予約。</span>
-</div>
-<span class="modern-arrow" style="font-size: 1.5em; color: #999; transition: transform 0.3s ease;">→</span>
-</a>
-</li>
-<li style="border-bottom: 1px solid #ddd;">
-<a class="modern-list-link" href="admission.html#faq" style="display: flex; justify-content: space-between; align-items: center; padding: 30px 10px; color: #333; text-decoration: none; font-size: 1.25em; font-weight: bold; transition: all 0.3s ease;">
-<div style="display: flex; flex-direction: column; gap: 8px;">
-<span>よくある質問</span>
-<span style="font-size: 0.75em; font-weight: normal; color: #666; letter-spacing: 0.5px;">受験生から寄せられるよくある質問と回答。</span>
-</div>
-<span class="modern-arrow" style="font-size: 1.5em; color: #999; transition: transform 0.3s ease;">→</span>
-</a>
-</li>
-</ul>
-</div>
-</section>
-<!-- 学校紹介 -->
-<section class="modern-list-section" style="display: flex; flex-direction: row; flex-wrap: wrap; gap: 50px; margin-top: 80px; padding-top: 20px;">
-<div style="flex: 1; min-width: 300px;">
-<h2 style="font-size: 2.2em; margin-bottom: 25px; font-weight: bold; letter-spacing: 2px; border-bottom: 3px solid #333; padding-bottom: 15px;">
+                <img alt="受験情報" src="https://placehold.co/800x600/eeeeee/666666?text=Photo"
+                    style="width: 100%; height: auto; object-fit: cover; border-radius: 4px; box-shadow: 0 4px 15px rgba(0,0,0,0.05);" />
+            </div>
+            <div style="flex: 1; min-width: 300px; display: flex; flex-direction: column; justify-content: flex-end;">
+                <ul style="list-style: none; padding: 0; margin: 0; border-top: 1px solid #ddd;">
+                    <li style="border-bottom: 1px solid #ddd;">
+                        <a class="modern-list-link" href="admission.html#guide"
+                            style="display: flex; justify-content: space-between; align-items: center; padding: 30px 10px; color: #333; text-decoration: none; font-size: 1.25em; font-weight: bold; transition: all 0.3s ease;">
+                            <div style="display: flex; flex-direction: column; gap: 8px;">
+                                <span>スクールガイド案内</span>
+                                <span
+                                    style="font-size: 0.75em; font-weight: normal; color: #666; letter-spacing: 0.5px;">本校のデジタルパンフレット。</span>
+                            </div>
+                            <span class="modern-arrow"
+                                style="font-size: 1.5em; color: #999; transition: transform 0.3s ease;">→</span>
+                        </a>
+                    </li>
+                    <li style="border-bottom: 1px solid #ddd;">
+                        <a class="modern-list-link" href="admission.html#consultation"
+                            style="display: flex; justify-content: space-between; align-items: center; padding: 30px 10px; color: #333; text-decoration: none; font-size: 1.25em; font-weight: bold; transition: all 0.3s ease;">
+                            <div style="display: flex; flex-direction: column; gap: 8px;">
+                                <span>各種イベント案内</span>
+                                <span
+                                    style="font-size: 0.75em; font-weight: normal; color: #666; letter-spacing: 0.5px;">オープンスクールや個別相談会の日程・予約。</span>
+                            </div>
+                            <span class="modern-arrow"
+                                style="font-size: 1.5em; color: #999; transition: transform 0.3s ease;">→</span>
+                        </a>
+                    </li>
+                    <li style="border-bottom: 1px solid #ddd;">
+                        <a class="modern-list-link" href="admission.html#faq"
+                            style="display: flex; justify-content: space-between; align-items: center; padding: 30px 10px; color: #333; text-decoration: none; font-size: 1.25em; font-weight: bold; transition: all 0.3s ease;">
+                            <div style="display: flex; flex-direction: column; gap: 8px;">
+                                <span>よくある質問</span>
+                                <span
+                                    style="font-size: 0.75em; font-weight: normal; color: #666; letter-spacing: 0.5px;">受験生から寄せられるよくある質問と回答。</span>
+                            </div>
+                            <span class="modern-arrow"
+                                style="font-size: 1.5em; color: #999; transition: transform 0.3s ease;">→</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <!-- 学校紹介 -->
+        <section class="modern-list-section"
+            style="display: flex; flex-direction: row; flex-wrap: wrap; gap: 50px; margin-top: 80px; padding-top: 20px;">
+            <div style="flex: 1; min-width: 300px;">
+                <h2
+                    style="font-size: 2.2em; margin-bottom: 25px; font-weight: bold; letter-spacing: 2px; border-bottom: 3px solid #333; padding-bottom: 15px;">
                     学校紹介</h2>
-<img alt="学校紹介" src="https://placehold.co/800x600/eeeeee/666666?text=Photo" style="width: 100%; height: auto; object-fit: cover; border-radius: 4px; box-shadow: 0 4px 15px rgba(0,0,0,0.05);"/>
-</div>
-<div style="flex: 1; min-width: 300px; display: flex; flex-direction: column; justify-content: flex-end;">
-<ul style="list-style: none; padding: 0; margin: 0; border-top: 1px solid #ddd;">
-<li style="border-bottom: 1px solid #ddd;">
-<a class="modern-list-link" href="about.html#principal-history" style="display: flex; justify-content: space-between; align-items: center; padding: 30px 10px; color: #333; text-decoration: none; font-size: 1.25em; font-weight: bold; transition: all 0.3s ease;">
-<div style="display: flex; flex-direction: column; gap: 8px;">
-<span>校長紹介・学校沿革</span>
-<span style="font-size: 0.75em; font-weight: normal; color: #666; letter-spacing: 0.5px;">学校の歴史と教育方針。</span>
-</div>
-<span class="modern-arrow" style="font-size: 1.5em; color: #999; transition: transform 0.3s ease;">→</span>
-</a>
-</li>
-<li style="border-bottom: 1px solid #ddd;">
-<a class="modern-list-link" href="about.html#course-top" style="display: flex; justify-content: space-between; align-items: center; padding: 30px 10px; color: #333; text-decoration: none; font-size: 1.25em; font-weight: bold; transition: all 0.3s ease;">
-<div style="display: flex; flex-direction: column; gap: 8px;">
-<span>コース紹介（3コース）</span>
-<span style="font-size: 0.75em; font-weight: normal; color: #666; letter-spacing: 0.5px;">特進選抜、特進、総合進学の3コース。</span>
-</div>
-<span class="modern-arrow" style="font-size: 1.5em; color: #999; transition: transform 0.3s ease;">→</span>
-</a>
-</li>
-<li style="border-bottom: 1px solid #ddd;">
-<a class="modern-list-link" href="about.html#school-life-top" style="display: flex; justify-content: space-between; align-items: center; padding: 30px 10px; color: #333; text-decoration: none; font-size: 1.25em; font-weight: bold; transition: all 0.3s ease;">
-<div style="display: flex; flex-direction: column; gap: 8px;">
-<span>制服・年間スケジュール</span>
-<span style="font-size: 0.75em; font-weight: normal; color: #666; letter-spacing: 0.5px;">学校行事と霞ヶ浦高校の制服紹介。</span>
-</div>
-<span class="modern-arrow" style="font-size: 1.5em; color: #999; transition: transform 0.3s ease;">→</span>
-</a>
-</li>
-<li style="border-bottom: 1px solid #ddd;">
-<a class="modern-list-link" href="about.html#learning-center" style="display: flex; justify-content: space-between; align-items: center; padding: 30px 10px; color: #333; text-decoration: none; font-size: 1.25em; font-weight: bold; transition: all 0.3s ease;">
-<div style="display: flex; flex-direction: column; gap: 8px;">
-<span>施設・アクセス</span>
-<span style="font-size: 0.75em; font-weight: normal; color: #666; letter-spacing: 0.5px;">充実した学習環境と交通アクセス。</span>
-</div>
-<span class="modern-arrow" style="font-size: 1.5em; color: #999; transition: transform 0.3s ease;">→</span>
-</a>
-</li>
-</ul>
-</div>
-</section>
-<!-- 部活動 -->
-<section class="modern-list-section" style="display: flex; flex-direction: row; flex-wrap: wrap; gap: 50px; margin-top: 80px; padding-top: 20px;">
-<div style="flex: 1; min-width: 300px;">
-<h2 style="font-size: 2.2em; margin-bottom: 25px; font-weight: bold; letter-spacing: 2px; border-bottom: 3px solid #333; padding-bottom: 15px;">
+                <img alt="学校紹介" src="https://placehold.co/800x600/eeeeee/666666?text=Photo"
+                    style="width: 100%; height: auto; object-fit: cover; border-radius: 4px; box-shadow: 0 4px 15px rgba(0,0,0,0.05);" />
+            </div>
+            <div style="flex: 1; min-width: 300px; display: flex; flex-direction: column; justify-content: flex-end;">
+                <ul style="list-style: none; padding: 0; margin: 0; border-top: 1px solid #ddd;">
+                    <li style="border-bottom: 1px solid #ddd;">
+                        <a class="modern-list-link" href="about.html#principal-history"
+                            style="display: flex; justify-content: space-between; align-items: center; padding: 30px 10px; color: #333; text-decoration: none; font-size: 1.25em; font-weight: bold; transition: all 0.3s ease;">
+                            <div style="display: flex; flex-direction: column; gap: 8px;">
+                                <span>校長紹介・学校沿革</span>
+                                <span
+                                    style="font-size: 0.75em; font-weight: normal; color: #666; letter-spacing: 0.5px;">学校の歴史と教育方針。</span>
+                            </div>
+                            <span class="modern-arrow"
+                                style="font-size: 1.5em; color: #999; transition: transform 0.3s ease;">→</span>
+                        </a>
+                    </li>
+                    <li style="border-bottom: 1px solid #ddd;">
+                        <a class="modern-list-link" href="about.html#course-top"
+                            style="display: flex; justify-content: space-between; align-items: center; padding: 30px 10px; color: #333; text-decoration: none; font-size: 1.25em; font-weight: bold; transition: all 0.3s ease;">
+                            <div style="display: flex; flex-direction: column; gap: 8px;">
+                                <span>コース紹介（3コース）</span>
+                                <span
+                                    style="font-size: 0.75em; font-weight: normal; color: #666; letter-spacing: 0.5px;">特進選抜、特進、総合進学の3コース。</span>
+                            </div>
+                            <span class="modern-arrow"
+                                style="font-size: 1.5em; color: #999; transition: transform 0.3s ease;">→</span>
+                        </a>
+                    </li>
+                    <li style="border-bottom: 1px solid #ddd;">
+                        <a class="modern-list-link" href="about.html#school-life-top"
+                            style="display: flex; justify-content: space-between; align-items: center; padding: 30px 10px; color: #333; text-decoration: none; font-size: 1.25em; font-weight: bold; transition: all 0.3s ease;">
+                            <div style="display: flex; flex-direction: column; gap: 8px;">
+                                <span>制服・年間スケジュール</span>
+                                <span
+                                    style="font-size: 0.75em; font-weight: normal; color: #666; letter-spacing: 0.5px;">学校行事と霞ヶ浦高校の制服紹介。</span>
+                            </div>
+                            <span class="modern-arrow"
+                                style="font-size: 1.5em; color: #999; transition: transform 0.3s ease;">→</span>
+                        </a>
+                    </li>
+                    <li style="border-bottom: 1px solid #ddd;">
+                        <a class="modern-list-link" href="about.html#learning-center"
+                            style="display: flex; justify-content: space-between; align-items: center; padding: 30px 10px; color: #333; text-decoration: none; font-size: 1.25em; font-weight: bold; transition: all 0.3s ease;">
+                            <div style="display: flex; flex-direction: column; gap: 8px;">
+                                <span>施設・アクセス</span>
+                                <span
+                                    style="font-size: 0.75em; font-weight: normal; color: #666; letter-spacing: 0.5px;">充実した学習環境と交通アクセス。</span>
+                            </div>
+                            <span class="modern-arrow"
+                                style="font-size: 1.5em; color: #999; transition: transform 0.3s ease;">→</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <!-- 部活動 -->
+        <section class="modern-list-section"
+            style="display: flex; flex-direction: row; flex-wrap: wrap; gap: 50px; margin-top: 80px; padding-top: 20px;">
+            <div style="flex: 1; min-width: 300px;">
+                <h2
+                    style="font-size: 2.2em; margin-bottom: 25px; font-weight: bold; letter-spacing: 2px; border-bottom: 3px solid #333; padding-bottom: 15px;">
                     部活動</h2>
-<img alt="部活動" src="https://placehold.co/800x600/eeeeee/666666?text=Photo" style="width: 100%; height: auto; object-fit: cover; border-radius: 4px; box-shadow: 0 4px 15px rgba(0,0,0,0.05);"/>
-</div>
-<div style="flex: 1; min-width: 300px; display: flex; flex-direction: column; justify-content: flex-end;">
-<ul style="list-style: none; padding: 0; margin: 0; border-top: 1px solid #ddd;">
-<li style="border-bottom: 1px solid #ddd;">
-<a class="modern-list-link" href="club.html#sports" style="display: flex; justify-content: space-between; align-items: center; padding: 30px 10px; color: #333; text-decoration: none; font-size: 1.25em; font-weight: bold; transition: all 0.3s ease;">
-<div style="display: flex; flex-direction: column; gap: 8px;">
-<span>運動部</span>
-<span style="font-size: 0.75em; font-weight: normal; color: #666; letter-spacing: 0.5px;">全国レベルで活躍する運動部の紹介。</span>
-</div>
-<span class="modern-arrow" style="font-size: 1.5em; color: #999; transition: transform 0.3s ease;">→</span>
-</a>
-</li>
-<li style="border-bottom: 1px solid #ddd;">
-<a class="modern-list-link" href="club.html#culture" style="display: flex; justify-content: space-between; align-items: center; padding: 30px 10px; color: #333; text-decoration: none; font-size: 1.25em; font-weight: bold; transition: all 0.3s ease;">
-<div style="display: flex; flex-direction: column; gap: 8px;">
-<span>文化部</span>
-<span style="font-size: 0.75em; font-weight: normal; color: #666; letter-spacing: 0.5px;">多彩な文化部の紹介。</span>
-</div>
-<span class="modern-arrow" style="font-size: 1.5em; color: #999; transition: transform 0.3s ease;">→</span>
-</a>
-</li>
-</ul>
-</div>
-</section>
-<!-- 進路 -->
-<section class="modern-list-section" style="display: flex; flex-direction: row; flex-wrap: wrap; gap: 50px; margin-top: 80px; padding-top: 20px;">
-<div style="flex: 1; min-width: 300px;">
-<h2 style="font-size: 2.2em; margin-bottom: 25px; font-weight: bold; letter-spacing: 2px; border-bottom: 3px solid #333; padding-bottom: 15px;">
+                <img alt="部活動" src="https://placehold.co/800x600/eeeeee/666666?text=Photo"
+                    style="width: 100%; height: auto; object-fit: cover; border-radius: 4px; box-shadow: 0 4px 15px rgba(0,0,0,0.05);" />
+            </div>
+            <div style="flex: 1; min-width: 300px; display: flex; flex-direction: column; justify-content: flex-end;">
+                <ul style="list-style: none; padding: 0; margin: 0; border-top: 1px solid #ddd;">
+                    <li style="border-bottom: 1px solid #ddd;">
+                        <a class="modern-list-link" href="club.html#sports"
+                            style="display: flex; justify-content: space-between; align-items: center; padding: 30px 10px; color: #333; text-decoration: none; font-size: 1.25em; font-weight: bold; transition: all 0.3s ease;">
+                            <div style="display: flex; flex-direction: column; gap: 8px;">
+                                <span>運動部</span>
+                                <span
+                                    style="font-size: 0.75em; font-weight: normal; color: #666; letter-spacing: 0.5px;">全国レベルで活躍する運動部の紹介。</span>
+                            </div>
+                            <span class="modern-arrow"
+                                style="font-size: 1.5em; color: #999; transition: transform 0.3s ease;">→</span>
+                        </a>
+                    </li>
+                    <li style="border-bottom: 1px solid #ddd;">
+                        <a class="modern-list-link" href="club.html#culture"
+                            style="display: flex; justify-content: space-between; align-items: center; padding: 30px 10px; color: #333; text-decoration: none; font-size: 1.25em; font-weight: bold; transition: all 0.3s ease;">
+                            <div style="display: flex; flex-direction: column; gap: 8px;">
+                                <span>文化部</span>
+                                <span
+                                    style="font-size: 0.75em; font-weight: normal; color: #666; letter-spacing: 0.5px;">多彩な文化部の紹介。</span>
+                            </div>
+                            <span class="modern-arrow"
+                                style="font-size: 1.5em; color: #999; transition: transform 0.3s ease;">→</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <!-- 進路 -->
+        <section class="modern-list-section"
+            style="display: flex; flex-direction: row; flex-wrap: wrap; gap: 50px; margin-top: 80px; padding-top: 20px;">
+            <div style="flex: 1; min-width: 300px;">
+                <h2
+                    style="font-size: 2.2em; margin-bottom: 25px; font-weight: bold; letter-spacing: 2px; border-bottom: 3px solid #333; padding-bottom: 15px;">
                     進路</h2>
-<img alt="進路" src="https://placehold.co/800x600/eeeeee/666666?text=Photo" style="width: 100%; height: auto; object-fit: cover; border-radius: 4px; box-shadow: 0 4px 15px rgba(0,0,0,0.05);"/>
-</div>
-<div style="flex: 1; min-width: 300px; display: flex; flex-direction: column; justify-content: flex-end;">
-<ul style="list-style: none; padding: 0; margin: 0; border-top: 1px solid #ddd;">
-<li style="border-bottom: 1px solid #ddd;">
-<a class="modern-list-link" href="career.html#results" style="display: flex; justify-content: space-between; align-items: center; padding: 30px 10px; color: #333; text-decoration: none; font-size: 1.25em; font-weight: bold; transition: all 0.3s ease;">
-<div style="display: flex; flex-direction: column; gap: 8px;">
-<span>進学状況・就職／進学指導</span>
-<span style="font-size: 0.75em; font-weight: normal; color: #666; letter-spacing: 0.5px;">大学合格実績と丁寧な進路指導。</span>
-</div>
-<span class="modern-arrow" style="font-size: 1.5em; color: #999; transition: transform 0.3s ease;">→</span>
-</a>
-</li>
-<li style="border-bottom: 1px solid #ddd;">
-<a class="modern-list-link" href="career.html#kokugakuin" style="display: flex; justify-content: space-between; align-items: center; padding: 30px 10px; color: #333; text-decoration: none; font-size: 1.25em; font-weight: bold; transition: all 0.3s ease;">
-<div style="display: flex; flex-direction: column; gap: 8px;">
-<span>大学連携</span>
-<span style="font-size: 0.75em; font-weight: normal; color: #666; letter-spacing: 0.5px;">國學院大學をはじめとする各種大学連携。</span>
-</div>
-<span class="modern-arrow" style="font-size: 1.5em; color: #999; transition: transform 0.3s ease;">→</span>
-</a>
-</li>
-<li style="border-bottom: 1px solid #ddd;">
-<a class="modern-list-link" href="career.html#interview-top" style="display: flex; justify-content: space-between; align-items: center; padding: 30px 10px; color: #333; text-decoration: none; font-size: 1.25em; font-weight: bold; transition: all 0.3s ease;">
-<div style="display: flex; flex-direction: column; gap: 8px;">
-<span>卒業生の声</span>
-<span style="font-size: 0.75em; font-weight: normal; color: #666; letter-spacing: 0.5px;">各方面で活躍する卒業生へのインタビュー。</span>
-</div>
-<span class="modern-arrow" style="font-size: 1.5em; color: #999; transition: transform 0.3s ease;">→</span>
-</a>
-</li>
-</ul>
-</div>
-</section>
-<!-- 5. Inquiry Button -->
-<section class="course-section" style="margin-top: 60px; text-align: center; padding-bottom: 40px;">
-<a href="contact_admission.html" style="display: inline-block; width: 100%; max-width: 800px; padding: 30px 20px; background-color: #fff; color: #333; text-decoration: none; border: 2px solid #333; border-radius: 8px; font-weight: bold; font-size: 1.5em; transition: all 0.3s ease;">
+                <img alt="進路" src="https://placehold.co/800x600/eeeeee/666666?text=Photo"
+                    style="width: 100%; height: auto; object-fit: cover; border-radius: 4px; box-shadow: 0 4px 15px rgba(0,0,0,0.05);" />
+            </div>
+            <div style="flex: 1; min-width: 300px; display: flex; flex-direction: column; justify-content: flex-end;">
+                <ul style="list-style: none; padding: 0; margin: 0; border-top: 1px solid #ddd;">
+                    <li style="border-bottom: 1px solid #ddd;">
+                        <a class="modern-list-link" href="career.html#results"
+                            style="display: flex; justify-content: space-between; align-items: center; padding: 30px 10px; color: #333; text-decoration: none; font-size: 1.25em; font-weight: bold; transition: all 0.3s ease;">
+                            <div style="display: flex; flex-direction: column; gap: 8px;">
+                                <span>進学状況・就職／進学指導</span>
+                                <span
+                                    style="font-size: 0.75em; font-weight: normal; color: #666; letter-spacing: 0.5px;">大学合格実績と丁寧な進路指導。</span>
+                            </div>
+                            <span class="modern-arrow"
+                                style="font-size: 1.5em; color: #999; transition: transform 0.3s ease;">→</span>
+                        </a>
+                    </li>
+                    <li style="border-bottom: 1px solid #ddd;">
+                        <a class="modern-list-link" href="career.html#kokugakuin"
+                            style="display: flex; justify-content: space-between; align-items: center; padding: 30px 10px; color: #333; text-decoration: none; font-size: 1.25em; font-weight: bold; transition: all 0.3s ease;">
+                            <div style="display: flex; flex-direction: column; gap: 8px;">
+                                <span>大学連携</span>
+                                <span
+                                    style="font-size: 0.75em; font-weight: normal; color: #666; letter-spacing: 0.5px;">國學院大學をはじめとする各種大学連携。</span>
+                            </div>
+                            <span class="modern-arrow"
+                                style="font-size: 1.5em; color: #999; transition: transform 0.3s ease;">→</span>
+                        </a>
+                    </li>
+                    <li style="border-bottom: 1px solid #ddd;">
+                        <a class="modern-list-link" href="career.html#interview-top"
+                            style="display: flex; justify-content: space-between; align-items: center; padding: 30px 10px; color: #333; text-decoration: none; font-size: 1.25em; font-weight: bold; transition: all 0.3s ease;">
+                            <div style="display: flex; flex-direction: column; gap: 8px;">
+                                <span>卒業生の声</span>
+                                <span
+                                    style="font-size: 0.75em; font-weight: normal; color: #666; letter-spacing: 0.5px;">各方面で活躍する卒業生へのインタビュー。</span>
+                            </div>
+                            <span class="modern-arrow"
+                                style="font-size: 1.5em; color: #999; transition: transform 0.3s ease;">→</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <!-- 5. Inquiry Button -->
+        <section class="course-section" style="margin-top: 60px; text-align: center; padding-bottom: 40px;">
+            <a href="contact_admission.html"
+                style="display: inline-block; width: 100%; max-width: 800px; padding: 30px 20px; background-color: #fff; color: #333; text-decoration: none; border: 2px solid #333; border-radius: 8px; font-weight: bold; font-size: 1.5em; transition: all 0.3s ease;">
                 受験生専用 お問い合わせフォーム
             </a>
-</section>
-</main>
-<footer>
-<div class="container">
-</div>
-</footer>
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+        </div>
+    </footer>
 </body>
+
 </html>
