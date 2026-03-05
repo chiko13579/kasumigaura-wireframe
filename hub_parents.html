@@ -363,6 +363,188 @@
                 <span>お問合せ</span>
             </a>
         </nav>
+
+        <!-- お知らせ section -->
+        <style>
+            .news-section {
+                margin-bottom: 70px;
+            }
+
+            .news-header {
+                display: flex;
+                justify-content: space-between;
+                align-items: baseline;
+                border-bottom: 2px solid #111;
+                padding-bottom: 12px;
+                margin-bottom: 0;
+            }
+
+            .news-header h2 {
+                font-size: 1.6em;
+                font-weight: bold;
+            }
+
+            .news-header a {
+                color: #3b60a0;
+                font-size: 0.9em;
+                text-decoration: none;
+            }
+
+            .news-header a:hover {
+                text-decoration: underline;
+            }
+
+            .news-layout {
+                display: grid;
+                grid-template-columns: 2fr 1fr;
+                gap: 40px;
+                margin-top: 0;
+            }
+
+            .news-list {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+            }
+
+            .news-list li {
+                display: flex;
+                gap: 20px;
+                align-items: baseline;
+                padding: 22px 0;
+                border-bottom: 1px dashed #ccc;
+                font-size: 0.95em;
+            }
+
+            .news-date {
+                color: #666;
+                white-space: nowrap;
+                min-width: 90px;
+            }
+
+            .news-img-placeholder {
+                width: 100%;
+                aspect-ratio: 4/3;
+                background: #ccc;
+                border-radius: 6px;
+                margin-top: 30px;
+            }
+
+            /* 霞ヶ浦通信 */
+            .blog-section {
+                margin-bottom: 70px;
+            }
+
+            .blog-header {
+                display: flex;
+                justify-content: space-between;
+                align-items: baseline;
+                border-bottom: 2px solid #111;
+                padding-bottom: 12px;
+                margin-bottom: 30px;
+            }
+
+            .blog-header h2 {
+                font-size: 1.6em;
+                font-weight: bold;
+            }
+
+            .blog-header a {
+                color: #3b60a0;
+                font-size: 0.9em;
+                text-decoration: none;
+            }
+
+            .blog-header a:hover {
+                text-decoration: underline;
+            }
+
+            .blog-grid {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 30px;
+            }
+
+            .blog-card {
+                text-decoration: none;
+                color: #333;
+            }
+
+            .blog-card-img {
+                width: 100%;
+                aspect-ratio: 4/3;
+                background: #ccc;
+                border-radius: 6px;
+                margin-bottom: 14px;
+            }
+
+            .blog-card p {
+                font-size: 0.95em;
+                line-height: 1.6;
+                border-bottom: 1px solid #ddd;
+                padding-bottom: 14px;
+            }
+
+            .blog-card:hover p {
+                color: #3b60a0;
+            }
+
+            @media (max-width: 768px) {
+                .news-layout {
+                    grid-template-columns: 1fr;
+                }
+
+                .blog-grid {
+                    grid-template-columns: 1fr;
+                }
+            }
+        </style>
+
+        <section class="news-section">
+            <div class="news-header">
+                <h2>お知らせ</h2>
+                <a href="#">一覧を見る ›</a>
+            </div>
+            <div class="news-layout">
+                <ul class="news-list">
+                    <li>
+                        <span class="news-date">2026.03.01</span>
+                        <span>令和○年度 前期生徒会役員選挙のお知らせ</span>
+                    </li>
+                    <li>
+                        <span class="news-date">2026.02.15</span>
+                        <span>修学旅行の持ち物・日程について（2年生）</span>
+                    </li>
+                    <li>
+                        <span class="news-date">2026.02.01</span>
+                        <span>春季補講・課外授業のスケジュールを掲載しました。</span>
+                    </li>
+                </ul>
+                <div class="news-img-placeholder"></div>
+            </div>
+        </section>
+
+        <!-- 霞ヶ浦通信 section -->
+        <section class="blog-section">
+            <div class="blog-header">
+                <h2>霞ヶ浦通信</h2>
+                <a href="#">一覧を見る ›</a>
+            </div>
+            <div class="blog-grid">
+                <a href="#" class="blog-card">
+                    <div class="blog-card-img"></div>
+                    <p>生徒会役員選挙が行われ、新体制がスタートしました。</p>
+                </a>
+                <a href="#" class="blog-card">
+                    <div class="blog-card-img"></div>
+                    <p>吹奏楽部が東関東大会で金賞を受賞！全国大会への切符を掴みました。</p>
+                </a>
+                <a href="#" class="blog-card">
+                    <div class="blog-card-img"></div>
+                    <p>特進選抜コースの生徒が参加した海外研修レポート。</p>
+                </a>
+            </div>
+        </section>
     </main>
     <footer>
         <div class="container">
