@@ -38,16 +38,19 @@
 <ul class="overlay-submenu">
 <li><a href="admission.html#guide">スクールガイド案内 <span class="nav-arrow">›</span></a></li>
 <li><a href="admission.html#consultation">各種イベント案内 <span class="nav-arrow">›</span></a></li>
-<li><a href="admission.html#faq">よくある質問 <span class="nav-arrow">›</span></a></li>
+<li><a href="admission.html#faq">よくある質問 <span class="nav-arrow">›</span></a>
+</li>
 </ul>
 </li>
 <li class="has-submenu">
 <a class="submenu-toggle" href="#">学校紹介 <span class="nav-arrow toggle-arrow">›</span></a>
 <ul class="overlay-submenu">
-<li><a href="about.html#principal-history">校長紹介・学校沿革 <span class="nav-arrow">›</span></a></li>
-<li><a href="about.html#course-top">コース紹介（3コース） <span class="nav-arrow">›</span></a></li>
-<li><a href="about.html#school-life-top">制服・年間スケジュール <span class="nav-arrow">›</span></a></li>
-<li><a href="about.html#learning-center">施設・アクセス <span class="nav-arrow">›</span></a></li>
+<li><a href="about.html">校長紹介・学校沿革 <span class="nav-arrow">›</span></a>
+</li>
+<li><a href="course.html">コース紹介（3コース） <span class="nav-arrow">›</span></a></li>
+<li><a href="school_life.html">制服・年間スケジュール <span class="nav-arrow">›</span></a>
+</li>
+<li><a href="facility.html">施設・アクセス <span class="nav-arrow">›</span></a></li>
 </ul>
 </li>
 <li class="has-submenu">
@@ -61,7 +64,8 @@
 <a class="submenu-toggle" href="#">進路 <span class="nav-arrow toggle-arrow">›</span></a>
 <ul class="overlay-submenu">
 <li><a href="career.html#results">進学状況・就職／進学指導 <span class="nav-arrow">›</span></a></li>
-<li><a href="career.html#kokugakuin">大学連携 <span class="nav-arrow">›</span></a></li>
+<li><a href="career.html#kokugakuin">大学連携 <span class="nav-arrow">›</span></a>
+</li>
 <li><a href="career.html#interview-top">卒業生の声 <span class="nav-arrow">›</span></a></li>
 </ul>
 </li>
@@ -74,10 +78,12 @@
 <li class="has-submenu">
 <a class="submenu-toggle" href="#">学校紹介 <span class="nav-arrow toggle-arrow">›</span></a>
 <ul class="overlay-submenu">
-<li><a href="about.html#principal-history">校長紹介・学校沿革 <span class="nav-arrow">›</span></a></li>
-<li><a href="about.html#course-top">コース紹介（3コース） <span class="nav-arrow">›</span></a></li>
-<li><a href="about.html#school-life-top">制服・年間スケジュール <span class="nav-arrow">›</span></a></li>
-<li><a href="about.html#learning-center">施設・アクセス <span class="nav-arrow">›</span></a></li>
+<li><a href="about.html">校長紹介・学校沿革 <span class="nav-arrow">›</span></a>
+</li>
+<li><a href="course.html">コース紹介（3コース） <span class="nav-arrow">›</span></a></li>
+<li><a href="school_life.html">制服・年間スケジュール <span class="nav-arrow">›</span></a>
+</li>
+<li><a href="facility.html">施設・アクセス <span class="nav-arrow">›</span></a></li>
 </ul>
 </li>
 <li class="has-submenu">
@@ -91,7 +97,8 @@
 <a class="submenu-toggle" href="#">進路 <span class="nav-arrow toggle-arrow">›</span></a>
 <ul class="overlay-submenu">
 <li><a href="career.html#results">進学状況・就職／進学指導 <span class="nav-arrow">›</span></a></li>
-<li><a href="career.html#kokugakuin">大学連携 <span class="nav-arrow">›</span></a></li>
+<li><a href="career.html#kokugakuin">大学連携 <span class="nav-arrow">›</span></a>
+</li>
 <li><a href="career.html#interview-top">卒業生の声 <span class="nav-arrow">›</span></a></li>
 </ul>
 </li>
@@ -118,24 +125,24 @@
 </div>
 </div>
 <script>
-            document.addEventListener('DOMContentLoaded', function() {
+            document.addEventListener('DOMContentLoaded', function () {
                 var hamburger = document.getElementById('hamburgerBtn');
                 var nav = document.getElementById('fullscreenNav');
                 var closebtn = document.getElementById('closeNavBtn');
 
-                if(hamburger && nav && closebtn) {
-                    hamburger.addEventListener('click', function() {
+                if (hamburger && nav && closebtn) {
+                    hamburger.addEventListener('click', function () {
                         nav.classList.add('active');
                     });
-                    closebtn.addEventListener('click', function() {
+                    closebtn.addEventListener('click', function () {
                         nav.classList.remove('active');
                     });
                 }
 
                 // Accordion functionality
                 var toggles = document.querySelectorAll('.submenu-toggle');
-                toggles.forEach(function(toggle) {
-                    toggle.addEventListener('click', function(e) {
+                toggles.forEach(function (toggle) {
+                    toggle.addEventListener('click', function (e) {
                         e.preventDefault();
                         e.stopPropagation(); // crucial for multi-level accordions
                         var parentLi = this.parentElement;
@@ -145,10 +152,7 @@
             });
         </script>
 </header>
-<main class="container">
-<h1 class="page-main-title" style="text-align: center; font-size: 32px; font-weight: bold; margin-top: 40px; margin-bottom: 30px; letter-spacing: 2px;">コース紹介</h1>
-<!-- Special Advanced Selection Course -->
-<section class="course-section" id="special-advanced">
+<main class="container"><h1 class="page-main-title" style="text-align: center; font-size: 32px; font-weight: bold; margin-top: 40px; margin-bottom: 30px; letter-spacing: 2px;">コース紹介</h1><section class="course-section" id="special-advanced">
 <h2 class="course-title" id="tokushin_senbatsu">特進選抜</h2>
 <div class="content-block">
 <div class="two-column">
@@ -209,10 +213,7 @@
 </div>
 </div>
 </div>
-</section>
-<hr/>
-<!-- Advanced Course -->
-<section class="course-section" id="advanced">
+</section><hr/><section class="course-section" id="advanced">
 <h2 class="course-title" id="tokushin">特進</h2>
 <div class="content-block">
 <div class="two-column">
@@ -271,10 +272,7 @@
 </div>
 </div>
 </div>
-</section>
-<hr/>
-<!-- Comprehensive Advancement Course -->
-<section class="course-section" id="comprehensive">
+</section><hr/><section class="course-section" id="comprehensive">
 <h2 class="course-title" id="sogo">総合進学</h2>
 <div class="content-block">
 <div class="two-column">
@@ -333,13 +331,10 @@
 </div>
 </div>
 </div>
-</section>
-</main>
+</section><hr/></main>
 <footer>
 <div class="container">
-<p>© 2026 Course Introduction Wireframe</p>
 </div>
 </footer>
-<script src="script.js"></script>
 </body>
 </html>

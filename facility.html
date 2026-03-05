@@ -38,15 +38,18 @@
 <ul class="overlay-submenu">
 <li><a href="admission.html#guide">スクールガイド案内 <span class="nav-arrow">›</span></a></li>
 <li><a href="admission.html#consultation">各種イベント案内 <span class="nav-arrow">›</span></a></li>
-<li><a href="admission.html#faq">よくある質問 <span class="nav-arrow">›</span></a></li>
+<li><a href="admission.html#faq">よくある質問 <span class="nav-arrow">›</span></a>
+</li>
 </ul>
 </li>
 <li class="has-submenu">
 <a class="submenu-toggle" href="#">学校紹介 <span class="nav-arrow toggle-arrow">›</span></a>
 <ul class="overlay-submenu">
-<li><a href="about.html">校長紹介・学校沿革 <span class="nav-arrow">›</span></a></li>
+<li><a href="about.html">校長紹介・学校沿革 <span class="nav-arrow">›</span></a>
+</li>
 <li><a href="course.html">コース紹介（3コース） <span class="nav-arrow">›</span></a></li>
-<li><a href="school_life.html">制服・年間スケジュール <span class="nav-arrow">›</span></a></li>
+<li><a href="school_life.html">制服・年間スケジュール <span class="nav-arrow">›</span></a>
+</li>
 <li><a href="facility.html">施設・アクセス <span class="nav-arrow">›</span></a></li>
 </ul>
 </li>
@@ -61,7 +64,8 @@
 <a class="submenu-toggle" href="#">進路 <span class="nav-arrow toggle-arrow">›</span></a>
 <ul class="overlay-submenu">
 <li><a href="career.html#results">進学状況・就職／進学指導 <span class="nav-arrow">›</span></a></li>
-<li><a href="career.html#kokugakuin">大学連携 <span class="nav-arrow">›</span></a></li>
+<li><a href="career.html#kokugakuin">大学連携 <span class="nav-arrow">›</span></a>
+</li>
 <li><a href="career.html#interview-top">卒業生の声 <span class="nav-arrow">›</span></a></li>
 </ul>
 </li>
@@ -74,9 +78,11 @@
 <li class="has-submenu">
 <a class="submenu-toggle" href="#">学校紹介 <span class="nav-arrow toggle-arrow">›</span></a>
 <ul class="overlay-submenu">
-<li><a href="about.html">校長紹介・学校沿革 <span class="nav-arrow">›</span></a></li>
+<li><a href="about.html">校長紹介・学校沿革 <span class="nav-arrow">›</span></a>
+</li>
 <li><a href="course.html">コース紹介（3コース） <span class="nav-arrow">›</span></a></li>
-<li><a href="school_life.html">制服・年間スケジュール <span class="nav-arrow">›</span></a></li>
+<li><a href="school_life.html">制服・年間スケジュール <span class="nav-arrow">›</span></a>
+</li>
 <li><a href="facility.html">施設・アクセス <span class="nav-arrow">›</span></a></li>
 </ul>
 </li>
@@ -91,7 +97,8 @@
 <a class="submenu-toggle" href="#">進路 <span class="nav-arrow toggle-arrow">›</span></a>
 <ul class="overlay-submenu">
 <li><a href="career.html#results">進学状況・就職／進学指導 <span class="nav-arrow">›</span></a></li>
-<li><a href="career.html#kokugakuin">大学連携 <span class="nav-arrow">›</span></a></li>
+<li><a href="career.html#kokugakuin">大学連携 <span class="nav-arrow">›</span></a>
+</li>
 <li><a href="career.html#interview-top">卒業生の声 <span class="nav-arrow">›</span></a></li>
 </ul>
 </li>
@@ -118,24 +125,24 @@
 </div>
 </div>
 <script>
-            document.addEventListener('DOMContentLoaded', function() {
+            document.addEventListener('DOMContentLoaded', function () {
                 var hamburger = document.getElementById('hamburgerBtn');
                 var nav = document.getElementById('fullscreenNav');
                 var closebtn = document.getElementById('closeNavBtn');
 
-                if(hamburger && nav && closebtn) {
-                    hamburger.addEventListener('click', function() {
+                if (hamburger && nav && closebtn) {
+                    hamburger.addEventListener('click', function () {
                         nav.classList.add('active');
                     });
-                    closebtn.addEventListener('click', function() {
+                    closebtn.addEventListener('click', function () {
                         nav.classList.remove('active');
                     });
                 }
 
                 // Accordion functionality
                 var toggles = document.querySelectorAll('.submenu-toggle');
-                toggles.forEach(function(toggle) {
-                    toggle.addEventListener('click', function(e) {
+                toggles.forEach(function (toggle) {
+                    toggle.addEventListener('click', function (e) {
                         e.preventDefault();
                         e.stopPropagation(); // crucial for multi-level accordions
                         var parentLi = this.parentElement;
@@ -145,45 +152,73 @@
             });
         </script>
 </header>
-<main class="container">
-<h1 class="page-main-title" style="text-align: center; font-size: 32px; font-weight: bold; margin-top: 40px; margin-bottom: 30px; letter-spacing: 2px;">卒業生の声</h1>
-<section class="course-section">
-<div class="interview-list" style="display: flex; flex-wrap: wrap; gap: 20px;">
-<!-- Person 1 -->
-<div class="interview-card" style="width: calc(50% - 10px); border: 1px solid #ddd; padding: 20px; box-sizing: border-box;">
-<div class="image-placeholder" style="height: 200px; margin-bottom: 15px;">ここに写真を入れるイメージ</div>
-<h3>テキストテキストテキスト</h3>
-<p>明確な目標を立て、最後まで諦めずに努力しました。</p>
-<a href="interview_detail.html" style="display: inline-block; margin-top: 10px; color: #333; text-decoration: underline;">インタビューを読む</a>
+<main class="container"><h1 class="page-main-title" style="text-align: center; font-size: 32px; font-weight: bold; margin-top: 40px; margin-bottom: 30px; letter-spacing: 2px;">施設・アクセス</h1><section class="course-section" id="learning-center">
+<img alt="霞ヶ浦高等学校の施設" src="img/facility.jpg" style="width: 100%; max-width: 1200px; height: auto; display: block; margin: 20px auto;"/>
+<h2 class="course-title" id="learning_center">学習センター</h2>
+<div class="content-block center-text">
+<h3>自宅でもない、塾でもない、あなたのための学習空間</h3>
+<p class="goal-text">使い方いろいろ、3種類の学び場</p>
+<div class="learning-spaces">
+<!-- Space 1 -->
+<div class="space-item">
+<div class="image-placeholder">ここに写真を入れるイメージ</div>
+<h4>Innovation Lab</h4>
+<p>探究学習でも活用！<br/>グループワーク用の「学び合い」空間</p>
 </div>
-<!-- Person 2 -->
-<div class="interview-card" style="width: calc(50% - 10px); border: 1px solid #ddd; padding: 20px; box-sizing: border-box;">
-<div class="image-placeholder" style="height: 200px; margin-bottom: 15px;">ここに写真を入れるイメージ</div>
-<h3>テキストテキストテキスト</h3>
-<p>部活と両立しながら第一志望に合格することができました。</p>
-<a href="interview_detail.html" style="display: inline-block; margin-top: 10px; color: #333; text-decoration: underline;">インタビューを読む</a>
+<!-- Space 2 -->
+<div class="space-item">
+<div class="image-placeholder">ここに写真を入れるイメージ</div>
+<h4>Study Room</h4>
+<p>個人用の学習机を完備。<br/>黙々と学習するための自習スペース。</p>
 </div>
-<!-- Person 3 -->
-<div class="interview-card" style="width: calc(50% - 10px); border: 1px solid #ddd; padding: 20px; box-sizing: border-box;">
-<div class="image-placeholder" style="height: 200px; margin-bottom: 15px;">ここに写真を入れるイメージ</div>
-<h3>テキストテキストテキスト</h3>
-<p>資格取得や面接対策など、手厚いサポートに感謝しています。</p>
-<a href="interview_detail.html" style="display: inline-block; margin-top: 10px; color: #333; text-decoration: underline;">インタビューを読む</a>
-</div>
-<!-- Person 4 -->
-<div class="interview-card" style="width: calc(50% - 10px); border: 1px solid #ddd; padding: 20px; box-sizing: border-box;">
-<div class="image-placeholder" style="height: 200px; margin-bottom: 15px;">ここに写真を入れるイメージ</div>
-<h3>テキストテキストテキスト</h3>
-<p>先生方との距離が近く、気軽に相談できたのがよかったです。</p>
-<a href="interview_detail.html" style="display: inline-block; margin-top: 10px; color: #333; text-decoration: underline;">インタビューを読む</a>
+<!-- Space 3 -->
+<div class="space-item">
+<div class="image-placeholder">ここに写真を入れるイメージ</div>
+<h4>生徒ラウンジ</h4>
+<p>学習したり、休憩したり、<br/>生徒専用の“憩いの空間”</p>
 </div>
 </div>
-</section>
-</main>
+<p style="margin-top: 30px; font-weight: bold; font-size: 1.2em;">多様な学びの場として「学習センター」を整備</p>
+</div>
+<div class="sub-section">
+<div class="two-column">
+<div class="column">
+<h5>・20時まで開放</h5>
+<p>原則、最終下校は17:00ですが、学習センターは20:00まで開放しています。部活動の後でも、納得いくまで学習に取り組むことができます。</p>
+<div class="image-placeholder">ここに写真を入れるイメージ</div>
+</div>
+<div class="column">
+<h5>・教員が近くに常駐</h5>
+<p>教員が近くに常駐しているため、質問したい時に職員室まで行く必要がありません。いつでも気軽に質問できる環境が整っています。</p>
+<div class="image-placeholder">ここに写真を入れるイメージ</div>
+</div>
+</div>
+</div>
+</section><hr/><section class="course-section" id="access"><h2 class="course-title" id="access" style="margin-top: 60px;">アクセス（交通案内）</h2><div class="content-block two-column">
+<div class="column">
+<h3 style="font-size: 1.2em; border-left: 4px solid #333; padding-left: 10px; margin-bottom: 20px;">
+                        交通機関のご案内</h3>
+<ul class="feature-list" style="line-height: 1.8;">
+<li>JR常磐線「神立駅」から徒歩またはバス</li>
+<li>JR常磐線「土浦駅」からバス</li>
+<li>各方面からのスクールバスを運行（詳細要確認）</li>
+</ul>
+<div style="margin-top: 20px; padding: 15px; background-color: #fff; border: 1px solid #ddd;">
+<strong>霞ヶ浦高等学校</strong><br/>
+                        〒300-0000 茨城県かすみがうら市○○町1-2-3<br/>
+                        TEL: 029-887-0013 / FAX: 029-887-XXXX
+                    </div>
+</div>
+<div class="column" style="min-width: 400px;">
+<!-- Google Maps Iframe Placeholder -->
+<div style="width: 100%; height: 300px; background-color: #eee; border: 1px solid #ccc; display: flex; justify-content: center; align-items: center; text-align: center; color: #666;">
+<span style="font-size: 1.2em; font-weight: bold;">ここに写真を入れるイメージ</span>
+</div>
+</div>
+</div></section></main>
 <footer>
 <div class="container">
 </div>
 </footer>
-<script src="script.js"></script>
 </body>
 </html>
