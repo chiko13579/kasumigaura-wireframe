@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="noindex, nofollow" name="robots" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>寄付 | 霞ヶ浦高等学校</title>
+    <link href="style.css?v=2" rel="stylesheet" />
+    <style>
+        .donation-container {
+            max-width: 900px;
+            margin: 80px auto;
+            padding: 0 20px;
+            text-align: center;
+        }
+
+        .placeholder-message {
+            background-color: #f5f5f5;
+            border: 2px dashed #ccc;
+            padding: 60px 40px;
+            border-radius: 12px;
+            font-size: 1.5em;
+            color: #666;
+            margin-top: 40px;
+        }
+
+        .page-title {
+            font-size: 2.2em;
+            font-weight: bold;
+            margin-bottom: 30px;
+            letter-spacing: 2px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="modern-header-container">
+            <div class="logo-container">
+                <a class="modern-logo" href="index.html">霞ヶ浦高等学校</a>
+            </div>
+            <div class="hamburger-btn" id="hamburgerBtn">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="menu-text">MENU</span>
+            </div>
+        </div>
+        <!-- Simplified Header/Nav for consistency -->
+        <div class="fullscreen-overlay-nav" id="fullscreenNav">
+            <div class="close-btn" id="closeNavBtn">✕ 閉じる</div>
+            <div class="overlay-nav-container">
+                <div class="overlay-nav-left">
+                    <div class="school-name">霞ヶ浦高等学校</div>
+                </div>
+                <div class="overlay-nav-right">
+                    <ul class="overlay-nav-links">
+                        <li><a href="index.html">トップページ <span class="nav-arrow">›</span></a></li>
+                        <li><a href="hub_admission.html">受験生の方へ <span class="nav-arrow">›</span></a></li>
+                        <li><a href="hub_parents.html">在校生・保護者の方へ <span class="nav-arrow">›</span></a></li>
+                        <li><a href="hub_alumni.html">卒業生の方へ <span class="nav-arrow">›</span></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="donation-container">
+        <h1 class="page-title">寄付のご案内</h1>
+        <div class="placeholder-message">
+            PDFを差し込みます
+        </div>
+        <div style="margin-top: 60px;">
+            <a href="hub_alumni.html" style="color: #3b60a0; text-decoration: none;">卒業生の方へ戻る</a>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container" style="text-align: center; padding: 40px 0; color: #999;">
+            © 霞ヶ浦高等学校
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var hamburger = document.getElementById('hamburgerBtn');
+            var nav = document.getElementById('fullscreenNav');
+            var closebtn = document.getElementById('closeNavBtn');
+
+            if (hamburger && nav && closebtn) {
+                hamburger.addEventListener('click', function () {
+                    nav.classList.add('active');
+                });
+                closebtn.addEventListener('click', function () {
+                    nav.classList.remove('active');
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>
