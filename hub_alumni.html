@@ -303,56 +303,66 @@
             テキストテキストテキスト</h1>
     </div>
     <main class="container">
-        <section class="modern-list-section"
-            style="display: flex; flex-direction: row; flex-wrap: wrap; gap: 50px; margin-top: 80px; padding-top: 20px;">
-            <div style="flex: 1; min-width: 300px;">
-                <h2
-                    style="font-size: 2.2em; margin-bottom: 25px; font-weight: bold; letter-spacing: 2px; border-bottom: 3px solid #333; padding-bottom: 15px;">
-                    各種申請・お問い合わせ</h2>
-                <img alt="各種申請・お問い合わせ" src="https://placehold.co/800x600/eeeeee/666666"
-                    style="width: 100%; height: auto; object-fit: cover; border-radius: 4px; box-shadow: 0 4px 15px rgba(0,0,0,0.05);" />
-            </div>
-            <div style="flex: 1; min-width: 300px; display: flex; flex-direction: column; justify-content: flex-end;">
-                <ul style="list-style: none; padding: 0; margin: 0; border-top: 1px solid #ddd;">
-                    <li style="border-bottom: 1px solid #ddd;">
-                        <a class="modern-list-link" href="contact.html"
-                            style="display: flex; justify-content: space-between; align-items: center; padding: 30px 10px; color: #333; text-decoration: none; font-size: 1.25em; font-weight: bold; transition: all 0.3s ease;">
-                            <div style="display: flex; flex-direction: column; gap: 8px;">
-                                <span>卒業証明書申請</span>
-                                <span
-                                    style="font-size: 0.75em; font-weight: normal; color: #666; letter-spacing: 0.5px;">卒業証明書の発行手続きについてはこちらからお申し込みください。</span>
-                            </div>
-                            <span class="modern-arrow"
-                                style="font-size: 1.5em; color: #999; transition: transform 0.3s ease;">→</span>
-                        </a>
-                    </li>
-                    <li style="border-bottom: 1px solid #ddd;">
-                        <a class="modern-list-link" href="contact.html"
-                            style="display: flex; justify-content: space-between; align-items: center; padding: 30px 10px; color: #333; text-decoration: none; font-size: 1.25em; font-weight: bold; transition: all 0.3s ease;">
-                            <div style="display: flex; flex-direction: column; gap: 8px;">
-                                <span>成績証明書申請</span>
-                                <span
-                                    style="font-size: 0.75em; font-weight: normal; color: #666; letter-spacing: 0.5px;">成績証明書・調査書などの発行手続きについてはこちら。</span>
-                            </div>
-                            <span class="modern-arrow"
-                                style="font-size: 1.5em; color: #999; transition: transform 0.3s ease;">→</span>
-                        </a>
-                    </li>
-                    <li style="border-bottom: 1px solid #ddd;">
-                        <a class="modern-list-link" href="contact.html"
-                            style="display: flex; justify-content: space-between; align-items: center; padding: 30px 10px; color: #333; text-decoration: none; font-size: 1.25em; font-weight: bold; transition: all 0.3s ease;">
-                            <div style="display: flex; flex-direction: column; gap: 8px;">
-                                <span>料金・支払い案内</span>
-                                <span
-                                    style="font-size: 0.75em; font-weight: normal; color: #666; letter-spacing: 0.5px;">各種証明書の発行にかかる手数料とお支払い方法のご案内です。</span>
-                            </div>
-                            <span class="modern-arrow"
-                                style="font-size: 1.5em; color: #999; transition: transform 0.3s ease;">→</span>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </section>
+        <style>
+            .alumni-nav-grid {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 20px;
+                margin: 48px 0 60px;
+            }
+
+            .alumni-nav-btn {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 14px;
+                padding: 36px 20px;
+                background: #fff;
+                border: 2px solid #ddd;
+                border-radius: 8px;
+                text-decoration: none;
+                color: #333;
+                font-size: 1.1em;
+                font-weight: bold;
+                letter-spacing: 1px;
+                transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+                box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+            }
+
+            .alumni-nav-btn:hover {
+                background: #f5f8ff;
+                border-color: #3b60a0;
+                color: #3b60a0;
+                transform: translateY(-3px);
+            }
+
+            .alumni-nav-btn .nav-icon {
+                font-size: 2.2em;
+                line-height: 1;
+            }
+
+            @media (max-width: 600px) {
+                .alumni-nav-grid {
+                    grid-template-columns: 1fr;
+                }
+            }
+        </style>
+
+        <nav class="alumni-nav-grid">
+            <a href="#" class="alumni-nav-btn">
+                <span class="nav-icon">🧧</span>
+                <span>寄付</span>
+            </a>
+            <a href="alumni_assoc.html" class="alumni-nav-btn">
+                <span class="nav-icon">🤝</span>
+                <span>同窓会</span>
+            </a>
+            <a href="contact_alumni.html" class="alumni-nav-btn">
+                <span class="nav-icon">📄</span>
+                <span>各種証明書申請</span>
+            </a>
+        </nav>
         <!-- お知らせ section -->
         <style>
             .news-section {
