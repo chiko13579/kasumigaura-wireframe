@@ -1,112 +1,195 @@
 <!DOCTYPE html>
 
 <html lang="ja">
+
 <head>
-<meta charset="utf-8"/>
-<meta content="noindex, nofollow" name="robots"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title></title>
-<link href="style.css?v=2" rel="stylesheet"/>
+    <meta charset="utf-8" />
+    <meta content="noindex, nofollow" name="robots" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title></title>
+    <link href="style.css?v=2" rel="stylesheet" />
+    <style>
+        .history-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 30px;
+            background: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .history-table th,
+        .history-table td {
+            padding: 20px 25px;
+            border-bottom: 1px solid #eee;
+            text-align: left;
+        }
+
+        .history-table th {
+            background-color: #f9f9f9;
+            width: 180px;
+            font-weight: bold;
+            color: #3b60a0;
+            vertical-align: top;
+        }
+
+        .history-table tr:last-child td,
+        .history-table tr:last-child th {
+            border-bottom: none;
+        }
+
+        .history-year {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            font-size: 1.1em;
+        }
+
+        .history-event {
+            line-height: 1.7;
+            color: #333;
+        }
+
+        @media (max-width: 600px) {
+
+            .history-table th,
+            .history-table td {
+                display: block;
+                width: 100%;
+                padding: 15px;
+            }
+
+            .history-table th {
+                background-color: transparent;
+                padding-bottom: 0;
+                color: #3b60a0;
+            }
+
+            .history-table td {
+                padding-top: 5px;
+            }
+        }
+    </style>
 </head>
+
 <body>
-<header>
-<div class="modern-header-container">
-<div class="logo-container">
-<a class="modern-logo" href="index.html">霞ヶ浦高等学校</a>
-</div>
-<div class="hamburger-btn" id="hamburgerBtn">
-<span class="bar"></span>
-<span class="bar"></span>
-<span class="bar"></span>
-<span class="menu-text">MENU</span>
-</div>
-</div>
-<div class="fullscreen-overlay-nav" id="fullscreenNav">
-<div class="close-btn" id="closeNavBtn">✕ 閉じる</div>
-<div class="overlay-nav-container">
-<div class="overlay-nav-left">
-<div class="school-name">霞ヶ浦高等学校</div>
-</div>
-<div class="overlay-nav-right">
-<ul class="overlay-nav-links">
-<li class="has-submenu">
-<a class="submenu-toggle" href="#">受験生の方へ <span class="nav-arrow toggle-arrow">›</span></a>
-<ul class="overlay-submenu"><li><a href="hub_admission.html">受験生の方へ <span class="nav-arrow">›</span></a></li>
-<li><a href="application.html">出願 <span class="nav-arrow">›</span></a></li>
-<li class="has-submenu">
-<a class="submenu-toggle" href="#">受験情報 <span class="nav-arrow toggle-arrow">›</span></a>
-<ul class="overlay-submenu">
-<li><a href="admission.html#guide">スクールガイド案内 <span class="nav-arrow">›</span></a></li>
-<li><a href="admission.html#consultation">各種イベント案内 <span class="nav-arrow">›</span></a></li>
-<li><a href="admission.html#faq">よくある質問 <span class="nav-arrow">›</span></a>
-</li>
-</ul>
-</li>
-<li class="has-submenu">
-<a class="submenu-toggle" href="#">学校紹介 <span class="nav-arrow toggle-arrow">›</span></a>
-<ul class="overlay-submenu">
-<li><a href="about.html">校長紹介・学校沿革 <span class="nav-arrow">›</span></a>
-</li>
-<li><a href="course.html">コース紹介（3コース） <span class="nav-arrow">›</span></a></li>
-<li><a href="school_life.html">制服・年間スケジュール <span class="nav-arrow">›</span></a>
-</li>
-<li><a href="facility.html">施設・アクセス <span class="nav-arrow">›</span></a></li>
-</ul>
-</li>
-<li class="has-submenu">
-<a class="submenu-toggle" href="#">部活動 <span class="nav-arrow toggle-arrow">›</span></a>
-<ul class="overlay-submenu">
-<li><a href="club.html#sports">運動部 <span class="nav-arrow">›</span></a></li>
-<li><a href="club.html#culture">文化部 <span class="nav-arrow">›</span></a></li>
-</ul>
-</li>
-<li class="has-submenu">
-<a class="submenu-toggle" href="#">進路 <span class="nav-arrow toggle-arrow">›</span></a>
-<ul class="overlay-submenu">
-<li><a href="career.html#results">進学状況・就職／進学指導 <span class="nav-arrow">›</span></a></li>
-<li><a href="career.html#kokugakuin">大学連携 <span class="nav-arrow">›</span></a>
-</li>
-<li><a href="career.html#interview-top">卒業生の声 <span class="nav-arrow">›</span></a></li>
-</ul>
-</li>
-<li><a href="contact_admission.html">お問い合わせ <span class="nav-arrow">›</span></a></li>
-</ul>
-</li>
-<li class="has-submenu">
-<a class="submenu-toggle" href="#">在校生・保護者の方へ <span class="nav-arrow toggle-arrow">›</span></a>
-<ul class="overlay-submenu"><li><a href="hub_parents.html">在校生・保護者の方へ <span class="nav-arrow">›</span></a></li>
-<li class="has-submenu">
-<a class="submenu-toggle" href="#">進路 <span class="nav-arrow toggle-arrow">›</span></a>
-<ul class="overlay-submenu">
-<li><a href="career.html#results">進学状況・就職／進学指導 <span class="nav-arrow">›</span></a></li>
-<li><a href="career.html#kokugakuin">大学連携 <span class="nav-arrow">›</span></a>
-</li>
-<li><a href="career.html#interview-top">卒業生の声 <span class="nav-arrow">›</span></a></li>
-</ul>
-</li>
-<li><a href="#">治癒報告書の案内（PDF） <span class="nav-arrow">›</span></a></li>
-<li><a href="contact_parents.html">お問い合わせ <span class="nav-arrow">›</span></a></li>
-</ul>
-</li>
-<li class="has-submenu">
-<a class="submenu-toggle" href="#">卒業生の方へ <span class="nav-arrow toggle-arrow">›</span></a>
-<ul class="overlay-submenu"><li><a href="hub_alumni.html">卒業生の方へ <span class="nav-arrow">›</span></a></li><li><a href="alumni_assoc.html">同窓会 <span class="nav-arrow">›</span></a></li>
-<li class="has-submenu">
-<a class="submenu-toggle" href="#">お問い合わせ <span class="nav-arrow toggle-arrow">›</span></a>
-<ul class="overlay-submenu">
-<li><a href="contact_alumni.html#certificate">卒業証明書申請 <span class="nav-arrow">›</span></a></li>
-<li><a href="contact_alumni.html#transcript">成績証明書申請 <span class="nav-arrow">›</span></a></li>
-<li><a href="contact_alumni.html#fee">料金・支払い案内 <span class="nav-arrow">›</span></a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a href="recruit.html">教員採用 <span class="nav-arrow">›</span></a></li>
-</ul>
-</div>
-</div>
-</div>
-<script>
+    <header>
+        <div class="modern-header-container">
+            <div class="logo-container">
+                <a class="modern-logo" href="index.html">霞ヶ浦高等学校</a>
+            </div>
+            <div class="hamburger-btn" id="hamburgerBtn">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="menu-text">MENU</span>
+            </div>
+        </div>
+        <div class="fullscreen-overlay-nav" id="fullscreenNav">
+            <div class="close-btn" id="closeNavBtn">✕ 閉じる</div>
+            <div class="overlay-nav-container">
+                <div class="overlay-nav-left">
+                    <div class="school-name">霞ヶ浦高等学校</div>
+                </div>
+                <div class="overlay-nav-right">
+                    <ul class="overlay-nav-links">
+                        <li class="has-submenu">
+                            <a class="submenu-toggle" href="#">受験生の方へ <span class="nav-arrow toggle-arrow">›</span></a>
+                            <ul class="overlay-submenu">
+                                <li><a href="hub_admission.html">受験生の方へ <span class="nav-arrow">›</span></a></li>
+                                <li><a href="application.html">出願 <span class="nav-arrow">›</span></a></li>
+                                <li class="has-submenu">
+                                    <a class="submenu-toggle" href="#">受験情報 <span
+                                            class="nav-arrow toggle-arrow">›</span></a>
+                                    <ul class="overlay-submenu">
+                                        <li><a href="admission.html#guide">スクールガイド案内 <span
+                                                    class="nav-arrow">›</span></a></li>
+                                        <li><a href="admission.html#consultation">各種イベント案内 <span
+                                                    class="nav-arrow">›</span></a></li>
+                                        <li><a href="admission.html#faq">よくある質問 <span class="nav-arrow">›</span></a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="has-submenu">
+                                    <a class="submenu-toggle" href="#">学校紹介 <span
+                                            class="nav-arrow toggle-arrow">›</span></a>
+                                    <ul class="overlay-submenu">
+                                        <li><a href="about.html">校長紹介・学校沿革 <span class="nav-arrow">›</span></a>
+                                        </li>
+                                        <li><a href="course.html">コース紹介（3コース） <span class="nav-arrow">›</span></a></li>
+                                        <li><a href="school_life.html">制服・年間スケジュール <span class="nav-arrow">›</span></a>
+                                        </li>
+                                        <li><a href="facility.html">施設・アクセス <span class="nav-arrow">›</span></a></li>
+                                    </ul>
+                                </li>
+                                <li class="has-submenu">
+                                    <a class="submenu-toggle" href="#">部活動 <span
+                                            class="nav-arrow toggle-arrow">›</span></a>
+                                    <ul class="overlay-submenu">
+                                        <li><a href="club.html#sports">運動部 <span class="nav-arrow">›</span></a></li>
+                                        <li><a href="club.html#culture">文化部 <span class="nav-arrow">›</span></a></li>
+                                    </ul>
+                                </li>
+                                <li class="has-submenu">
+                                    <a class="submenu-toggle" href="#">進路 <span
+                                            class="nav-arrow toggle-arrow">›</span></a>
+                                    <ul class="overlay-submenu">
+                                        <li><a href="career.html#results">進学状況・就職／進学指導 <span
+                                                    class="nav-arrow">›</span></a></li>
+                                        <li><a href="career.html#kokugakuin">大学連携 <span class="nav-arrow">›</span></a>
+                                        </li>
+                                        <li><a href="career.html#interview-top">卒業生の声 <span
+                                                    class="nav-arrow">›</span></a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="contact_admission.html">お問い合わせ <span class="nav-arrow">›</span></a></li>
+                            </ul>
+                        </li>
+                        <li class="has-submenu">
+                            <a class="submenu-toggle" href="#">在校生・保護者の方へ <span
+                                    class="nav-arrow toggle-arrow">›</span></a>
+                            <ul class="overlay-submenu">
+                                <li><a href="hub_parents.html">在校生・保護者の方へ <span class="nav-arrow">›</span></a></li>
+                                <li class="has-submenu">
+                                    <a class="submenu-toggle" href="#">進路 <span
+                                            class="nav-arrow toggle-arrow">›</span></a>
+                                    <ul class="overlay-submenu">
+                                        <li><a href="career.html#results">進学状況・就職／進学指導 <span
+                                                    class="nav-arrow">›</span></a></li>
+                                        <li><a href="career.html#kokugakuin">大学連携 <span class="nav-arrow">›</span></a>
+                                        </li>
+                                        <li><a href="career.html#interview-top">卒業生の声 <span
+                                                    class="nav-arrow">›</span></a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">治癒報告書の案内（PDF） <span class="nav-arrow">›</span></a></li>
+                                <li><a href="contact_parents.html">お問い合わせ <span class="nav-arrow">›</span></a></li>
+                            </ul>
+                        </li>
+                        <li class="has-submenu">
+                            <a class="submenu-toggle" href="#">卒業生の方へ <span class="nav-arrow toggle-arrow">›</span></a>
+                            <ul class="overlay-submenu">
+                                <li><a href="hub_alumni.html">卒業生の方へ <span class="nav-arrow">›</span></a></li>
+                                <li><a href="alumni_assoc.html">同窓会 <span class="nav-arrow">›</span></a></li>
+                                <li class="has-submenu">
+                                    <a class="submenu-toggle" href="#">お問い合わせ <span
+                                            class="nav-arrow toggle-arrow">›</span></a>
+                                    <ul class="overlay-submenu">
+                                        <li><a href="contact_alumni.html#certificate">卒業証明書申請 <span
+                                                    class="nav-arrow">›</span></a></li>
+                                        <li><a href="contact_alumni.html#transcript">成績証明書申請 <span
+                                                    class="nav-arrow">›</span></a></li>
+                                        <li><a href="contact_alumni.html#fee">料金・支払い案内 <span
+                                                    class="nav-arrow">›</span></a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><a href="recruit.html">教員採用 <span class="nav-arrow">›</span></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <script>
             document.addEventListener('DOMContentLoaded', function () {
                 var hamburger = document.getElementById('hamburgerBtn');
                 var nav = document.getElementById('fullscreenNav');
@@ -133,53 +216,144 @@
                 });
             });
         </script>
-</header>
-<main class="container"><div style="width: 100%; height: 400px; background-color: #ccc; position: relative; margin-bottom: 40px;"><h1 style="position: absolute; bottom: 20px; left: 20px; font-size: 32px; font-weight: bold; color: #333; margin: 0; letter-spacing: 2px;">テキストテキストテキスト</h1></div><section class="course-section" id="principal-history">
-<h2 class="course-title" id="history">校長・沿革</h2>
-<div class="content-block">
-<div style="display: flex; gap: 30px; flex-wrap: wrap;">
-<div style="flex: 1.5; min-width: 300px;">
-<div class="image-placeholder" style="height: 300px;"></div>
-</div>
-<div style="flex: 1; min-width: 300px;">
-<h3>校長のプロフィールにするので、ここにプロフィールが入ります。</h3>
-<hr style="margin: 15px 0; border: 0; border-top: 1px solid #ddd;"/>
-<p style="font-size: 0.95em; line-height: 1.7; color: #444; margin-bottom: 20px;">
+    </header>
+    <main class="container">
+        <div style="width: 100%; height: 400px; background-color: #ccc; position: relative; margin-bottom: 40px;">
+            <h1
+                style="position: absolute; bottom: 20px; left: 20px; font-size: 32px; font-weight: bold; color: #333; margin: 0; letter-spacing: 2px;">
+                テキストテキストテキスト</h1>
+        </div>
+        <section class="course-section" id="principal-history">
+            <h2 class="course-title" id="history">校長・沿革</h2>
+            <div class="content-block">
+                <div style="display: flex; gap: 30px; flex-wrap: wrap;">
+                    <div style="flex: 1.5; min-width: 300px;">
+                        <div class="image-placeholder" style="height: 300px;"></div>
+                    </div>
+                    <div style="flex: 1; min-width: 300px;">
+                        <h3>校長のプロフィールにするので、ここにプロフィールが入ります。</h3>
+                        <hr style="margin: 15px 0; border: 0; border-top: 1px solid #ddd;" />
+                        <p style="font-size: 0.95em; line-height: 1.7; color: #444; margin-bottom: 20px;">
                             テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
                         </p>
-</div>
-</div>
-</div>
-<div class="content-block">
-<h3>「人生夢失うことなかれ」</h3>
-<div class="two-column">
-<div class="column">
-<p>「あなたの夢は何ですか？」と聞かれて明確にこたえられる人はどれほどいるでしょうか。「夢＝就きたい職業」といった公式を子どものころから教えられ「高校生になったら、なりたい職業を見つけなきゃ」と焦っている人はいませんか。確かに、夢や目標として職業をあげるのは間違いではありません。しかし、人生100年時代の今、夢であった理想の仕事への就職が、幸福な人生を保証してくれるとも限りません。
+                    </div>
+                </div>
+            </div>
+            <div class="content-block">
+                <h3>「人生夢失うことなかれ」</h3>
+                <div class="two-column">
+                    <div class="column">
+                        <p>「あなたの夢は何ですか？」と聞かれて明確にこたえられる人はどれほどいるでしょうか。「夢＝就きたい職業」といった公式を子どものころから教えられ「高校生になったら、なりたい職業を見つけなきゃ」と焦っている人はいませんか。確かに、夢や目標として職業をあげるのは間違いではありません。しかし、人生100年時代の今、夢であった理想の仕事への就職が、幸福な人生を保証してくれるとも限りません。
                         </p>
-<p>この言葉を本校は教育理念としています。夢にゴールはありません。その時その瞬間に達成しては、また抱くものです。夢には大小もありません。自分で夢を見つけ、抱くことが大切です。皆さんが生きていく時代は、将来の予測が難しくなることから、VUCA時代と呼ばれています。テクノロジーが想定以上の速さで発達し、人からAIに代わる職業も少なくありません。そのような時代に夢を持ち、強く生き抜くためには何が必要なのでしょうか。
+                        <p>この言葉を本校は教育理念としています。夢にゴールはありません。その時その瞬間に達成しては、また抱くものです。夢には大小もありません。自分で夢を見つけ、抱くことが大切です。皆さんが生きていく時代は、将来の予測が難しくなることから、VUCA時代と呼ばれています。テクノロジーが想定以上の速さで発達し、人からAIに代わる職業も少なくありません。そのような時代に夢を持ち、強く生き抜くためには何が必要なのでしょうか。
                         </p>
-</div>
-<div class="column">
-<div class="image-placeholder"></div>
-</div>
-</div>
-<div class="two-column" style="margin-top: 30px;">
-<div class="column">
-<div class="image-placeholder"></div>
-</div>
-<div class="column">
-<p>霞ヶ浦高等学校では探究学習を取り入れ、AIには不可能とされている「0から1を生み出す力」を養っています。たとえば、大手企業と共に研究開発を考える授業や阿見町の課題を見つけ出し解決策を提案する授業など、これからの時代に必要とされる非認知能力の向上を図り実現しています。
+                    </div>
+                    <div class="column">
+                        <div class="image-placeholder"></div>
+                    </div>
+                </div>
+                <div class="two-column" style="margin-top: 30px;">
+                    <div class="column">
+                        <div class="image-placeholder"></div>
+                    </div>
+                    <div class="column">
+                        <p>霞ヶ浦高等学校では探究学習を取り入れ、AIには不可能とされている「0から1を生み出す力」を養っています。たとえば、大手企業と共に研究開発を考える授業や阿見町の課題を見つけ出し解決策を提案する授業など、これからの時代に必要とされる非認知能力の向上を図り実現しています。
                         </p>
-<p>一生に一度の青春を霞ヶ浦高等学校で共に過ごし、校訓である「至誠」「自由」「責任」「敬愛」「勤勉」のもと、夢を抱き、優しく、行動力のある大人になりませんか。本校で「将来なりたい自分は何なのか」「そのために必要とする力は何なのか」そして「今やるべきことは何なのか」を一緒に考え、学び、「夢のStart
+                        <p>一生に一度の青春を霞ヶ浦高等学校で共に過ごし、校訓である「至誠」「自由」「責任」「敬愛」「勤勉」のもと、夢を抱き、優しく、行動力のある大人になりませんか。本校で「将来なりたい自分は何なのか」「そのために必要とする力は何なのか」そして「今やるべきことは何なのか」を一緒に考え、学び、「夢のStart
                             Line」に立ちましょう。</p>
-</div>
-</div>
-</div>
-<!-- Access Section -->
-</section><hr/></main>
-<footer>
-<div class="container">
-</div>
-</footer>
+                    </div>
+                </div>
+            </div>
+            <!-- Access Section -->
+        </section>
+        <div class="content-block" id="history-section" style="margin-top: 80px;">
+            <h2 class="course-title"
+                style="border-bottom: 3px solid #3b60a0; padding-bottom: 15px; margin-bottom: 40px;">沿革</h2>
+            <table class="history-table">
+                <tr>
+                    <th><span class="history-year">令和3年 (2021)</span></th>
+                    <td><span class="history-event">学校法人國學院大學との法人間の教育連携協定締結（茨城県初）<br>音楽ホール落成</span></td>
+                </tr>
+                <tr>
+                    <th><span class="history-year">令和元年 (2019)</span></th>
+                    <td><span class="history-event">クラブハウス完成（ダグアウト・ブルペン・監督室等）</span></td>
+                </tr>
+                <tr>
+                    <th><span class="history-year">平成30年 (2018)</span></th>
+                    <td><span class="history-event">野球部 室内練習場完成</span></td>
+                </tr>
+                <tr>
+                    <th><span class="history-year">平成29年 (2017)</span></th>
+                    <td><span class="history-event">大室グラウンド完成（総面積74,001㎡）</span></td>
+                </tr>
+                <tr>
+                    <th><span class="history-year">平成27年 (2015)</span></th>
+                    <td><span class="history-event">本館リニューアル<br>第97回全国高等学校野球選手権大会出場</span></td>
+                </tr>
+                <tr>
+                    <th><span class="history-year">平成23年 (2011)</span></th>
+                    <td><span class="history-event">多目的屋内運動場完成（第2体育館）</span></td>
+                </tr>
+                <tr>
+                    <th><span class="history-year">平成22年 (2010)</span></th>
+                    <td><span class="history-event">特別進学・Zコース設置</span></td>
+                </tr>
+                <tr>
+                    <th><span class="history-year">平成21年 (2009)</span></th>
+                    <td><span class="history-event">併設 霞南至健中学校（現 霞ヶ浦高等学校附属中学校）開校</span></td>
+                </tr>
+                <tr>
+                    <th><span class="history-year">平成16年 (2004)</span></th>
+                    <td><span class="history-event">男女共学となる</span></td>
+                </tr>
+                <tr>
+                    <th><span class="history-year">平成11年 (1999)</span></th>
+                    <td><span class="history-event">新東館完成（管理棟）</span></td>
+                </tr>
+                <tr>
+                    <th><span class="history-year">平成8年 (1996)</span></th>
+                    <td><span class="history-event">創立50周年記念式典挙行</span></td>
+                </tr>
+                <tr>
+                    <th><span class="history-year">平成3年 (1991)</span></th>
+                    <td><span class="history-event">新本館完成</span></td>
+                </tr>
+                <tr>
+                    <th><span class="history-year">昭和61年 (1986)</span></th>
+                    <td><span class="history-event">レスリング部インターハイ初優勝（以後11年連続優勝）</span></td>
+                </tr>
+                <tr>
+                    <th><span class="history-year">昭和57年 (1982)</span></th>
+                    <td><span class="history-year">第1体育館完成</span></td>
+                </tr>
+                <tr>
+                    <th><span class="history-year">昭和43年 (1968)</span></th>
+                    <td><span class="history-event">ヨット部全国大会初優勝</span></td>
+                </tr>
+                <tr>
+                    <th><span class="history-year">昭和30年 (1955)</span></th>
+                    <td><span class="history-event">農業科を廃し全日制普通科のみとなる</span></td>
+                </tr>
+                <tr>
+                    <th><span class="history-year">昭和26年 (1951)</span></th>
+                    <td><span class="history-event">学校法人霞ヶ浦高等学校となる</span></td>
+                </tr>
+                <tr>
+                    <th><span class="history-year">昭和24年 (1949)</span></th>
+                    <td><span class="history-event">霞ヶ浦高等学校と改称し、農業科と普通科を設置</span></td>
+                </tr>
+                <tr>
+                    <th><span class="history-year">昭和21年 (1946)</span></th>
+                    <td><span class="history-event">私立霞浦農科大学併設霞浦農業学校として創立</span></td>
+                </tr>
+            </table>
+        </div>
+        <hr />
+    </main>
+    <footer>
+        <div class="container">
+        </div>
+    </footer>
 </body>
+
 </html>
