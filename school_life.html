@@ -357,27 +357,32 @@
         </div>
     </div>
 
-    <!-- D: 時間割 -->
-    <div style="margin-bottom: 80px;">
-        <h3 style="font-size: 1.4em; letter-spacing: 2px; border-bottom: 2px solid #111; padding-bottom: 10px; display: inline-block;">時間割</h3>
-        <div class="image-placeholder" style="height: 400px; margin-top: 30px;"></div>
-    </div>
+    <!-- D+E: 時間割 × キッチンカー・購買 横並び -->
+    <div style="display: flex; gap: 50px; align-items: flex-start; margin-bottom: 80px; flex-wrap: wrap;">
 
-    <!-- E: キッチンカー・購買 -->
-    <div style="margin-bottom: 40px;">
-        <h3 style="font-size: 1.4em; letter-spacing: 2px; border-bottom: 2px solid #111; padding-bottom: 10px; display: inline-block;">キッチンカー &amp; 購買</h3>
-        <div style="display: flex; gap: 30px; margin-top: 30px; flex-wrap: wrap;">
-            <div style="flex: 1; min-width: 280px;">
-                <div class="image-placeholder" style="height: 220px; margin-bottom: 20px;"></div>
-                <h4 style="text-align: left; font-size: 1.1em; margin-bottom: 10px;">キッチンカー</h4>
-                <p style="font-size: 0.95em; color: #444;">（説明文100字程度・後日記入）</p>
-            </div>
-            <div style="flex: 1; min-width: 280px;">
-                <div class="image-placeholder" style="height: 220px; margin-bottom: 20px;"></div>
-                <h4 style="text-align: left; font-size: 1.1em; margin-bottom: 10px;">購買</h4>
-                <p style="font-size: 0.95em; color: #444;">（パンの値段・弁当の値段など・後日記入）</p>
+        <!-- 左：時間割 -->
+        <div style="flex: 0 0 33%;">
+            <h3 style="font-size: 1.4em; letter-spacing: 2px; border-bottom: 2px solid #111; padding-bottom: 10px; display: inline-block; margin-bottom: 20px;">時間割</h3>
+            <div class="image-placeholder" style="width: 100%; height: 520px;"></div>
+        </div>
+
+        <!-- 右：キッチンカー・購買 -->
+        <div style="flex: 1; min-width: 280px;">
+            <h3 style="font-size: 1.4em; letter-spacing: 2px; border-bottom: 2px solid #111; padding-bottom: 10px; display: inline-block; margin-bottom: 20px;">キッチンカー &amp; 購買</h3>
+            <div style="display: flex; flex-direction: column; gap: 30px;">
+                <div>
+                    <div class="image-placeholder" style="height: 220px; margin-bottom: 15px;"></div>
+                    <h4 style="text-align: left; font-size: 1.1em; margin-bottom: 8px;">キッチンカー</h4>
+                    <p style="font-size: 0.95em; color: #444;">（説明文100字程度・後日記入）</p>
+                </div>
+                <div>
+                    <div class="image-placeholder" style="height: 220px; margin-bottom: 15px;"></div>
+                    <h4 style="text-align: left; font-size: 1.1em; margin-bottom: 8px;">購買</h4>
+                    <p style="font-size: 0.95em; color: #444;">（パンの値段・弁当の値段など・後日記入）</p>
+                </div>
             </div>
         </div>
+
     </div>
 </section>
 <hr/>
