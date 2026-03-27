@@ -1,72 +1,70 @@
 <!DOCTYPE html>
-
 <html lang="ja">
-
 <head>
     <meta charset="utf-8" />
     <meta content="noindex, nofollow" name="robots" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title></title>
+    <title>学校生活メニュー | 霞ヶ浦高等学校</title>
     <link href="style.css?v=2" rel="stylesheet" />
     <style>
-        .history-list {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 25px 40px;
-            max-width: 1000px;
-            margin: 40px auto;
-            padding-left: 0;
-            border-left: none;
+        .menu-container {
+            max-width: 800px;
+            margin: 80px auto;
+            padding: 0 20px;
+            text-align: center;
         }
 
-        .history-item {
-            position: relative;
-            padding-bottom: 5px;
-            padding-left: 25px;
-            border-left: 1px solid #ddd;
-        }
-
-        .history-item::before {
-            content: '';
-            position: absolute;
-            left: -6px;
-            top: 5px;
-            width: 11px;
-            height: 11px;
-            background-color: #000;
-            border-radius: 50%;
-        }
-
-        .history-item:last-child {
-            padding-bottom: 5px;
-        }
-
-        .history-year-text {
+        .password-notice {
+            font-size: 1.2em;
+            color: #d9534f;
             font-weight: bold;
-            font-size: 1.05em;
+            margin-bottom: 50px;
+            padding: 20px;
+            background-color: #fdf2f2;
+            border: 1px solid #ebccd1;
+            border-radius: 8px;
+            display: inline-block;
+        }
+
+        .external-links {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .external-link-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            max-width: 350px;
+            padding: 24px;
+            background-color: #fff;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            text-decoration: none;
+            color: #333;
+            font-size: 1.2em;
+            font-weight: bold;
+            letter-spacing: 1px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+            transition: all 0.2s ease;
+        }
+
+        .external-link-btn:hover {
+            background-color: #f5f8ff;
+            border-color: #000;
             color: #000;
-            margin-bottom: 4px;
-            display: block;
-            line-height: 1.2;
+            transform: translateY(-3px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
         }
 
-        .history-desc {
-            font-size: 0.9em;
-            line-height: 1.5;
-            color: #444;
-        }
-
-        @media (max-width: 800px) {
-            .history-list {
-                grid-template-columns: 1fr;
-                gap: 20px;
-                margin: 30px 10px;
-                padding-left: 10px;
-            }
+        .external-link-btn span {
+            margin-left: 10px;
         }
     </style>
 </head>
-
 <body>
     <header>
         <div class="modern-header-container">
@@ -98,9 +96,9 @@
                                             class="nav-arrow toggle-arrow">›</span></a>
                                     <ul class="overlay-submenu">
                                         <li><a href="admission.html#guide">スクールガイド案内 <span
-                                                    class="nav-arrow">›</span></a></li>
+                                                     class="nav-arrow">›</span></a></li>
                                         <li><a href="admission.html#consultation">各種イベント案内 <span
-                                                    class="nav-arrow">›</span></a></li>
+                                                     class="nav-arrow">›</span></a></li>
                                         <li><a href="admission.html#faq">よくある質問 <span class="nav-arrow">›</span></a>
                                         </li>
                                     </ul>
@@ -130,11 +128,11 @@
                                             class="nav-arrow toggle-arrow">›</span></a>
                                     <ul class="overlay-submenu">
                                         <li><a href="career.html#results">進学状況・就職／進学指導 <span
-                                                    class="nav-arrow">›</span></a></li>
+                                                     class="nav-arrow">›</span></a></li>
                                         <li><a href="career.html#kokugakuin">大学連携 <span class="nav-arrow">›</span></a>
                                         </li>
                                         <li><a href="career.html#interview-top">卒業生の声 <span
-                                                    class="nav-arrow">›</span></a></li>
+                                                     class="nav-arrow">›</span></a></li>
                                     </ul>
                                 </li>
                                 <li><a href="contact_admission.html">お問い合わせ <span class="nav-arrow">›</span></a></li>
@@ -150,11 +148,11 @@
                                             class="nav-arrow toggle-arrow">›</span></a>
                                     <ul class="overlay-submenu">
                                         <li><a href="career.html#results">進学状況・就職／進学指導 <span
-                                                    class="nav-arrow">›</span></a></li>
+                                                     class="nav-arrow">›</span></a></li>
                                         <li><a href="career.html#kokugakuin">大学連携 <span class="nav-arrow">›</span></a>
                                         </li>
                                         <li><a href="career.html#interview-top">卒業生の声 <span
-                                                    class="nav-arrow">›</span></a></li>
+                                                     class="nav-arrow">›</span></a></li>
                                     </ul>
                                 </li>
                                 <li><a href="#">治癒報告書の案内（PDF） <span class="nav-arrow">›</span></a></li>
@@ -171,11 +169,11 @@
                                             class="nav-arrow toggle-arrow">›</span></a>
                                     <ul class="overlay-submenu">
                                         <li><a href="contact_alumni.html#certificate">卒業証明書申請 <span
-                                                    class="nav-arrow">›</span></a></li>
+                                                     class="nav-arrow">›</span></a></li>
                                         <li><a href="contact_alumni.html#transcript">成績証明書申請 <span
-                                                    class="nav-arrow">›</span></a></li>
+                                                     class="nav-arrow">›</span></a></li>
                                         <li><a href="contact_alumni.html#fee">料金・支払い案内 <span
-                                                    class="nav-arrow">›</span></a></li>
+                                                     class="nav-arrow">›</span></a></li>
                                     </ul>
                                 </li>
                             </ul>
@@ -213,138 +211,22 @@
             });
         </script>
     </header>
-    <main class="container">
-        <div style="width: 100%; height: 400px; background-color: #ccc; position: relative; margin-bottom: 40px;">
-            <h1
-                style="position: absolute; bottom: 20px; left: 20px; font-size: 32px; font-weight: bold; color: #333; margin: 0; letter-spacing: 2px;">
-                テキストテキストテキスト</h1>
+
+    <main class="menu-container">
+        <div class="password-notice">
+            ※パスワード入れたら、この画面入ります
         </div>
-        <section class="course-section" id="principal-history">
-            <h2 class="course-title" id="history">校長・沿革</h2>
-            <div class="content-block">
-                <div style="display: flex; gap: 30px; flex-wrap: wrap;">
-                    <div style="flex: 1.5; min-width: 300px;">
-                        <div class="image-placeholder" style="height: 300px;"></div>
-                    </div>
-                    <div style="flex: 1; min-width: 300px;">
-                        <h3>校長のプロフィールにするので、ここにプロフィールが入ります。</h3>
-                        <hr style="margin: 15px 0; border: 0; border-top: 1px solid #ddd;" />
-                        <p style="font-size: 0.95em; line-height: 1.7; color: #444; margin-bottom: 20px;">
-                            テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="content-block">
-                <h3>「夢のStart Line」</h3>
-                <p>本校は、昭和21年に霞ヶ浦農科大学併設の中等学校（実業学校）である霞ヶ浦農業学校を前身とした、創立８０周年を迎える伝統ある私立高校です。2004年に男女共学となり、卒業生は27,000名を超え、多くの著名人を輩出してきました。歴史ある学び舎で、生徒たちは明るく元気に過ごし、日々成長しています。その成長を支えるべく、教師たちは「何事にも誠実に」・「熱意ある指導」を心掛け、教育活動に励んでいます。</p>
-                <div class="two-column">
-                    <div class="column">
-                        <p>「あなたの夢は何ですか？」と聞かれて明確にこたえられる人はどれほどいるでしょうか。「夢＝就きたい職業」といった公式を子どものころから教えられ、「高校生になったら、なりたい職業を見つけなきゃ」と焦っている人はいませんか。確かに、夢や目標として職業をあげるのは間違いではありません。しかし、人生100年時代の今、夢であった理想の仕事への就職が、幸福な人生を保証してくれるとも限りません。</p>
-                        <p style="font-size: 1.3em; font-weight: bold; text-align: center; margin: 30px 0; letter-spacing: 2px;">「人生夢失うことなかれ」</p>
-                        <p>この言葉を、本校の教育理念としています。夢に終点はありません。達成は、新たな始まりです。夢に大小はなく、あるのは「自ら抱く」という意志だけです。</p>
-                        <p>皆さんが生きる時代は、予測不可能なVUCA時代です。テクノロジ―が想定以上の速さで発達し、人からAIに代わる職業も少なくありません。そのような時代に夢を持ち、強く生き抜くためには何が必要なのでしょうか。</p>
-                    </div>
-                    <div class="column">
-                        <div class="image-placeholder"></div>
-                    </div>
-                </div>
-                <div class="two-column" style="margin-top: 30px;">
-                    <div class="column">
-                        <div class="image-placeholder"></div>
-                    </div>
-                    <div class="column">
-                        <p>霞ヶ浦高等学校では探究学習を取り入れ、AIには不可能とされている「0から1を生み出す力」を養っています。たとえば、大手企業と共に研究開発を考える授業や阿見町の課題を見つけ出し解決策を提案する授業など、これからの時代に必要とされる非認知能力の向上を図り実現しています。</p>
-                        <p>一生に一度の青春を霞ヶ浦高等学校で共に過ごし、校訓である「至誠」・「自由」・「責任」・「敬愛」・「勤勉」のもと、夢を抱き、優しく、行動力のある大人になりませんか。本校で「将来なりたい自分は何なのか」、「そのために必要とする力は何なのか」、そして「今やるべきことは何なのか」を一緒に考え、学び、「夢のStart Line」に立ちましょう。</p>
-                    </div>
-                </div>
-            </div>
-            <!-- Access Section -->
-        </section>
-        <div class="content-block" id="history-section" style="margin-top: 80px;">
-            <h2 class="course-title"
-                style="border-bottom: 3px solid #000; padding-bottom: 15px; margin-bottom: 40px;">沿革</h2>
-            <div class="history-list">
-                <div class="history-item">
-                    <div class="history-year-text">令和3年 (2021)</div>
-                    <div class="history-desc">学校法人國學院大學との法人間の教育連携協定締結（茨城県初） / 音楽ホール落成</div>
-                </div>
-                <div class="history-item">
-                    <div class="history-year-text">令和元年 (2019)</div>
-                    <div class="history-desc">クラブハウス完成（ダグアウト・ブルペン・監督室等）</div>
-                </div>
-                <div class="history-item">
-                    <div class="history-year-text">平成30年 (2018)</div>
-                    <div class="history-desc">野球部 室内練習場完成</div>
-                </div>
-                <div class="history-item">
-                    <div class="history-year-text">平成29年 (2017)</div>
-                    <div class="history-desc">大室グラウンド完成（総面積74,001㎡）</div>
-                </div>
-                <div class="history-item">
-                    <div class="history-year-text">平成27年 (2015)</div>
-                    <div class="history-desc">本館リニューアル / 第97回全国高等学校野球選手権大会出場</div>
-                </div>
-                <div class="history-item">
-                    <div class="history-year-text">平成23年 (2011)</div>
-                    <div class="history-desc">多目的屋内運動場完成（第2体育館）</div>
-                </div>
-                <div class="history-item">
-                    <div class="history-year-text">平成22年 (2010)</div>
-                    <div class="history-desc">特別進学・Zコース設置</div>
-                </div>
-                <div class="history-item">
-                    <div class="history-year-text">平成21年 (2009)</div>
-                    <div class="history-desc">併設 霞南至健中学校（現 霞ヶ浦高等学校附属中学校）開校</div>
-                </div>
-                <div class="history-item">
-                    <div class="history-year-text">平成16年 (2004)</div>
-                    <div class="history-desc">男女共学となる</div>
-                </div>
-                <div class="history-item">
-                    <div class="history-year-text">平成11年 (1999)</div>
-                    <div class="history-desc">新東館完成（管理棟）</div>
-                </div>
-                <div class="history-item">
-                    <div class="history-year-text">平成8年 (1996)</div>
-                    <div class="history-desc">創立50周年記念式典挙行</div>
-                </div>
-                <div class="history-item">
-                    <div class="history-year-text">平成3年 (1991)</div>
-                    <div class="history-desc">新本館完成</div>
-                </div>
-                <div class="history-item">
-                    <div class="history-year-text">昭和61年 (1986)</div>
-                    <div class="history-desc">レスリング部インターハイ初優勝（以後11年連続優勝）</div>
-                </div>
-                <div class="history-item">
-                    <div class="history-year-text">昭和57年 (1982)</div>
-                    <div class="history-desc">第1体育館完成</div>
-                </div>
-                <div class="history-item">
-                    <div class="history-year-text">昭和43年 (1968)</div>
-                    <div class="history-desc">ヨット部全国大会初優勝</div>
-                </div>
-                <div class="history-item">
-                    <div class="history-year-text">昭和30年 (1955)</div>
-                    <div class="history-desc">農業科を廃し全日制普通科のみとなる</div>
-                </div>
-                <div class="history-item">
-                    <div class="history-year-text">昭和26年 (1951)</div>
-                    <div class="history-desc">学校法人霞ヶ浦高等学校となる</div>
-                </div>
-                <div class="history-item">
-                    <div class="history-year-text">昭和24年 (1949)</div>
-                    <div class="history-desc">霞ヶ浦高等学校と改称し、農業科と普通科を設置</div>
-                </div>
-                <div class="history-item">
-                    <div class="history-year-text">昭和21年 (1946)</div>
-                    <div class="history-desc">私立霞浦農科大学併設霞浦農業学校として創立</div>
-                </div>
-            </div>
+
+        <div class="external-links">
+            <a href="#" class="external-link-btn">
+                <span>出欠席システムへ</span>
+            </a>
+            <a href="#" class="external-link-btn">
+                <span>ネットパトロールへ</span>
+            </a>
         </div>
-        <hr />
     </main>
+
                                                 <footer>
         <div class="footer-container">
             <!-- 1. 受験生の方へ (2-COLUMN WIDE) -->
@@ -444,5 +326,4 @@
         </div>
     </footer>
 </body>
-
 </html>

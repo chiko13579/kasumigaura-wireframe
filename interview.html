@@ -1,13 +1,158 @@
 <!DOCTYPE html>
-
 <html lang="ja">
 
 <head>
     <meta charset="utf-8" />
     <meta content="noindex, nofollow" name="robots" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title></title>
+    <title>卒業生の声 | 霞ヶ浦高等学校</title>
     <link href="style.css?v=2" rel="stylesheet" />
+    <style>
+        /* タブ */
+        .interview-tabs {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0;
+            border-bottom: 2px solid #111;
+            margin-bottom: 50px;
+        }
+
+        .interview-tab-btn {
+            padding: 16px 28px;
+            background: none;
+            border: none;
+            border-bottom: 3px solid transparent;
+            margin-bottom: -2px;
+            font-size: 0.95em;
+            font-weight: bold;
+            letter-spacing: 1px;
+            cursor: pointer;
+            color: #888;
+            transition: all 0.2s;
+            text-align: center;
+        }
+
+        .interview-tab-btn:hover {
+            color: #111;
+        }
+
+        .interview-tab-btn.active {
+            color: #111;
+            border-bottom: 3px solid #111;
+        }
+
+        .interview-tab-btn .tab-name {
+            display: block;
+            font-size: 1.1em;
+        }
+
+        .interview-tab-btn .tab-course {
+            display: block;
+            font-size: 0.75em;
+            font-weight: normal;
+            color: #aaa;
+            margin-top: 3px;
+        }
+
+        .interview-tab-btn.active .tab-course {
+            color: #666;
+        }
+
+        /* パネル */
+        .interview-panel {
+            display: none;
+        }
+
+        .interview-panel.active {
+            display: block;
+        }
+
+        /* 写真グリッド */
+        .photo-grid {
+            display: flex;
+            gap: 16px;
+            margin-bottom: 50px;
+        }
+
+        .photo-grid .image-placeholder {
+            flex: 1;
+            height: 280px;
+        }
+
+        /* プロフィール帯 */
+        .student-profile-bar {
+            background-color: #f7f7f7;
+            padding: 24px 30px;
+            margin-bottom: 40px;
+            display: flex;
+            align-items: baseline;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .student-name {
+            font-size: 1.8em;
+            font-weight: bold;
+            letter-spacing: 3px;
+            margin: 0;
+        }
+
+        .student-course {
+            font-size: 0.9em;
+            color: #666;
+            letter-spacing: 2px;
+            border-left: 1px solid #ccc;
+            padding-left: 20px;
+        }
+
+        /* Q&A */
+        .qa-block {
+            margin-bottom: 40px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 40px;
+        }
+
+        .qa-block:last-child {
+            border-bottom: none;
+        }
+
+        .qa-question {
+            font-size: 1.05em;
+            font-weight: bold;
+            letter-spacing: 1px;
+            margin-bottom: 14px;
+            padding-left: 14px;
+            border-left: 3px solid #111;
+        }
+
+        .qa-answer {
+            font-size: 0.98em;
+            line-height: 2;
+            color: #333;
+            padding-left: 14px;
+        }
+
+        /* イントロ引用 */
+        .student-intro {
+            font-size: 1.05em;
+            line-height: 2;
+            color: #444;
+            border-left: 3px solid #ddd;
+            padding-left: 20px;
+            margin-bottom: 40px;
+            font-style: italic;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 30px;
+            color: #333;
+            text-decoration: none;
+            border-bottom: 1px solid #333;
+            font-size: 0.9em;
+            letter-spacing: 1px;
+        }
+    </style>
 </head>
 
 <body>
@@ -37,66 +182,50 @@
                                 <li><a href="hub_admission.html">受験生の方へ <span class="nav-arrow">›</span></a></li>
                                 <li><a href="application.html">出願 <span class="nav-arrow">›</span></a></li>
                                 <li class="has-submenu">
-                                    <a class="submenu-toggle" href="#">受験情報 <span
-                                            class="nav-arrow toggle-arrow">›</span></a>
+                                    <a class="submenu-toggle" href="#">受験情報 <span class="nav-arrow toggle-arrow">›</span></a>
                                     <ul class="overlay-submenu">
-                                        <li><a href="admission.html#guide">スクールガイド案内 <span
-                                                    class="nav-arrow">›</span></a></li>
-                                        <li><a href="admission.html#consultation">各種イベント案内 <span
-                                                    class="nav-arrow">›</span></a></li>
-                                        <li><a href="admission.html#faq">よくある質問 <span class="nav-arrow">›</span></a>
-                                        </li>
+                                        <li><a href="admission.html#guide">スクールガイド案内 <span class="nav-arrow">›</span></a></li>
+                                        <li><a href="admission.html#consultation">各種イベント案内 <span class="nav-arrow">›</span></a></li>
+                                        <li><a href="admission.html#faq">よくある質問 <span class="nav-arrow">›</span></a></li>
                                     </ul>
                                 </li>
                                 <li class="has-submenu">
-                                    <a class="submenu-toggle" href="#">学校紹介 <span
-                                            class="nav-arrow toggle-arrow">›</span></a>
+                                    <a class="submenu-toggle" href="#">学校紹介 <span class="nav-arrow toggle-arrow">›</span></a>
                                     <ul class="overlay-submenu">
                                         <li><a href="about.html">校長紹介・学校沿革 <span class="nav-arrow">›</span></a></li>
                                         <li><a href="course.html">コース紹介（3コース） <span class="nav-arrow">›</span></a></li>
-                                        <li><a href="school_life.html">制服・年間スケジュール <span class="nav-arrow">›</span></a>
-                                        </li>
+                                        <li><a href="school_life.html">制服・学校生活 <span class="nav-arrow">›</span></a></li>
                                         <li><a href="facility.html">施設・アクセス <span class="nav-arrow">›</span></a></li>
                                     </ul>
                                 </li>
                                 <li class="has-submenu">
-                                    <a class="submenu-toggle" href="#">部活動 <span
-                                            class="nav-arrow toggle-arrow">›</span></a>
+                                    <a class="submenu-toggle" href="#">部活動 <span class="nav-arrow toggle-arrow">›</span></a>
                                     <ul class="overlay-submenu">
                                         <li><a href="club.html#sports">運動部 <span class="nav-arrow">›</span></a></li>
                                         <li><a href="club.html#culture">文化部 <span class="nav-arrow">›</span></a></li>
                                     </ul>
                                 </li>
                                 <li class="has-submenu">
-                                    <a class="submenu-toggle" href="#">進路 <span
-                                            class="nav-arrow toggle-arrow">›</span></a>
+                                    <a class="submenu-toggle" href="#">進路 <span class="nav-arrow toggle-arrow">›</span></a>
                                     <ul class="overlay-submenu">
-                                        <li><a href="career.html#results">進学状況・就職／進学指導 <span
-                                                    class="nav-arrow">›</span></a></li>
-                                        <li><a href="career.html#kokugakuin">大学連携 <span class="nav-arrow">›</span></a>
-                                        </li>
-                                        <li><a href="career.html#interview-top">卒業生の声 <span
-                                                    class="nav-arrow">›</span></a></li>
+                                        <li><a href="career.html#results">進学状況・就職／進学指導 <span class="nav-arrow">›</span></a></li>
+                                        <li><a href="career.html#kokugakuin">大学連携 <span class="nav-arrow">›</span></a></li>
+                                        <li><a href="career.html#interview-top">卒業生の声 <span class="nav-arrow">›</span></a></li>
                                     </ul>
                                 </li>
                                 <li><a href="contact_admission.html">お問い合わせ <span class="nav-arrow">›</span></a></li>
                             </ul>
                         </li>
                         <li class="has-submenu">
-                            <a class="submenu-toggle" href="#">在校生・保護者の方へ <span
-                                    class="nav-arrow toggle-arrow">›</span></a>
+                            <a class="submenu-toggle" href="#">在校生・保護者の方へ <span class="nav-arrow toggle-arrow">›</span></a>
                             <ul class="overlay-submenu">
                                 <li><a href="hub_parents.html">在校生・保護者の方へ <span class="nav-arrow">›</span></a></li>
                                 <li class="has-submenu">
-                                    <a class="submenu-toggle" href="#">進路 <span
-                                            class="nav-arrow toggle-arrow">›</span></a>
+                                    <a class="submenu-toggle" href="#">進路 <span class="nav-arrow toggle-arrow">›</span></a>
                                     <ul class="overlay-submenu">
-                                        <li><a href="career.html#results">進学状況・就職／進学指導 <span
-                                                    class="nav-arrow">›</span></a></li>
-                                        <li><a href="career.html#kokugakuin">大学連携 <span class="nav-arrow">›</span></a>
-                                        </li>
-                                        <li><a href="career.html#interview-top">卒業生の声 <span
-                                                    class="nav-arrow">›</span></a></li>
+                                        <li><a href="career.html#results">進学状況・就職／進学指導 <span class="nav-arrow">›</span></a></li>
+                                        <li><a href="career.html#kokugakuin">大学連携 <span class="nav-arrow">›</span></a></li>
+                                        <li><a href="career.html#interview-top">卒業生の声 <span class="nav-arrow">›</span></a></li>
                                     </ul>
                                 </li>
                                 <li><a href="#">治癒報告書の案内（PDF） <span class="nav-arrow">›</span></a></li>
@@ -109,15 +238,11 @@
                                 <li><a href="hub_alumni.html">卒業生の方へ <span class="nav-arrow">›</span></a></li>
                                 <li><a href="alumni_assoc.html">同窓会 <span class="nav-arrow">›</span></a></li>
                                 <li class="has-submenu">
-                                    <a class="submenu-toggle" href="#">お問い合わせ <span
-                                            class="nav-arrow toggle-arrow">›</span></a>
+                                    <a class="submenu-toggle" href="#">お問い合わせ <span class="nav-arrow toggle-arrow">›</span></a>
                                     <ul class="overlay-submenu">
-                                        <li><a href="contact_alumni.html#certificate">卒業証明書申請 <span
-                                                    class="nav-arrow">›</span></a></li>
-                                        <li><a href="contact_alumni.html#transcript">成績証明書申請 <span
-                                                    class="nav-arrow">›</span></a></li>
-                                        <li><a href="contact_alumni.html#fee">料金・支払い案内 <span
-                                                    class="nav-arrow">›</span></a></li>
+                                        <li><a href="contact_alumni.html#certificate">卒業証明書申請 <span class="nav-arrow">›</span></a></li>
+                                        <li><a href="contact_alumni.html#transcript">成績証明書申請 <span class="nav-arrow">›</span></a></li>
+                                        <li><a href="contact_alumni.html#fee">料金・支払い案内 <span class="nav-arrow">›</span></a></li>
                                     </ul>
                                 </li>
                             </ul>
@@ -132,71 +257,293 @@
                 var hamburger = document.getElementById('hamburgerBtn');
                 var nav = document.getElementById('fullscreenNav');
                 var closebtn = document.getElementById('closeNavBtn');
-
                 if (hamburger && nav && closebtn) {
-                    hamburger.addEventListener('click', function () {
-                        nav.classList.add('active');
-                    });
-                    closebtn.addEventListener('click', function () {
-                        nav.classList.remove('active');
-                    });
+                    hamburger.addEventListener('click', function () { nav.classList.add('active'); });
+                    closebtn.addEventListener('click', function () { nav.classList.remove('active'); });
                 }
-
-                // Accordion functionality
                 var toggles = document.querySelectorAll('.submenu-toggle');
                 toggles.forEach(function (toggle) {
                     toggle.addEventListener('click', function (e) {
                         e.preventDefault();
-                        e.stopPropagation(); // crucial for multi-level accordions
-                        var parentLi = this.parentElement;
-                        parentLi.classList.toggle('open');
+                        e.stopPropagation();
+                        this.parentElement.classList.toggle('open');
                     });
                 });
             });
         </script>
     </header>
+
     <main class="container">
         <div style="width: 100%; height: 400px; background-color: #ccc; position: relative; margin-bottom: 40px;">
-            <h1
-                style="position: absolute; bottom: 20px; left: 20px; font-size: 32px; font-weight: bold; color: #333; margin: 0; letter-spacing: 2px;">
-                テキストテキストテキスト</h1>
+            <h1 style="position: absolute; bottom: 20px; left: 20px; font-size: 32px; font-weight: bold; color: #333; margin: 0; letter-spacing: 2px;">卒業生の声</h1>
         </div>
-        <section class="course-section">
-            <div class="interview-list" style="display: flex; flex-wrap: wrap; gap: 20px;">
-                <!-- Person 1 -->
-                <div class="interview-card"
-                    style="width: calc(33.333% - 14px); border: 1px solid #ddd; padding: 20px; box-sizing: border-box;">
-                    <div class="image-placeholder" style="height: 200px; margin-bottom: 15px;"></div>
-                    <h3>テキストテキストテキスト</h3>
-                    <p>明確な目標を立て、最後まで諦めずに努力しました。</p>
-                    <a href="interview_detail.html"
-                        style="display: inline-block; margin-top: 10px; color: #333; text-decoration: underline;">インタビューを読む</a>
-                </div>
-                <!-- Person 2 -->
-                <div class="interview-card"
-                    style="width: calc(33.333% - 14px); border: 1px solid #ddd; padding: 20px; box-sizing: border-box;">
-                    <div class="image-placeholder" style="height: 200px; margin-bottom: 15px;"></div>
-                    <h3>テキストテキストテキスト</h3>
-                    <p>部活と両立しながら第一志望に合格することができました。</p>
-                    <a href="interview_detail.html"
-                        style="display: inline-block; margin-top: 10px; color: #333; text-decoration: underline;">インタビューを読む</a>
-                </div>
-                <!-- Person 3 -->
-                <div class="interview-card"
-                    style="width: calc(33.333% - 14px); border: 1px solid #ddd; padding: 20px; box-sizing: border-box;">
-                    <div class="image-placeholder" style="height: 200px; margin-bottom: 15px;"></div>
-                    <h3>テキストテキストテキスト</h3>
-                    <p>資格取得や面接対策など、手厚いサポートに感謝しています。</p>
-                    <a href="interview_detail.html"
-                        style="display: inline-block; margin-top: 10px; color: #333; text-decoration: underline;">インタビューを読む</a>
+
+        <!-- タブ -->
+        <div class="interview-tabs">
+            <button class="interview-tab-btn active" data-tab="ohkubo">
+                <span class="tab-name">大久保 陽斗</span>
+                <span class="tab-course">特進選抜コース</span>
+            </button>
+            <button class="interview-tab-btn" data-tab="ichinomiya">
+                <span class="tab-name">一ノ宮 大和</span>
+                <span class="tab-course">特進選抜コース</span>
+            </button>
+            <button class="interview-tab-btn" data-tab="sasaki">
+                <span class="tab-name">佐々木 侑奈</span>
+                <span class="tab-course">特進コース</span>
+            </button>
+            <button class="interview-tab-btn" data-tab="tsuda">
+                <span class="tab-name">津田 楓</span>
+                <span class="tab-course">特進コース</span>
+            </button>
+        </div>
+
+        <!-- 大久保 陽斗 -->
+        <div class="interview-panel active" id="panel-ohkubo">
+            <div class="student-profile-bar">
+                <p class="student-name">大久保 陽斗</p>
+                <span class="student-course">特進選抜コース</span>
+            </div>
+            <div class="photo-grid">
+                <div class="image-placeholder"></div>
+                <div class="image-placeholder"></div>
+                <div class="image-placeholder"></div>
+            </div>
+            <div class="qa-block">
+                <p class="qa-question">Q. 霞ヶ浦高校に入学を決めた理由</p>
+                <p class="qa-answer">オープンスクールに参加した際に、霞ヶ浦高校の雰囲気の良さに惹かれました。また、学習環境や生徒が過ごしやすい環境が整っていることにも魅力を感じました。ありきたりな理由に聞こえるかもしれませんが、ここでなら高校での3年間を充実して過ごせると、オープンスクールに参加した当時に思いました。実際に楽しく、やりがいのある3年間を過ごすことができました。</p>
+            </div>
+            <div class="qa-block">
+                <p class="qa-question">Q. 高校卒業後の進路を決めた理由</p>
+                <p class="qa-answer">将来やりたいことに必要な知識を学ぶことができるという理由があるのですが、国立大学の推薦入試という難関な試験に挑戦したくなったという理由もあります。私は中学生のころ霞ヶ浦高校の推薦入試を受けようと考えていたのですが、目標とする特待を得るには評定が足らないため、受けることができませんでした。そのため、茨城大学の推薦入試で再挑戦し、学びたいことを学び、自分を成長させたいと考え、志望しました。</p>
+            </div>
+            <div class="qa-block">
+                <p class="qa-question">Q. 高校生活での思い出</p>
+                <p class="qa-answer">文化祭や球技祭、体育祭や修学旅行などの様々なイベントでたくさんの良い思い出ができました。特に楽しかったのは、受験生活です。友達と一緒に夜遅くまで勉強をしたり、テストの点数で勝負をしたりしました。時には助け合い、時には競い合い、そんな受験生の生活が自分にとってはかけがえのない思い出となりました。今となっては、一緒に受験を乗り越えていく仲間がいなければ大学に合格することはできなかったと感じ、友人たちには非常に感謝しています。</p>
+            </div>
+            <div class="qa-block">
+                <p class="qa-question">Q. 受験を考えている中学生へのメッセージ</p>
+                <p class="qa-answer">受験生活で特に重要なことは、明確な目標を立てることです。ただ、目標を立てるだけではなく、それを成し遂げるために精一杯の努力が必要です。親に言われるからという受動的な理由から勉強をしている人がいると思います。実際に私もそうでした。しかし、目標を達成しようと本気で努力すれば、必ずそれに見合った結果が返ってきます。「どうせ自分じゃ…」と思っているままでは、周りの受験生に置いていかれてしまいます。上から目線な言い方になってしまいますが、自分が一度やると決めたことは全力で成し遂げてください。応援しています。</p>
+            </div>
+            <a class="back-link" href="career.html#interview-top">← 卒業生の声一覧へ戻る</a>
+        </div>
+
+        <!-- 一ノ宮 大和 -->
+        <div class="interview-panel" id="panel-ichinomiya">
+            <div class="student-profile-bar">
+                <p class="student-name">一ノ宮 大和</p>
+                <span class="student-course">特進選抜コース</span>
+            </div>
+            <div class="photo-grid">
+                <div class="image-placeholder"></div>
+                <div class="image-placeholder"></div>
+                <div class="image-placeholder"></div>
+            </div>
+            <div class="qa-block">
+                <p class="qa-question">Q. 霞ヶ浦高校に入学を決めた理由</p>
+                <p class="qa-answer">部活動と学業のどちらにも取り組める環境が整っていたからです。部活動はソフトテニス部が県内で一番強く、レベルが高い人たちの中で取り組みたいと思いました。また、学業では希望する進路に合わせたコースが選択できて、周りと高め合って行くことができると思ったからです。</p>
+            </div>
+            <div class="qa-block">
+                <p class="qa-question">Q. 高校卒業後の進路を決めた理由</p>
+                <p class="qa-answer">より高いレベルでの文武両道が叶うと思ったからです。日本一を取るために歴史と伝統のある早稲田大学軟式庭球部に入ることで、技術以外にも人として成長できる環境で挑戦できることを期待しています。</p>
+            </div>
+            <div class="qa-block">
+                <p class="qa-question">Q. 高校生活での思い出</p>
+                <p class="qa-answer">寮での生活です。はじめは慣れないことだらけで大変でしたが、普段では関わる機会のない他の部活の人達と話をすることができ、自分の世界が広がりました。また、寮生活でなければ味わえない貴重な経験を沢山味わうことができました。</p>
+            </div>
+            <div class="qa-block">
+                <p class="qa-question">Q. 受験を考えている中学生へのメッセージ</p>
+                <p class="qa-answer">色々迷う中で決断をすることは勇気がいりますが、自分が思い描いたイメージと違っても好きなことができればなんとかなります！選んだ先で頑張る自分を想像して、自分が一番やりたいと思ったことをやり切れるような決断をして欲しいです！</p>
+            </div>
+            <a class="back-link" href="career.html#interview-top">← 卒業生の声一覧へ戻る</a>
+        </div>
+
+        <!-- 佐々木 侑奈 -->
+        <div class="interview-panel" id="panel-sasaki">
+            <div class="student-profile-bar">
+                <p class="student-name">佐々木 侑奈</p>
+                <span class="student-course">特進コース</span>
+            </div>
+            <div class="photo-grid">
+                <div class="image-placeholder"></div>
+                <div class="image-placeholder"></div>
+                <div class="image-placeholder"></div>
+            </div>
+            <p class="student-intro">先生方は常に私たち生徒のことを考え、夢を叶えるために力を貸してくれました。特に受験期には、夜遅くまで指導してくださり、合格へと導いてくださいました。このような環境の中で学べたことに感謝しており、この学校で得た経験や支えが、これからの人生の糧になると確信しています。</p>
+            <div class="qa-block">
+                <p class="qa-question">Q. 霞ヶ浦高校に入学を決めた理由</p>
+                <p class="qa-answer">最初は県立高校の受験に受かることができず、私立受験で合格していた霞ヶ浦高校に進学を決めました。しかし、入学後は温かい友人に恵まれ、学校生活が充実したものになりました。休み時間には楽しく会話をしたり、行事で協力し合ったりする中で、大切な仲間ができました。友人との絆が深まるにつれ、この学校に入学して本当に良かったと感じています。霞ヶ浦高校での出会いや経験は、私の人生においてかけがえのないものとなりました。</p>
+            </div>
+            <div class="qa-block">
+                <p class="qa-question">Q. 高校卒業後の進路を決めた理由</p>
+                <p class="qa-answer">私は国語科教員として、現代文化と結びつけた古典の授業を行い、生徒の興味を高めたいと考えています。母校の中学校で行った意識調査では古典への関心が低いことがわかりました。そこで、古典知識の習得とともに、当時の人々の価値観を伝え、生徒が親しみを持てる授業が重要だと感じました。進学先での学びを通じ、実践力を高め、生徒が主体的に学べる授業を実現できる教員を目指したいと考えています。</p>
+            </div>
+            <div class="qa-block">
+                <p class="qa-question">Q. 高校生活での思い出</p>
+                <p class="qa-answer">高校生活で最も印象に残っているのは、文化祭や体育祭、修学旅行での経験です。クラスメイトと一致団結して取り組む中で、達成感や喜びを共有できました。また、普段あまり関わることのない人とも交流を深め、新たな友情が生まれたことも大きな思い出です。こうした経験を通じて、協力することの大切さや多様な人と関わる楽しさを学ぶことができました。</p>
+            </div>
+            <div class="qa-block">
+                <p class="qa-question">Q. 受験を考えている中学生へのメッセージ</p>
+                <p class="qa-answer">受験は大変ですが、自分の未来への大切な一歩です。焦ることもあるかもしれませんが、コツコツ積み重ねた努力は必ず力になります。苦しい時こそ、目標を思い出し、自分を信じてください。一つひとつの学びが、あなたの可能性を広げます。しっかり休息もとりながら、自分のペースで進んでいきましょう。応援しています！</p>
+            </div>
+            <a class="back-link" href="career.html#interview-top">← 卒業生の声一覧へ戻る</a>
+        </div>
+
+        <!-- 津田 楓 -->
+        <div class="interview-panel" id="panel-tsuda">
+            <div class="student-profile-bar">
+                <p class="student-name">津田 楓</p>
+                <span class="student-course">特進コース</span>
+            </div>
+            <div class="photo-grid">
+                <div class="image-placeholder"></div>
+                <div class="image-placeholder"></div>
+                <div class="image-placeholder"></div>
+            </div>
+            <div class="qa-block">
+                <p class="qa-question">Q. 霞ヶ浦高校でどんな素敵な「出会い」がありましたか？</p>
+                <p class="qa-answer">霞ヶ浦高校では、部活動の先輩や友達との出会いがとても印象に残っています。部活動では、うまくいかないことや大変なこともありましたが、そのたびに先輩が優しく声をかけてくれたり、アドバイスをしてくれたりして何度も助けてもらいました。そのおかげで、あきらめずに続けることの大切さを学ぶことができました。また、友達とも出会い、楽しい時間を一緒に過ごす中で高校生活がより充実したものになりました。こうした出会いを通して、人とのつながりの大切さを実感し、これからも一つひとつの出会いを大切にしていきたいと思うようになりました。</p>
+            </div>
+            <div class="qa-block">
+                <p class="qa-question">Q. 霞ヶ浦高校に入学を決めた理由</p>
+                <p class="qa-answer">私は、部活動に力を入れたいと思ったことと、霞ヶ浦高校の先生方の雰囲気の良さに惹かれて決めました。オープンスクールに参加した際、困っていたときにすぐ声をかけて助けてくださったことがとても印象に残っています。部活動だけでなく、このような温かい環境で高校生活を送りたいと思い、霞ヶ浦高校を選びました。</p>
+            </div>
+            <div class="qa-block">
+                <p class="qa-question">Q. 高校卒業後の進路を決めた理由</p>
+                <p class="qa-answer">オープンキャンパスに参加した際、ゼミの模擬授業を受けて、その授業をしてくださった先生のもとで、さらに深く学びたいと思ったことが進学を決めた大きな理由です。また、学生数が多くさまざまな人と出会える環境があることにも魅力を感じ、日本大学への進学を選びました。</p>
+            </div>
+            <div class="qa-block">
+                <p class="qa-question">Q. 高校生活での思い出</p>
+                <p class="qa-answer">高校生活で最も印象に残っているのは、修学旅行や文化祭、そして部活動です。部活動では、ほぼ毎日練習に励み、仲間と切磋琢磨しながら目標に向かって努力したことで、部員との協調性や継続して物事に取り組む力を身につけることができました。また修学旅行や文化祭では、普段あまり経験することができないことをクラスメイトや友人と協力して行うことでかけがえのない思い出を作ることができました。</p>
+            </div>
+            <div class="qa-block">
+                <p class="qa-question">Q. 霞ヶ浦高校の受験を考えている中学生へのメッセージ</p>
+                <p class="qa-answer">決断することにすごく苦労すると思うし、受験では色んなことに不安もあってとても大変だと思いますが、どんな選択をしたとしても自分の決めたことを信じて最後まで頑張ってください。応援してます！</p>
+            </div>
+            <a class="back-link" href="career.html#interview-top">← 卒業生の声一覧へ戻る</a>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column footer-column-wide">
+                <h4><a href="hub_admission.html">受験生の方へ</a></h4>
+                <div class="footer-sub-grid">
+                    <ul class="footer-list">
+                        <li><a href="application.html">出願</a></li>
+                        <li class="has-children">
+                            <span class="parent-label">受験情報</span>
+                            <ul class="footer-sub-list">
+                                <li><a href="admission.html#guide">スクールガイド案内</a></li>
+                                <li><a href="admission.html#consultation">各種イベント案内</a></li>
+                                <li><a href="admission.html#faq">よくある質問</a></li>
+                            </ul>
+                        </li>
+                        <li class="has-children">
+                            <span class="parent-label">学校紹介</span>
+                            <ul class="footer-sub-list">
+                                <li><a href="about.html">校長紹介・学校沿革</a></li>
+                                <li><a href="course.html">コース紹介</a></li>
+                                <li><a href="school_life.html">制服・学校生活</a></li>
+                                <li><a href="facility.html">施設・アクセス</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul class="footer-list">
+                        <li class="has-children">
+                            <span class="parent-label">部活動</span>
+                            <ul class="footer-sub-list">
+                                <li><a href="club.html">部活動 TOP</a></li>
+                                <li><a href="club.html#sports">運動部</a></li>
+                                <li><a href="club.html#culture">文化部</a></li>
+                            </ul>
+                        </li>
+                        <li class="has-children">
+                            <span class="parent-label">進路</span>
+                            <ul class="footer-sub-list">
+                                <li><a href="career.html">進路 TOP</a></li>
+                                <li><a href="career.html#results">進学状況・就職指導</a></li>
+                                <li><a href="career.html#kokugakuin">大学連携</a></li>
+                                <li><a href="career.html#interview-top">卒業生の声</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="contact_admission.html">お問い合わせ</a></li>
+                    </ul>
                 </div>
             </div>
-        </section>
-    </main>
-    <footer>
-        <div class="container">
+            <div class="footer-column">
+                <h4><a href="hub_parents.html">在校生・保護者の方へ</a></h4>
+                <ul class="footer-list">
+                    <li class="has-children">
+                        <span class="parent-label">進路</span>
+                        <ul class="footer-sub-list">
+                            <li><a href="career.html#results">進学状況・就職指導</a></li>
+                            <li><a href="career.html#kokugakuin">大学連携</a></li>
+                            <li><a href="career.html#interview-top">卒業生の声</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">治癒報告書の案内（PDF）</a></li>
+                    <li><a href="contact_parents.html">お問い合わせ</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4><a href="hub_alumni.html">卒業生の方へ</a></h4>
+                <ul class="footer-list">
+                    <li><a href="alumni_assoc.html">同窓会</a></li>
+                    <li><a href="contact_alumni.html">お問い合わせ</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>その他</h4>
+                <ul class="footer-list">
+                    <li><a href="recruit.html">教員採用</a></li>
+                    <li><a href="policy.html">各種方針</a></li>
+                    <li><a href="#">サイトマップ</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="footer-bottom-inner">
+                <div class="footer-school-info">
+                    <p>学校法人 霞ヶ浦高等学校</p>
+                    <p>〒300-0301 茨城県稲敷郡阿見町青宿 50</p>
+                    <p>TEL 029-887-0013（代） / FAX 029-887-9380</p>
+                </div>
+                <div class="copyright">
+                    &copy; 霞ヶ浦高等学校 All Rights Reserved.
+                </div>
+            </div>
         </div>
     </footer>
+
+    <script>
+        // タブ切り替え
+        document.addEventListener('DOMContentLoaded', function () {
+            var tabs = document.querySelectorAll('.interview-tab-btn');
+            var panels = document.querySelectorAll('.interview-panel');
+
+            tabs.forEach(function (tab) {
+                tab.addEventListener('click', function () {
+                    var target = this.getAttribute('data-tab');
+
+                    tabs.forEach(function (t) { t.classList.remove('active'); });
+                    panels.forEach(function (p) { p.classList.remove('active'); });
+
+                    this.classList.add('active');
+                    document.getElementById('panel-' + target).classList.add('active');
+
+                    window.scrollTo({ top: document.querySelector('.interview-tabs').offsetTop - 80, behavior: 'smooth' });
+                });
+            });
+
+            // URLハッシュで直接タブを開く (#ohkubo / #ichinomiya / #sasaki / #tsuda)
+            var hash = window.location.hash.replace('#', '');
+            if (hash) {
+                var targetTab = document.querySelector('[data-tab="' + hash + '"]');
+                if (targetTab) targetTab.click();
+            }
+        });
+    </script>
     <script src="script.js"></script>
 </body>
 
