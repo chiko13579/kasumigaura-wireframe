@@ -11,71 +11,13 @@
             max-width: 900px;
             margin: 60px auto;
             padding: 0 20px;
+            min-height: 400px;
         }
-
-        .policy-list {
-            list-style: none;
-            padding: 0;
-            margin: 40px 0;
-        }
-
-        .policy-item {
-            border-bottom: 1px dashed #ccc;
-            padding: 25px 0;
-        }
-
-        .policy-item:last-child {
-            border-bottom: none;
-        }
-
-        .policy-link {
-            text-decoration: none;
+        .policy-text {
+            font-size: 1.2em;
             color: #333;
-            display: block;
-            transition: background-color 0.2s ease;
-            padding: 10px;
-            border-radius: 4px;
-        }
-
-        .policy-link:hover {
-            background-color: #f9f9f9;
-        }
-
-        .policy-header {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            margin-bottom: 10px;
-        }
-
-        .policy-title {
-            font-size: 1.3em;
-            font-weight: bold;
-            color: #000;
-        }
-
-        .pdf-tag {
-            background-color: #d35400;
-            color: #fff;
-            padding: 2px 8px;
-            border-radius: 4px;
-            font-size: 0.8em;
-            font-weight: bold;
-        }
-
-        .policy-desc {
-            font-size: 1em;
-            color: #666;
-            line-height: 1.6;
-            margin-left: 0;
-        }
-
-        @media (max-width: 600px) {
-            .policy-header {
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 5px;
-            }
+            text-align: center;
+            margin-top: 100px;
         }
     </style>
 </head>
@@ -127,7 +69,8 @@
                                         <li><a href="school_life.html">制服・学校生活 <span class="nav-arrow">›</span></a>
                                         </li>
                                         <li><a href="facility.html">施設・アクセス <span class="nav-arrow">›</span></a></li>
-                                    </ul>
+                                        <li><a href="hub_admission.html#now">霞ヶ浦の今を見てみる <span class="nav-arrow">›</span></a></li>
+</ul>
                                 </li>
                                 <li class="has-submenu">
                                     <a class="submenu-toggle" href="#">部活動 <span
@@ -228,66 +171,12 @@
 
     <main class="policy-container">
         <h2 class="course-title">各種方針</h2>
-        
-        <ul class="policy-list">
-            <li class="policy-item">
-                <a href="#" class="policy-link">
-                    <div class="policy-header">
-                        <span class="policy-title">いじめ防止基本方針</span>
-                        <span class="pdf-tag">PDF</span>
-                    </div>
-                    <p class="policy-desc">本校におけるいじめの防止、早期発見および対処に関する基本的な方針を定めています。</p>
-                </a>
-            </li>
-            <li class="policy-item">
-                <a href="#" class="policy-link">
-                    <div class="policy-header">
-                        <span class="policy-title">個人情報保護方針</span>
-                        <span class="pdf-tag">PDF</span>
-                    </div>
-                    <p class="policy-desc">生徒・保護者の皆様の個人情報の取り扱い、守秘義務に関する規程です。</p>
-                </a>
-            </li>
-            <li class="policy-item">
-                <a href="#" class="policy-link">
-                    <div class="policy-header">
-                        <span class="policy-title">学校評価</span>
-                        <span class="pdf-tag">PDF</span>
-                    </div>
-                    <p class="policy-desc">昨年度の学校活動に関する自己評価および外部評価の結果を公開しています。</p>
-                </a>
-            </li>
-            <li class="policy-item">
-                <a href="#" class="policy-link">
-                    <div class="policy-header">
-                        <span class="policy-title">ソーシャルメディアポリシー</span>
-                        <span class="pdf-tag">PDF</span>
-                    </div>
-                    <p class="policy-desc">本校生徒および教職員がSNSを利用する際のガイドラインです。</p>
-                </a>
-            </li>
-            <li class="policy-item">
-                <a href="#" class="policy-link">
-                    <div class="policy-header">
-                        <span class="policy-title">危機管理マニュアル</span>
-                        <span class="pdf-tag">PDF</span>
-                    </div>
-                    <p class="policy-desc">災害発生時や緊急事態における対応手順および連絡網を定めています。</p>
-                </a>
-            </li>
-            <li class="policy-item">
-                <a href="#" class="policy-link">
-                    <div class="policy-header">
-                        <span class="policy-title">治癒報告書（登校許可証）</span>
-                        <span class="pdf-tag">PDF</span>
-                    </div>
-                    <p class="policy-desc">学校保健安全法に定める指定感染症による出席停止期間終了後、登校する際にご提出いただく書類です。</p>
-                </a>
-            </li>
-        </ul>
+        <div class="policy-text">
+            テキスト入ります
+        </div>
     </main>
 
-                                                <footer>
+    <footer>
         <div class="footer-container">
             <!-- 1. 受験生の方へ (2-COLUMN WIDE) -->
             <div class="footer-column footer-column-wide">
@@ -310,6 +199,7 @@
                                 <li><a href="course.html">コース紹介</a></li>
                                 <li><a href="school_life.html">制服・学校生活</a></li>
                                 <li><a href="facility.html">施設・アクセス</a></li>
+                                <li><a href="hub_admission.html#now">霞ヶ浦の今を見てみる</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -368,6 +258,7 @@
                 <ul class="footer-list">
                     <li><a href="recruit.html">教員採用</a></li>
                     <li><a href="policy.html">各種方針</a></li>
+                    <li><a href="privacy.html">プライバシーポリシー</a></li>
                 </ul>
             </div>
         </div>

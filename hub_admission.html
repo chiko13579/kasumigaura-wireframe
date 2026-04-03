@@ -227,6 +227,8 @@
                                         <li><a href="school_life.html">制服・学校生活 <span class="nav-arrow">›</span></a>
                                         </li>
                                         <li><a href="facility.html">施設・アクセス <span class="nav-arrow">›</span></a></li>
+                                        <li><a href="hub_admission.html#now">霞ヶ浦の今を見てみる <span
+                                                    class="nav-arrow">›</span></a></li>
                                     </ul>
                                 </li>
                                 <li class="has-submenu">
@@ -682,6 +684,7 @@
             <div class="admission-news-content">
                 <div class="news-header">
                     <h2 class="news-title">お知らせ</h2>
+                    <p> (在校生/受験生/全てにタグを分けて受験生と全てを表示 一覧ページも作成 一覧ページは全て一緒に表示)</p>
                 </div>
                 <ul class="news-list">
                     <li class="news-item">
@@ -827,11 +830,8 @@
         </style>
         <section class="tsushin-section">
             <div class="tsushin-header">
-                <h2 class="tsushin-title">霞ヶ浦通信</h2>
-                <a href="#" class="news-more-link">一覧を見る <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="2">
-                        <polyline points="9 18 15 12 9 6"></polyline>
-                    </svg></a>
+                <h2 class="tsushin-title">霞ヶ浦通信(在校生/受験生同じ内容)</h2>
+                <a href="#" style="color:#000; font-size:0.9em; text-decoration:none;">一覧を見る ›</a>
             </div>
             <div class="tsushin-grid">
                 <!-- Card 1 -->
@@ -888,12 +888,129 @@
                         <h3 class="tsushin-card-title">進路ガイダンスを実施。様々な分野の専門家が来校。</h3>
                     </div>
                 </a>
-            </div>
-        </section>
 
+                <!-- Kasumigaura Now Section -->
+                <style>
+                    .now-section {
+                        padding: 100px 0;
+                        background-color: #f6f7f9;
+                        margin-top: 60px;
+                        width: 100vw;
+                        margin-left: calc(50% - 50vw);
+                    }
+
+                    .now-container {
+                        max-width: 1100px;
+                        margin: 0 auto;
+                        padding: 0 20px;
+                    }
+
+                    .now-title {
+                        text-align: center;
+                        font-size: 2.2em;
+                        font-weight: bold;
+                        margin-bottom: 60px;
+                        letter-spacing: 2px;
+                        color: #222;
+                    }
+
+                    .now-grid {
+                        display: grid;
+                        grid-template-columns: 1fr 1fr;
+                        gap: 50px;
+                    }
+
+                    .now-col {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 25px;
+                    }
+
+                    .now-media-label {
+                        font-size: 1.1em;
+                        font-weight: bold;
+                        color: #555;
+                        display: flex;
+                        align-items: center;
+                        gap: 10px;
+                    }
+
+                    .now-media-placeholder {
+                        width: 100%;
+                        aspect-ratio: 16 / 9;
+                        background-color: #e0e0e0;
+                        border-radius: 12px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        color: #888;
+                        font-size: 1.2em;
+                        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+                    }
+
+                    .youtube-more-btn {
+                        align-self: flex-start;
+                        padding: 14px 28px;
+                        background-color: #fff;
+                        border: 2px solid #333;
+                        text-decoration: none;
+                        color: #333;
+                        font-weight: bold;
+                        border-radius: 6px;
+                        transition: all 0.3s ease;
+                        margin-top: 10px;
+                        font-size: 0.95em;
+                        display: flex;
+                        align-items: center;
+                        gap: 10px;
+                    }
+
+                    .youtube-more-btn:hover {
+                        background-color: #333;
+                        color: #fff;
+                        transform: translateY(-2px);
+                        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+                    }
+
+                    @media (max-width: 768px) {
+                        .now-grid {
+                            grid-template-columns: 1fr;
+                        }
+
+                        .now-section {
+                            padding: 60px 0;
+                        }
+                    }
+                </style>
+                <section class="now-section" id="now">
+                    <div class="now-container">
+                        <h2 class="now-title">霞ヶ浦の今を見てみる</h2>
+                        <div class="now-grid">
+                            <div class="now-col">
+                                <div class="now-media-label">Instagram</div>
+                                <div class="now-media-placeholder">
+                                    Instagram Embedding Placeholder
+                                </div>
+                            </div>
+                            <div class="now-col">
+                                <div class="now-media-label">YouTube</div>
+                                <div class="now-media-placeholder">
+                                    YouTube Movie Embedding Placeholder
+                                </div>
+                                <a href="#" class="youtube-more-btn">
+                                    他のYouTubeを見てみる
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <polyline points="9 18 15 12 9 6"></polyline>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
 
     </main>
-                                                <footer>
+    <footer>
         <div class="footer-container">
             <!-- 1. 受験生の方へ (2-COLUMN WIDE) -->
             <div class="footer-column footer-column-wide">
@@ -916,6 +1033,7 @@
                                 <li><a href="course.html">コース紹介</a></li>
                                 <li><a href="school_life.html">制服・学校生活</a></li>
                                 <li><a href="facility.html">施設・アクセス</a></li>
+                                <li><a href="hub_admission.html#now">霞ヶ浦の今を見てみる</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -974,6 +1092,7 @@
                 <ul class="footer-list">
                     <li><a href="recruit.html">教員採用</a></li>
                     <li><a href="policy.html">各種方針</a></li>
+                    <li><a href="privacy.html">プライバシーポリシー</a></li>
                 </ul>
             </div>
         </div>
