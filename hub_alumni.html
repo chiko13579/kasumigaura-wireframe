@@ -364,7 +364,151 @@
                 <span>各種証明書申請</span>
             </a>
         </nav>
-        </nav>
+
+        <!-- 霞ヶ浦通信 CSS -->
+        <style>
+            .tsushin-section {
+                padding: 60px 0 80px 0;
+            }
+
+            .tsushin-header {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                border-bottom: 2px solid #333;
+                padding-bottom: 15px;
+                margin-bottom: 30px;
+            }
+
+            .tsushin-title {
+                font-size: 2em;
+                font-weight: bold;
+                margin: 0;
+                letter-spacing: 2px;
+            }
+
+            .tsushin-grid {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 30px;
+            }
+
+            .tsushin-card {
+                display: flex;
+                flex-direction: column;
+                text-decoration: none;
+                color: #333;
+                background-color: #fff;
+                border-radius: 8px;
+                overflow: hidden;
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+            }
+
+            .tsushin-card:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            }
+
+            .tsushin-img-wrapper {
+                width: 100%;
+                aspect-ratio: 16 / 9;
+                background-color: #ccc;
+                overflow: hidden;
+            }
+
+            .tsushin-img-wrapper img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                transition: transform 0.3s ease;
+            }
+
+            .tsushin-card:hover .tsushin-img-wrapper img {
+                transform: scale(1.05);
+            }
+
+            .tsushin-card-content {
+                padding: 20px;
+            }
+
+            .tsushin-card-title {
+                margin: 0;
+                font-size: 1.1em;
+                font-weight: bold;
+                line-height: 1.5;
+            }
+
+            @media (max-width: 992px) {
+                .tsushin-grid {
+                    grid-template-columns: repeat(2, 1fr);
+                }
+            }
+
+            @media (max-width: 576px) {
+                .tsushin-grid {
+                    grid-template-columns: 1fr;
+                }
+            }
+        </style>
+
+        <!-- 霞ヶ浦通信 section -->
+        <section class="tsushin-section">
+            <div class="tsushin-header">
+                <h2 class="tsushin-title">霞ヶ浦通信</h2>
+                <a href="#" style="color:#000; font-size:0.9em; text-decoration:none;">一覧を見る ›</a>
+            </div>
+            <div class="tsushin-grid">
+                <a href="#" class="tsushin-card">
+                    <div class="tsushin-img-wrapper">
+                        <img src="https://placehold.co/400x225/cccccc/cccccc" alt="霞ヶ浦通信画像">
+                    </div>
+                    <div class="tsushin-card-content">
+                        <h3 class="tsushin-card-title">卒業生インタビュー企画「私の歩んできた道」がスタート。</h3>
+                    </div>
+                </a>
+                <a href="#" class="tsushin-card">
+                    <div class="tsushin-img-wrapper">
+                        <img src="https://placehold.co/400x225/cccccc/cccccc" alt="霞ヶ浦通信画像">
+                    </div>
+                    <div class="tsushin-card-content">
+                        <h3 class="tsushin-card-title">吹奏楽部が東関東大会で金賞を受賞！全国大会への切符を掴みました。</h3>
+                    </div>
+                </a>
+                <a href="#" class="tsushin-card">
+                    <div class="tsushin-img-wrapper">
+                        <img src="https://placehold.co/400x225/cccccc/cccccc" alt="霞ヶ浦通信画像">
+                    </div>
+                    <div class="tsushin-card-content">
+                        <h3 class="tsushin-card-title">母校の施設が新しくなりました。リニューアルした図書室を公開。</h3>
+                    </div>
+                </a>
+                <a href="#" class="tsushin-card">
+                    <div class="tsushin-img-wrapper">
+                        <img src="https://placehold.co/400x225/cccccc/cccccc" alt="霞ヶ浦通信画像">
+                    </div>
+                    <div class="tsushin-card-content">
+                        <h3 class="tsushin-card-title">体育祭での熱戦！各団の団結力が光りました。</h3>
+                    </div>
+                </a>
+                <a href="#" class="tsushin-card">
+                    <div class="tsushin-img-wrapper">
+                        <img src="https://placehold.co/400x225/cccccc/cccccc" alt="霞ヶ浦通信画像">
+                    </div>
+                    <div class="tsushin-card-content">
+                        <h3 class="tsushin-card-title">文化祭の準備風景を大公開。生徒たちのアイディア満載。</h3>
+                    </div>
+                </a>
+                <a href="#" class="tsushin-card">
+                    <div class="tsushin-img-wrapper">
+                        <img src="https://placehold.co/400x225/cccccc/cccccc" alt="霞ヶ浦通信画像">
+                    </div>
+                    <div class="tsushin-card-content">
+                        <h3 class="tsushin-card-title">同窓会総会のご案内（令和◯年度）。</h3>
+                    </div>
+                </a>
+            </div>
+        </section>
     </main>
                                                 <footer>
         <div class="footer-container">
