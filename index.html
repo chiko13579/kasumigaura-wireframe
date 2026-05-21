@@ -38,58 +38,147 @@
             position: absolute;
             top: 40px;
             left: 40px;
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 10px;
             width: 45%;
             max-width: 600px;
             min-width: 450px;
+            padding: 14px;
+            border-radius: 4px;
+            background-color: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.16);
+            backdrop-filter: blur(3px);
         }
 
         .btn-large {
             display: flex;
+            flex-direction: column;
             justify-content: center;
-            align-items: center;
-            background-color: rgba(100, 100, 100, 0.85);
-            /* Semi-transparent gray */
+            align-items: flex-start;
+            gap: 18px;
+            position: relative;
+            overflow: hidden;
+            background-color: #222;
             color: #fff;
             text-decoration: none;
-            font-size: 1.8em;
-            padding: 25px;
-            border-radius: 6px;
-            transition: background-color 0.2s;
-            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
-            font-weight: 500;
+            font-size: 1.45em;
+            min-height: 145px;
+            padding: 24px;
+            border: 1px solid #222;
+            border-radius: 2px;
+            box-shadow: none;
+            transition: background-color 0.2s, transform 0.2s, box-shadow 0.2s;
+            text-shadow: none;
+            font-weight: 700;
+        }
+
+        .btn-large::after {
+            content: "›";
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            right: 18px;
+            bottom: 18px;
+            width: 38px;
+            height: 38px;
+            margin-left: 0;
+            border-radius: 50%;
+            background-color: #fff;
+            color: #222;
+            font-size: 1.3em;
+            line-height: 1;
+        }
+
+        .btn-content {
+            display: inline-flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+            min-width: 0;
+        }
+
+        .btn-icon {
+            display: block;
+            width: 38px;
+            height: 38px;
+            flex: 0 0 auto;
+        }
+
+        .btn-large .btn-icon {
+            filter: brightness(0) invert(1);
         }
 
         .btn-large:hover {
-            background-color: rgba(50, 50, 50, 0.95);
+            background-color: #000;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18);
         }
 
         .row-buttons {
-            display: flex;
-            gap: 10px;
+            display: grid;
+            grid-column: 1 / -1;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 8px;
         }
 
         .btn-small {
-            flex: 1;
             display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 14px;
+            position: relative;
+            background-color: #fff;
+            color: #222;
+            text-decoration: none;
+            font-size: 0.95em;
+            min-height: 105px;
+            padding: 16px;
+            border: 1px solid #222;
+            border-radius: 2px;
+            box-shadow: none;
+            transition: background-color 0.2s, transform 0.2s, box-shadow 0.2s;
+            text-align: left;
+            text-shadow: none;
+            white-space: normal;
+            font-weight: 700;
+            line-height: 1.35;
+        }
+
+        .btn-small::after {
+            content: "›";
+            display: inline-flex;
             justify-content: center;
             align-items: center;
-            background-color: rgba(150, 150, 150, 0.85);
+            position: absolute;
+            right: 12px;
+            bottom: 12px;
+            width: 24px;
+            height: 24px;
+            margin-left: 0;
+            border-radius: 50%;
+            background-color: #222;
             color: #fff;
-            text-decoration: none;
-            font-size: 1.05em;
-            padding: 18px 5px;
-            border-radius: 6px;
-            transition: background-color 0.2s;
-            text-align: center;
-            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
-            white-space: nowrap;
+            font-size: 1.2em;
+            line-height: 1;
+        }
+
+        .btn-small .btn-content {
+            align-items: flex-start;
+            gap: 8px;
+        }
+
+        .btn-small .btn-icon {
+            width: 26px;
+            height: 26px;
         }
 
         .btn-small:hover {
-            background-color: rgba(80, 80, 80, 0.95);
+            background-color: #f2f2f2;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
         }
 
         /* --- Logo Box at Bottom Left --- */
@@ -190,17 +279,17 @@
 <body>
 <header class="splash-hero">
 <div class="splash-buttons">
-<a class="btn-large" href="hub_admission.html">受験生の方</a>
-<a class="btn-large" href="hub_parents.html">在校生・保護者の方</a>
+<a class="btn-large" href="hub_admission.html"><span class="btn-content"><img class="btn-icon" src="img/icons/icon-admission.svg" alt="">受験生の方</span></a>
+<a class="btn-large" href="hub_parents.html"><span class="btn-content"><img class="btn-icon" src="img/icons/icon-parents.svg" alt="">在校生・保護者の方</span></a>
 <div class="row-buttons">
-<a class="btn-small" href="hub_alumni.html">卒業生の方へ</a>
-<a class="btn-small" href="#">受験生指導者の方</a>
-<a class="btn-small" href="recruit.html">霞ヶ浦で働きたい方</a>
+<a class="btn-small" href="hub_alumni.html"><span class="btn-content"><img class="btn-icon" src="img/icons/icon-alumni.svg" alt="">卒業生の方</span></a>
+<a class="btn-small" href="#"><span class="btn-content"><img class="btn-icon" src="img/icons/icon-instructor.svg" alt="">受験生指導者の方</span></a>
+<a class="btn-small" href="recruit.html"><span class="btn-content"><img class="btn-icon" src="img/icons/icon-recruit.svg" alt="">霞ヶ浦で働きたい方へ</span></a>
 </div>
 </div>
 <div class="splash-logo-box">
 <div class="logo-text-block">
-<h1 class="logo-main">学校法人 霞ヶ浦高等学校</h1>
+<h1 class="logo-main">霞ヶ浦高等学校</h1>
 </div>
 </div>
 </header>
@@ -272,9 +361,9 @@
                 </ul>
             </div>
 
-            <!-- 3. 卒業生の方へ -->
+            <!-- 3. 卒業生の方 -->
             <div class="footer-column">
-                <h4><a href="hub_alumni.html">卒業生の方へ</a></h4>
+                <h4><a href="hub_alumni.html">卒業生の方</a></h4>
                 <ul class="footer-list">
                     <li><a href="alumni_assoc.html">同窓会</a></li>
                     <li><a href="contact_alumni.html">お問い合わせ</a></li>
@@ -285,8 +374,11 @@
             <div class="footer-column">
                 <h4>その他</h4>
                 <ul class="footer-list">
-                    <li><a href="recruit.html">教員採用</a></li>
+                    <li><a href="recruit.html">霞ヶ浦で働きたい方へ</a></li>
                     <li><a href="policy.html">各種方針</a></li>
+                    <li><a href="policy.html#bullying">いじめ対策（PDF）</a></li>
+                    <li><a href="policy.html#futoko">不登校対策マニュアル（PDF）</a></li>
+                    <li><a href="policy.html#counselor">スクールカウンセラー（PDF）</a></li>
                     <li><a href="privacy.html">プライバシーポリシー</a></li>
                     <li><a href="#">SDGsの取り組みについて (PDF)</a></li>
                 </ul>
