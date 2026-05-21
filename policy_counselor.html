@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8" />
+    <meta content="noindex, nofollow" name="robots" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>スクールカウンセラー | 霞ヶ浦高等学校</title>
+    <link href="style.css?v=2" rel="stylesheet" />
+    <style>
+        .pdf-page-container {
+            max-width: 900px;
+            margin: 80px auto;
+            padding: 0 20px;
+            text-align: center;
+        }
+
+        .pdf-placeholder {
+            background-color: #f5f5f5;
+            border: 2px dashed #ccc;
+            border-radius: 12px;
+            color: #666;
+            font-size: 1.5em;
+            margin-top: 40px;
+            padding: 60px 40px;
+        }
+
+        .page-title {
+            font-size: 2.2em;
+            font-weight: bold;
+            letter-spacing: 2px;
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="modern-header-container">
+            <div class="logo-container">
+                <a class="modern-logo" href="index.html">霞ヶ浦高等学校</a>
+            </div>
+            <div class="hamburger-btn" id="hamburgerBtn">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="menu-text">MENU</span>
+            </div>
+        </div>
+        <div class="fullscreen-overlay-nav" id="fullscreenNav">
+            <div class="close-btn" id="closeNavBtn">✕ 閉じる</div>
+            <div class="overlay-nav-container">
+                <div class="overlay-nav-left">
+                    <div class="school-name">霞ヶ浦高等学校</div>
+                </div>
+                <div class="overlay-nav-right">
+                    <ul class="overlay-nav-links">
+                        <li><a href="index.html">トップページ <span class="nav-arrow">›</span></a></li>
+                        <li><a href="policy.html">各種方針 <span class="nav-arrow">›</span></a></li>
+                        <li><a href="hub_admission.html">受験生の方 <span class="nav-arrow">›</span></a></li>
+                        <li><a href="hub_parents.html">在校生・保護者の方 <span class="nav-arrow">›</span></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="pdf-page-container">
+        <h1 class="page-title">スクールカウンセラー</h1>
+        <div class="pdf-placeholder">PDFを差し込みます</div>
+        <div style="margin-top: 60px;">
+            <a href="policy.html" style="color: #000; text-decoration: none;">各種方針に戻る</a>
+        </div>
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var hamburger = document.getElementById('hamburgerBtn');
+            var nav = document.getElementById('fullscreenNav');
+            var closebtn = document.getElementById('closeNavBtn');
+
+            if (hamburger && nav && closebtn) {
+                hamburger.addEventListener('click', function () {
+                    nav.classList.add('active');
+                });
+                closebtn.addEventListener('click', function () {
+                    nav.classList.remove('active');
+                });
+            }
+        });
+    </script>
+</body>
+</html>
